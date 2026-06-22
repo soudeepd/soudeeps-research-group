@@ -9,9 +9,11 @@ author:
   name: Soudeep Deb
   email: soudeep@iimb.ac.in
 
+include:
+  - _pages
+
 header_pages:
-  - research.md
-  - consulting.md
-  - activities.md
-  - alumni.md
-  - contact.md
+  - _pages/research.md
+  - _pages/consulting.md
+  - _pages/contact.md
+  - _pages/alumni.md
