@@ -1,0 +1,17 @@
+title: Soudeep Deb Research Group
+description: Research, publications, consulting, alumni, and activities of Soudeep Deb's research group.
+theme: minima
+
+url: "https://soudeeps-group.org"
+baseurl: ""
+
+author:
+  name: Soudeep Deb
+  email: soudeep@iimb.ac.in
+
+header_pages:
+  - research.md
+  - consulting.md
+  - activities.md
+  - alumni.md
+  - contact.md
