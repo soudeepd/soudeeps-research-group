@@ -1,6 +1,5 @@
 title: Soudeep Deb Research Group
 description: Research, publications, consulting, alumni, and activities of Soudeep Deb's research group.
-theme: minima
 
 url: "https://soudeeps-group.org"
 baseurl: ""
@@ -15,5 +14,6 @@ include:
 header_pages:
   - _pages/research.md
   - _pages/consulting.md
-  - _pages/contact.md
+  - _pages/activities.md
   - _pages/alumni.md
+  - _pages/contact.md
