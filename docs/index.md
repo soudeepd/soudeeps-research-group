@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-# Soudeep Deb Research Group
+# Research Group of Soudeep Deb 
 
 Welcome to the Research Group led by Prof. Soudeep Deb, in the Decision Sciences Area at the Indian Institute of Management Bangalore. The group works on statistical modelling, data science, machine learning, forecasting, time series analysis, spatio-temporal modelling, nonparametric methods, and applied empirical research.
 

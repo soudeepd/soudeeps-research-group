@@ -1,0 +1,25 @@
+
+- name: Archi Roy
+  image: /assets/images/alumni/archi-roy.jpg
+  association: PhD student, co-supervised
+  period: Graduated August 2025
+  project: "Nonparametric methods for short and long-range dependent time series: Applications in financial and biomedical datasets"
+  themes: time series, nonparametric methods, financial data
+  current_position: Assistant Professor, Indian Institute of Management Kozhikode
+  bio: Archi worked on nonparametric methods for dependent data, with applications in financial datasets.
+  links:
+    - label: Profile
+      url: "#"
+
+
+- name: Kapil Gupta
+  image: /assets/images/alumni/kapil-gupta.jpg
+  association: PhD student
+  period: Graduated March 2025
+  project: "Analyzing House Price Dynamics Using Novel Spatio-Temporal Methods"
+  themes: Spatio-temporal modelling, real estate analytics, sports analytics
+  current_position: Assistant Professor, Indian Institute of Management Kozhikode
+  bio: Kapil worked on spatio-temporal methods for house price dynamics and contributed to research in sports analytics and regression modelling.
+  links:
+    - label: Profile
+      url: "#"
