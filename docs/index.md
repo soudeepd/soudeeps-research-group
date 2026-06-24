@@ -3,13 +3,11 @@ layout: home
 title: Home
 ---
 
-# Research Group of Soudeep Deb 
-
 Welcome to the Research Group led by Prof. Soudeep Deb, in the Decision Sciences Area at the Indian Institute of Management Bangalore. The group works on statistical modelling, data science, machine learning, forecasting, time series analysis, spatio-temporal modelling, nonparametric methods, and applied empirical research.
 
 Our research is motivated by real-world problems from climate, public health, finance, sports, urban systems, social sciences, and policy. We develop statistical and machine learning methods, apply them to complex datasets, and collaborate with academic, industry, and policy partners.
 
-## Research focus
+### Research focus
 
 The group's current work broadly spans the following areas:
 
@@ -21,7 +19,7 @@ The group's current work broadly spans the following areas:
 - Environmental, urban, health, financial, and sports applications
 - Policy evaluation and data-driven decision-making
 
-## What you can find on this website
+### What you can find on this website
 
 This website presents the research, publications, consulting activities, current members, alumni, collaborations, grants, and other academic activities of the group.
 
@@ -31,8 +29,8 @@ This website presents the research, publications, consulting activities, current
 - Visit **Alumni** to learn about former students, research assistants, interns, and collaborators associated with the group.
 - Visit **Contact** for research, consulting, collaboration, and alumni-related enquiries.
 
-## Opportunities
+### Opportunities
 
-Prof. Deb may consider hiring a new postdoctoral fellow who will be working in the domain of Bayesian approaches in spatio-temporal data. If you are interested in such a role, please send an email to soudeep@iimb.ac.in.
+Prof. Deb is considering hiring a new postdoctoral fellow who will be working in the domain of Bayesian approaches in spatio-temporal data. If you are interested in such a role, please send an email to [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in?subject=Postdoctoral%20Fellow%20Application%20-%20Bayesian%20Spatio-temporal%20Data), with your CV and specific information about how you fit well in this domain.
 
 In general, students and researchers willing to join/collaborate with the group may submit their CV and a short statement of interest through the contact page. For any postdoctoral position, applicants are expected to have a PhD and relevant expertise in probability theory, Bayesian methods, time series, spatial modelling, machine learning, or related areas. For short-term internships or research assistantships, applicants should have a strong motivation to pursue higher studies, and should clearly explain their research interests in the application, along with technical background, and how their interests connect with the group's work.
