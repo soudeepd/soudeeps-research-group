@@ -1,5 +1,5 @@
-title: Soudeep Deb Research Group
-description: Research, publications, consulting, alumni, and activities of Soudeep Deb's research group.
+title: SIGNAL Lab by Prof. Soudeep Deb
+description: Research, publications, consulting, and other information of Prof. Soudeep Deb's research group.
 
 url: "https://soudeepd.github.io"
 baseurl: "/soudeeps-research-group"
@@ -14,6 +14,7 @@ include:
 header_pages:
   - _pages/research.md
   - _pages/consulting.md
-  - _pages/activities.md
+  - _pages/member.md
   - _pages/alumni.md
+  - _pages/news.md
   - _pages/contact.md
