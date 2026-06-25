@@ -4,27 +4,13 @@ title: Contact
 permalink: /contact/
 ---
 
-# Contact
+For research, consulting, collaboration, alumni, or student-related enquiries, please use the form below or write by email. 
 
-For research, consulting, collaboration, alumni, or student-related enquiries, please use the form below or write by email.
+If you are writing about a research assistantship, internship, doctoral supervision, or postdoctoral position, please mention your academic background, technical skills, research interests, and a brief explanation of how your interests connect with the group's work. If this information is missing, your query may remain unanswered.
 
-## Email
+For consulting enquiries, please include a short description of the problem, the available data, the expected timeline, and the intended use of the analysis.
 
-**Research group email:** [soudeeps.research.group@gmail.com](mailto:soudeeps.research.group@gmail.com)
-
-**Soudeep Deb:** [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in)
-
-## Office address
-
-Soudeep Deb  
-Faculty Block C, C-201  
-Decision Sciences Area  
-Indian Institute of Management Bangalore  
-Bannerghatta Road  
-Bengaluru, Karnataka 560076  
-India
-
-## Contact form
+### Contact form
 
 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
@@ -61,8 +47,16 @@ India
 
 </form>
 
-## Notes for students and prospective researchers
+### Contact details
 
-If you are writing about a research assistantship, internship, doctoral supervision, or postdoctoral position, please include your CV, academic background, technical skills, research interests, and a brief explanation of how your interests connect with the group's work. If this information is missing, your query may remain unanswered.
+**Research group email:** [soudeeps.research.group@gmail.com](mailto:soudeeps.research.group@gmail.com)
 
-For consulting enquiries, please include a short description of the problem, the available data, the expected timeline, and the intended use of the analysis.
+**Address of the PI**:
+
+Soudeep Deb  
+Faculty Block C, C-201  
+Decision Sciences Area  
+Indian Institute of Management Bangalore  
+Bannerghatta Road, Bengaluru, KA 560076, India.  
+Email:  [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in)
+
