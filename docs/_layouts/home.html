@@ -4,15 +4,7 @@ layout: default
 
 <section class="hero">
   <div class="container hero-grid">
-    <div>
-      <div class="hero-logo-wrap">
-        <img
-          src="{{ site.baseurl }}/assets/images/logo/signal-logo.png"
-          alt="SIGNAL Lab logo"
-          class="hero-logo"
-        >
-      </div>
-
+    <div class="hero-main">
       <p class="eyebrow">Prof. Soudeep Deb's</p>
       <h1>SIGNAL Lab</h1>
 
@@ -28,7 +20,13 @@ layout: default
       </div>
     </div>
 
-    <div class="hero-panel">
+    <div class="hero-panel hero-panel-with-logo">
+      <img
+        src="{{ site.baseurl }}/assets/images/logo/signal-logo.png"
+        alt="SIGNAL Lab logo"
+        class="hero-panel-logo"
+      >
+
       <h2>Research themes</h2>
       <ul>
         <li>Time series and forecasting</li>
