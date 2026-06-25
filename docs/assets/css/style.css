@@ -284,6 +284,29 @@ h3 {
   font-size: clamp(2.2rem, 4vw, 4.2rem);
 }
 
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 36px;
+  align-items: center;
+}
+
+.page-hero-logo-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page-hero-logo {
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(15, 23, 42, 0.14);
+}
+
 .page-content {
   padding: 52px 0 80px;
 }
@@ -642,6 +665,18 @@ button:hover {
   .page-hero {
     padding: 56px 0 42px;
   }
+  
+  .page-hero-grid {
+  grid-template-columns: 1fr;
+}
+
+.page-hero-logo-wrap {
+  justify-content: flex-start;
+}
+
+.page-hero-logo {
+  width: 220px;
+}
 }
 
 @media (max-width: 760px) {

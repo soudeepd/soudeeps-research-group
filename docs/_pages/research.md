@@ -4,8 +4,6 @@ title: Research & Publications
 permalink: /research/
 ---
 
-# Research & Publications
-
 The group works on statistical and machine learning methods for complex data, with a particular emphasis on time series, spatial and spatio-temporal data, forecasting, nonparametric methods, Bayesian modelling, and interdisciplinary applications.
 
 Our work is often motivated by real-world problems from climate, public health, finance, urban systems, social sciences, policy, and sports. The aim is to develop rigorous methods and apply them to data-rich problems where uncertainty, dependence, heterogeneity, and temporal or spatial structure play an important role.

@@ -4,8 +4,6 @@ title: Consulting
 permalink: /consulting/
 ---
 
-# Consulting
-
 The group undertakes consulting, advisory, and collaborative research projects involving statistics, data science, machine learning, forecasting, policy evaluation, and empirical analysis.
 
 Our consulting work is motivated by real-world data problems where rigorous statistical thinking, careful modelling, and interpretable analysis can support better decision-making.
