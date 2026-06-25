@@ -1,0 +1,56 @@
+- name: Kunal Rai
+  category: phd
+  image: /assets/images/members/Kunal_Rai.jpg
+  role: PhD student, IIM Bangalore (exp 2026)
+  themes: Time series · Nonparametrics · Financial data · Physics-informed neural network
+  email: kunal.rai21@iimb.ac.in
+  profile: 
+
+- name: Amrutha Seshagiri
+  category: phd
+  image: /assets/images/members/Amrutha_Seshagiri.jpg
+  role: PhD student, IIM Bangalore (exp 2028)
+  themes: Econometrics · Tourism analytics · Bayesian methods · Time series
+  email: amrutha.seshagiri23@iimb.ac.in
+  profile: 
+
+- name: Lizan Meryl Pereira
+  category: phd
+  image: /assets/images/members/Lizan_Pereira.jpg
+  role: PhD student, IIM Bangalore (exp 2029)
+  themes: Spatio-temporal modeling · Environmental research · Bayesian methods · Extreme value
+  email: lizan.pereira24@iimb.ac.in
+  profile: 
+
+- name: Shagun Srivastava
+  category: phd
+  image: /assets/images/members/Shagun_Srivastava.jpg
+  role: PhD student, IIM Bangalore (exp 2029)
+  themes: Spatio-temporal modeling · Real estate · Bayesian methods
+  email: shagun.srivastava24@iimb.ac.in
+  profile: 
+
+- name: Shobhit Gupta
+  category: phd
+  image: /assets/images/members/Shobhit_Gupta.jpg
+  role: PhD student, IIM Bangalore (exp 2029)
+  themes: Machine learning · Sports analytics · Ensemble learning 
+  email: shobhit.gupta25@iimb.ac.in
+  profile: 
+
+
+- name: Madhab Barman
+  category: postdoc
+  image: /assets/images/members/Madhab_Barman.jpg
+  role: Working since 2025
+  themes: Machine learning · Extreme value theory · Environmental research · Applied mathematics 
+  email: madhab.barman@iimb.ac.in
+  profile: 
+
+- name: Mohd Irfan
+  category: postdoc
+  image: /assets/images/members/Mohd_Irfan.jpg
+  role: Working since 2026
+  themes: Real estate · Bayesian methods · Mixture model
+  email: mohd.irfan@iimb.ac.in
+  profile: 

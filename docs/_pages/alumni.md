@@ -8,28 +8,43 @@ permalink: /alumni/
 
 This page lists former doctoral students, postdoctoral fellows, and other research assistants who have worked with Prof. Soudeep Deb and have coauthored at least one research paper or case study. The alumni directory is intended to document the academic and professional journeys of people associated with the group and to help future students, collaborators, and alumni understand the range of research areas connected with the group.
 
-<div class="alumni-list">
+<div class="member-grid">
 {% for person in site.data.alumni %}
-  <div class="alumni-card">
-    <img src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
-    <div>
-      <h3>{{ person.name }}</h3>
-      <p><strong>Association with the group:</strong> {{ person.association }}</p>
-      <p><strong>Period:</strong> {{ person.period }}</p>
-      <p><strong>Thesis / project:</strong> {{ person.project }}</p>
-      <p><strong>Research themes:</strong> {{ person.themes }}</p>
-      <p><strong>Current position:</strong> {{ person.current_position }}</p>
-      <p>{{ person.bio }}</p>
+  <article class="member-card">
+    {% if person.image %}
+      <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
+    {% endif %}
 
-      {% if person.links %}
-      <p>
-        {% for link in person.links %}
-          <a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
-        {% endfor %}
-      </p>
+    <div class="member-info">
+      <h3>{{ person.name }}</h3>
+
+      {% if person.role %}
+        <p class="member-role">{{ person.role }}</p>
       {% endif %}
+
+      {% if person.period %}
+        <p class="member-meta">{{ person.period }}</p>
+      {% endif %}
+
+      {% if person.current %}
+        <p class="member-current">{{ person.current }}</p>
+      {% endif %}
+
+      {% if person.themes %}
+        <p class="member-tags">{{ person.themes }}</p>
+      {% endif %}
+
+      <div class="member-actions">
+        {% if person.webpage %}
+          <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
+        {% endif %}
+
+        {% if person.profile and person.profile != "#" %}
+          <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        {% endif %}
+      </div>
     </div>
-  </div>
+  </article>
 {% endfor %}
 </div>
 

@@ -1,25 +1,39 @@
-
-- name: Archi Roy
-  image: /assets/images/alumni/archi-roy.jpg
-  association: PhD student, co-supervised
+- name: Anchal Soni
+  image: /assets/images/alumni/Anchal_Soni.jpg
+  role: PhD student, IIM Bangalore
   period: Graduated August 2025
-  project: "Nonparametric methods for short and long-range dependent time series: Applications in financial and biomedical datasets"
-  themes: time series, nonparametric methods, financial data
-  current_position: Assistant Professor, Indian Institute of Management Kozhikode
-  bio: Archi worked on nonparametric methods for dependent data, with applications in financial datasets.
-  links:
-    - label: Profile
-      url: "#"
+  current: WNS
+  themes: Time series · Dimension reduction · Financial data · Multivariate data
+  webpage: 
 
+- name: Siddharth Rawat
+  image: /assets/images/members/Siddharth_Rawat.jpg
+  role: PhD student, IIM Bangalore
+  period: Graduated March 2023
+  current: Postdoctoral Fellow, NIHES, United States
+  themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
+  webpage: 
 
 - name: Kapil Gupta
-  image: /assets/images/alumni/kapil-gupta.jpg
-  association: PhD student
+  image: /assets/images/members/Kapil_Gupta.jpg
+  role: PhD student, IIM Bangalore
   period: Graduated March 2025
-  project: "Analyzing House Price Dynamics Using Novel Spatio-Temporal Methods"
-  themes: Spatio-temporal modelling, real estate analytics, sports analytics
-  current_position: Assistant Professor, Indian Institute of Management Kozhikode
-  bio: Kapil worked on spatio-temporal methods for house price dynamics and contributed to research in sports analytics and regression modelling.
-  links:
-    - label: Profile
-      url: "#"
+  current: Assistant Professor, IIM Kozhikode, India
+  themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
+  webpage: 
+
+- name: Archi Roy
+  image: /assets/images/alumni/Archi_Roy.jpg
+  role: PhD student, IISER Pune (co-supervised)
+  period: Graduated August 2025
+  current: Assistant Professor, IIM Kozhikode, India
+  themes: Time series · Nonparametrics · Financial data · Applied probability
+  webpage: 
+
+- name: Reetha Thomas
+  image: /assets/images/members/Reetha_Thomas.jpg
+  role: Postdoctoral Fellow
+  period: During 2024 -- 2025
+  current: Assistant Professor, IIIT Kottayam, India
+  themes: Deep learning · Quantile regression · Environmental research · Spatiotemporal data 
+  webpage: 
