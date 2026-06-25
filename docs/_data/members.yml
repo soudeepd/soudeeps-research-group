@@ -24,7 +24,7 @@
 
 - name: Shagun Srivastava
   category: phd
-  image: /assets/images/members/Shagun_Srivastava.jpg
+  image: /assets/images/members/Shagun_Srivastava.png
   role: PhD student, IIM Bangalore (exp 2029)
   themes: Spatio-temporal modeling · Real estate · Bayesian methods
   email: shagun.srivastava24@iimb.ac.in
@@ -32,7 +32,7 @@
 
 - name: Shobhit Gupta
   category: phd
-  image: /assets/images/members/Shobhit_Gupta.jpg
+  image: /assets/images/members/Shobhit_Gupta.png
   role: PhD student, IIM Bangalore (exp 2029)
   themes: Machine learning · Sports analytics · Ensemble learning 
   email: shobhit.gupta25@iimb.ac.in
@@ -53,4 +53,21 @@
   role: Working since 2026
   themes: Real estate · Bayesian methods · Mixture model
   email: mohd.irfan@iimb.ac.in
+  profile: 
+
+
+- name: Anitha Pathlavath
+  category: other
+  image: /assets/images/members/Anitha_Pathlavath.jpg
+  role: Research Associate, working since 2025
+  themes: Financial data · Deep learning · Time series
+  email: anitha.pathlavath@iimb.ac.in
+  profile: 
+
+- name: Ashish Yadav
+  category: other
+  image: /assets/images/members/blank.jpg
+  role: MS Student, IISER Mohali, working since 2026
+  themes: Financial data · Deep learning · Time series
+  email: ms22168@iisermohali.ac.in
   profile: 

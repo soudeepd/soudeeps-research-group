@@ -1,4 +1,5 @@
 - name: Anchal Soni
+  category: phd
   image: /assets/images/alumni/Anchal_Soni.jpg
   role: PhD student, IIM Bangalore
   period: Graduated February 2023
@@ -7,33 +8,74 @@
   webpage: "https://www.linkedin.com/in/dr-anchal-agarwal-soni-790703251/"
 
 - name: Siddharth Rawat
-  image: /assets/images/members/Siddharth_Rawat.png
+  category: phd
+  image: /assets/images/alumni/Siddharth_Rawat.png
   role: PhD student, IIM Bangalore
   period: Graduated March 2023
-  current: Postdoctoral Fellow, NIEHS, United States
-  themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
+  current: Postdoctoral Fellow, NIEHS, USA
+  themes: Spatio-temporal modelling · Public health · Environmental research · Bayesian methods
   webpage: "https://rawatsid.github.io/"
 
 - name: Kapil Gupta
-  image: /assets/images/members/Kapil_Gupta.jpg
+  category: phd
+  image: /assets/images/alumni/Kapil_Gupta.jpg
   role: PhD student, IIM Bangalore
   period: Graduated March 2025
   current: Assistant Professor, IIM Kozhikode, India
   themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
-  webpage: 
+  webpage: "https://kapil21gupta.github.io/"
 
 - name: Archi Roy
+  category: phd
   image: /assets/images/alumni/Archi_Roy.jpg
   role: PhD student, IISER Pune (co-supervised)
   period: Graduated August 2025
   current: Assistant Professor, IIM Kozhikode, India
   themes: Time series · Nonparametrics · Financial data · Applied probability
-  webpage: 
+  webpage: "https://sites.google.com/view/archi-roy"
+
+- name: Souvik Bag
+  category: other
+  image: /assets/images/alumni/Souvik_Bag.jpg
+  role: Predoctoral Fellow 
+  period: During 2021 -- 2022
+  current: PhD Student, University of Missouri, USA
+  themes: Variable selection · Binary data · Machine learning
+  webpage: "https://souvik-bag.github.io/"
+
+- name: Shreyash S Deshmukh
+  category: other
+  image: /assets/images/alumni/Shreyash_Deshmukh.jpg
+  role: Predoctoral Fellow 
+  period: During 2023 -- 2024
+  current: PhD Student, IIM Kozhikode, India
+  themes: Public health · Quantile regression · Time series
+  webpage: "https://www.linkedin.com/in/shrysdshmkh/"
 
 - name: Reetha Thomas
-  image: /assets/images/members/Reetha_Thomas.jpg
+  category: other
+  image: /assets/images/alumni/Reetha_Thomas.jpg
   role: Postdoctoral Fellow
   period: During 2024 -- 2025
   current: Assistant Professor, IIIT Kottayam, India
   themes: Deep learning · Quantile regression · Environmental research · Spatiotemporal data 
   webpage: "https://www.linkedin.com/in/reetha-thomas-992999217/"
+
+- name: Satyaki Basu Sarbadhikary
+  category: other
+  image: /assets/images/alumni/Satyaki.jpg
+  role: Research associate
+  period: During 2024 -- 2025
+  current: PhD Student, National University of Singapore
+  themes: Network · Sports analytics · Real estate · Policy evaluation 
+  webpage: "https://www.linkedin.com/in/satyaki-basu-sarbadhikary-2401a5234/"
+
+- name: Snehil Maurya
+  category: other
+  image: /assets/images/alumni/Snehil_Maurya.jpg
+  role: MS Student, IISER Mohali 
+  period: During 2025 -- 2026
+  current: Data Analyst, Deloitte, India
+  themes: Financial data · Optimization · Machine learning
+  webpage: "https://www.linkedin.com/in/snehil-maurya-a389221b8/"
+
