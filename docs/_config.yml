@@ -14,7 +14,7 @@ include:
 header_pages:
   - _pages/research.md
   - _pages/consulting.md
-  - _pages/member.md
+  - _pages/members.md
   - _pages/alumni.md
   - _pages/news.md
   - _pages/contact.md
