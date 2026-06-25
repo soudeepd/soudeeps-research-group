@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Contact
@@ -7,7 +6,7 @@ permalink: /contact/
 
 # Contact
 
-For research, consulting, collaboration, alumni, or student-related enquiries, please use the form below (preferred) or write by email (response may be given selectively).
+For research, consulting, collaboration, alumni, or student-related enquiries, please use the form below or write by email.
 
 ## Email
 
@@ -18,7 +17,7 @@ For research, consulting, collaboration, alumni, or student-related enquiries, p
 ## Office address
 
 Soudeep Deb  
-Faculty Block C, C-201
+Faculty Block C, C-201  
 Decision Sciences Area  
 Indian Institute of Management Bangalore  
 Bannerghatta Road  
@@ -27,7 +26,7 @@ India
 
 ## Contact form
 
-<form action="https://formspree.io/f/mpqgzyqg" method="POST">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
   <p>
     <label for="name">Name</label><br>
@@ -64,6 +63,6 @@ India
 
 ## Notes for students and prospective researchers
 
-If you are writing about a research assistantship, internship, doctoral supervision, or postdoctoral position, please include your CV, academic background, technical skills, research interests, and a brief explanation of how your interests connect with the group's work. If any of these informations is missing, your query may remain unanswered.
+If you are writing about a research assistantship, internship, doctoral supervision, or postdoctoral position, please include your CV, academic background, technical skills, research interests, and a brief explanation of how your interests connect with the group's work. If this information is missing, your query may remain unanswered.
 
 For consulting enquiries, please include a short description of the problem, the available data, the expected timeline, and the intended use of the analysis.
