@@ -56,17 +56,61 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(248, 250, 252, 0.88);
+  background: rgba(248, 250, 252, 0.9);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
 
 .nav-wrap {
-  min-height: 72px;
+  min-height: 76px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--text);
+  text-decoration: none;
+  min-width: 245px;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.16);
+  background: #ffffff;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-title {
+  color: var(--text);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: 1.08rem;
+}
+
+.brand-subtitle {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .site-title {
@@ -270,6 +314,14 @@ h3 {
   margin-top: 2rem;
 }
 
+.member-section h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.45rem;
+}
+
 .member-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -333,19 +385,6 @@ h3 {
   font-weight: 600;
 }
 
-.mini-label {
-  display: inline-block;
-  margin-right: 6px;
-  padding: 2px 7px;
-  border-radius: 999px;
-  background: #eaf1ff;
-  color: #1d4ed8;
-  font-size: 0.68rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
 .member-tags {
   margin: 0;
   font-size: 0.76rem;
@@ -371,6 +410,42 @@ h3 {
 
 .member-actions a {
   color: var(--accent);
+}
+
+.mini-label {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eaf1ff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Principal investigator card */
+
+.pi-grid {
+  grid-template-columns: minmax(320px, 520px);
+}
+
+.pi-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: stretch;
+  border: 1px solid rgba(29, 78, 216, 0.22);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.pi-card .member-photo {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.pi-card .member-info h3 {
+  font-size: 1.15rem;
 }
 
 /* Older alumni-card layout, retained in case any page still uses it */
@@ -508,6 +583,23 @@ button:hover {
   .member-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .pi-grid {
+    grid-template-columns: minmax(320px, 520px);
+  }
+}
+
+@media (max-width: 880px) {
+  .nav-wrap {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
 }
 
 @media (max-width: 820px) {
@@ -516,17 +608,6 @@ button:hover {
   .footer-grid,
   .alumni-card {
     grid-template-columns: 1fr;
-  }
-
-  .nav-wrap {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 18px 0;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    gap: 12px;
   }
 
   .page-content .container {
@@ -546,6 +627,18 @@ button:hover {
   .member-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .pi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pi-card {
+    display: block;
+  }
+
+  .pi-card .member-photo {
+    aspect-ratio: 4 / 3;
+  }
 }
 
 @media (max-width: 520px) {
@@ -553,8 +646,17 @@ button:hover {
     width: min(var(--max), calc(100% - 28px));
   }
 
-  .site-title {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-title {
     font-size: 1rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.7rem;
   }
 
   .site-nav {
@@ -578,4 +680,3 @@ button:hover {
     height: 140px;
   }
 }
-
