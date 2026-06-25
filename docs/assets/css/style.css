@@ -333,11 +333,31 @@ h3 {
   font-weight: 600;
 }
 
+.mini-label {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: #eaf1ff;
+  color: #1d4ed8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
 .member-tags {
   margin: 0;
   font-size: 0.76rem;
   color: #374151;
   line-height: 1.4;
+}
+
+.member-tags,
+.member-role,
+.member-current,
+.member-meta {
+  overflow-wrap: anywhere;
 }
 
 .member-actions {
@@ -558,3 +578,4 @@ button:hover {
     height: 140px;
   }
 }
+

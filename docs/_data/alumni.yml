@@ -1,7 +1,7 @@
 - name: Anchal Soni
   category: phd
   image: /assets/images/alumni/Anchal_Soni.jpg
-  role: PhD student, IIM Bangalore
+  role: PhD, IIM Bangalore
   period: Graduated February 2023
   current: Senior Consultant, WNS Global Services, India
   themes: Time series · Dimension reduction · Financial data · Multivariate data
@@ -10,7 +10,7 @@
 - name: Siddharth Rawat
   category: phd
   image: /assets/images/alumni/Siddharth_Rawat.png
-  role: PhD student, IIM Bangalore
+  role: PhD, IIM Bangalore
   period: Graduated March 2023
   current: Postdoctoral Fellow, NIEHS, USA
   themes: Spatio-temporal modelling · Public health · Environmental research · Bayesian methods
@@ -19,7 +19,7 @@
 - name: Kapil Gupta
   category: phd
   image: /assets/images/alumni/Kapil_Gupta.jpg
-  role: PhD student, IIM Bangalore
+  role: PhD, IIM Bangalore
   period: Graduated March 2025
   current: Assistant Professor, IIM Kozhikode, India
   themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
@@ -28,7 +28,7 @@
 - name: Archi Roy
   category: phd
   image: /assets/images/alumni/Archi_Roy.jpg
-  role: PhD student, IISER Pune (co-supervised)
+  role: PhD, IISER Pune (co-supervised)
   period: Graduated August 2025
   current: Assistant Professor, IIM Kozhikode, India
   themes: Time series · Nonparametrics · Financial data · Applied probability
@@ -37,7 +37,7 @@
 - name: Souvik Bag
   category: other
   image: /assets/images/alumni/Souvik_Bag.png
-  role: Predoctoral Fellow 
+  role: as Predoctoral Fellow 
   period: During 2021 -- 2022
   current: PhD Student, University of Missouri, USA
   themes: Variable selection · Binary data · Machine learning
@@ -73,9 +73,9 @@
 - name: Snehil Maurya
   category: other
   image: /assets/images/alumni/Snehil_Maurya.jpg
-  role: MS Student, IISER Mohali 
+  role: MS Thesis, IISER Mohali 
   period: During 2025 -- 2026
-  current: Data Analyst, Deloitte, India
+  current: Data Analyst, Deloitte (to join), India
   themes: Financial data · Optimization · Machine learning
   webpage: "https://www.linkedin.com/in/snehil-maurya-a389221b8/"
 

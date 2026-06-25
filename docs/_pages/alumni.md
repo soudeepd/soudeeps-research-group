@@ -35,8 +35,8 @@ The alumni directory is intended to document the academic and professional journ
         {% endif %}
 
         {% if person.current %}
-          <p class="member-current">{{ person.current }}</p>
-        {% endif %}
+  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+	{% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
@@ -81,8 +81,8 @@ The alumni directory is intended to document the academic and professional journ
         {% endif %}
 
         {% if person.current %}
-          <p class="member-current">{{ person.current }}</p>
-        {% endif %}
+  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+	{% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
@@ -127,8 +127,8 @@ The alumni directory is intended to document the academic and professional journ
         {% endif %}
 
         {% if person.current %}
-          <p class="member-current">{{ person.current }}</p>
-        {% endif %}
+  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+	{% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
