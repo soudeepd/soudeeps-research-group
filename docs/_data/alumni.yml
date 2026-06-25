@@ -1,18 +1,18 @@
 - name: Anchal Soni
   image: /assets/images/alumni/Anchal_Soni.jpg
   role: PhD student, IIM Bangalore
-  period: Graduated August 2025
-  current: WNS
+  period: Graduated February 2023
+  current: Senior Consultant, WNS Global Services, India
   themes: Time series · Dimension reduction · Financial data · Multivariate data
-  webpage: 
+  webpage: "https://www.linkedin.com/in/dr-anchal-agarwal-soni-790703251/"
 
 - name: Siddharth Rawat
-  image: /assets/images/members/Siddharth_Rawat.jpg
+  image: /assets/images/members/Siddharth_Rawat.png
   role: PhD student, IIM Bangalore
   period: Graduated March 2023
-  current: Postdoctoral Fellow, NIHES, United States
+  current: Postdoctoral Fellow, NIEHS, United States
   themes: Spatio-temporal modelling · Real estate · Sports analytics · Bayesian methods
-  webpage: 
+  webpage: "https://rawatsid.github.io/"
 
 - name: Kapil Gupta
   image: /assets/images/members/Kapil_Gupta.jpg
@@ -36,4 +36,4 @@
   period: During 2024 -- 2025
   current: Assistant Professor, IIIT Kottayam, India
   themes: Deep learning · Quantile regression · Environmental research · Spatiotemporal data 
-  webpage: 
+  webpage: "https://www.linkedin.com/in/reetha-thomas-992999217/"

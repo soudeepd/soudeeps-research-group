@@ -4,8 +4,6 @@ title: Alumni
 permalink: /alumni/
 ---
 
-# Alumni
-
 This page lists former doctoral students, postdoctoral fellows, and other research assistants who have worked with Prof. Soudeep Deb and have coauthored at least one research paper or case study.
 
 The alumni directory is intended to document the academic and professional journeys of people associated with the group and to help future students, collaborators, and alumni understand the range of research areas connected with the group.

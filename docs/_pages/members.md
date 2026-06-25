@@ -4,8 +4,6 @@ title: Members
 permalink: /members/
 ---
 
-# Members
-
 Following are the current members of SIGNAL Lab, who are working in different capacities.
 
 {% assign phd_members = site.data.members | where: "category", "phd" %}
