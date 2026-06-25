@@ -1,4 +1,3 @@
-
 ---
 layout: page
 title: Members
@@ -15,145 +14,153 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 {% assign other_members = site.data.members | where: "category", "other" %}
 
 {% if phd_members.size > 0 %}
-## PhD students
+<section class="member-section">
+  <h2>PhD students</h2>
 
-<div class="member-grid">
-{% for person in phd_members %}
-  <article class="member-card">
-    {% if person.image %}
-      <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
-    {% endif %}
-
-    <div class="member-info">
-      <h3>{{ person.name }}</h3>
-
-      {% if person.role %}
-        <p class="member-role">{{ person.role }}</p>
+  <div class="member-grid">
+  {% for person in phd_members %}
+    <article class="member-card">
+      {% if person.image %}
+        <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
 
-      {% if person.themes %}
-        <p class="member-tags">{{ person.themes }}</p>
-      {% endif %}
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
 
-      <div class="member-actions">
-        {% if person.email %}
-          <a href="mailto:{{ person.email }}">Email</a>
+        {% if person.role %}
+          <p class="member-role">{{ person.role }}</p>
         {% endif %}
 
-        {% if person.profile and person.profile != "#" %}
-          <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        {% if person.themes %}
+          <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
+
+        <div class="member-actions">
+          {% if person.email %}
+            <a href="mailto:{{ person.email }}">Email</a>
+          {% endif %}
+
+          {% if person.profile and person.profile != "#" %}
+            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  </article>
-{% endfor %}
-</div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
 {% endif %}
 
 {% if postdoc_members.size > 0 %}
-## Postdoctoral fellows
+<section class="member-section">
+  <h2>Postdoctoral fellows</h2>
 
-<div class="member-grid">
-{% for person in postdoc_members %}
-  <article class="member-card">
-    {% if person.image %}
-      <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
-    {% endif %}
-
-    <div class="member-info">
-      <h3>{{ person.name }}</h3>
-
-      {% if person.role %}
-        <p class="member-role">{{ person.role }}</p>
+  <div class="member-grid">
+  {% for person in postdoc_members %}
+    <article class="member-card">
+      {% if person.image %}
+        <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
 
-      {% if person.themes %}
-        <p class="member-tags">{{ person.themes }}</p>
-      {% endif %}
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
 
-      <div class="member-actions">
-        {% if person.email %}
-          <a href="mailto:{{ person.email }}">Email</a>
+        {% if person.role %}
+          <p class="member-role">{{ person.role }}</p>
         {% endif %}
 
-        {% if person.profile and person.profile != "#" %}
-          <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        {% if person.themes %}
+          <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
+
+        <div class="member-actions">
+          {% if person.email %}
+            <a href="mailto:{{ person.email }}">Email</a>
+          {% endif %}
+
+          {% if person.profile and person.profile != "#" %}
+            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  </article>
-{% endfor %}
-</div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
 {% endif %}
 
 {% if masters_members.size > 0 %}
-## Master's students
+<section class="member-section">
+  <h2>Master's students</h2>
 
-<div class="member-grid">
-{% for person in masters_members %}
-  <article class="member-card">
-    {% if person.image %}
-      <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
-    {% endif %}
-
-    <div class="member-info">
-      <h3>{{ person.name }}</h3>
-
-      {% if person.role %}
-        <p class="member-role">{{ person.role }}</p>
+  <div class="member-grid">
+  {% for person in masters_members %}
+    <article class="member-card">
+      {% if person.image %}
+        <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
 
-      {% if person.themes %}
-        <p class="member-tags">{{ person.themes }}</p>
-      {% endif %}
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
 
-      <div class="member-actions">
-        {% if person.email %}
-          <a href="mailto:{{ person.email }}">Email</a>
+        {% if person.role %}
+          <p class="member-role">{{ person.role }}</p>
         {% endif %}
 
-        {% if person.profile and person.profile != "#" %}
-          <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        {% if person.themes %}
+          <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
+
+        <div class="member-actions">
+          {% if person.email %}
+            <a href="mailto:{{ person.email }}">Email</a>
+          {% endif %}
+
+          {% if person.profile and person.profile != "#" %}
+            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  </article>
-{% endfor %}
-</div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
 {% endif %}
 
 {% if other_members.size > 0 %}
-## Other members
+<section class="member-section">
+  <h2>Other members</h2>
 
-<div class="member-grid">
-{% for person in other_members %}
-  <article class="member-card">
-    {% if person.image %}
-      <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
-    {% endif %}
-
-    <div class="member-info">
-      <h3>{{ person.name }}</h3>
-
-      {% if person.role %}
-        <p class="member-role">{{ person.role }}</p>
+  <div class="member-grid">
+  {% for person in other_members %}
+    <article class="member-card">
+      {% if person.image %}
+        <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
 
-      {% if person.themes %}
-        <p class="member-tags">{{ person.themes }}</p>
-      {% endif %}
+      <div class="member-info">
+        <h3>{{ person.name }}</h3>
 
-      <div class="member-actions">
-        {% if person.email %}
-          <a href="mailto:{{ person.email }}">Email</a>
+        {% if person.role %}
+          <p class="member-role">{{ person.role }}</p>
         {% endif %}
 
-        {% if person.profile and person.profile != "#" %}
-          <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        {% if person.themes %}
+          <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
+
+        <div class="member-actions">
+          {% if person.email %}
+            <a href="mailto:{{ person.email }}">Email</a>
+          {% endif %}
+
+          {% if person.profile and person.profile != "#" %}
+            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% endif %}
+        </div>
       </div>
-    </div>
-  </article>
-{% endfor %}
-</div>
+    </article>
+  {% endfor %}
+  </div>
+</section>
 {% endif %}
