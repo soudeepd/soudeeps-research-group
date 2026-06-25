@@ -161,6 +161,19 @@ img {
   letter-spacing: 0.16em;
 }
 
+.hero-logo-wrap {
+  margin-bottom: 24px;
+}
+
+.hero-logo {
+  width: min(440px, 100%);
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+  background: #ffffff;
+}
+
 h1,
 h2,
 h3 {
