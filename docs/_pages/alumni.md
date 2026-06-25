@@ -44,7 +44,7 @@ The alumni directory is intended to document the academic and professional journ
 
         <div class="member-actions">
           {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage / LinkedIn</a>
+            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
           {% endif %}
 
           {% if person.profile and person.profile != "#" %}
@@ -90,7 +90,7 @@ The alumni directory is intended to document the academic and professional journ
 
         <div class="member-actions">
           {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage / LinkedIn</a>
+            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
           {% endif %}
 
           {% if person.profile and person.profile != "#" %}
@@ -136,7 +136,7 @@ The alumni directory is intended to document the academic and professional journ
 
         <div class="member-actions">
           {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage / LinkedIn</a>
+            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
           {% endif %}
 
           {% if person.profile and person.profile != "#" %}
