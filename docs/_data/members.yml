@@ -1,3 +1,11 @@
+- name: Soudeep Deb
+  category: pi
+  image: /assets/images/members/Soudeep_Deb.jpg
+  role: Associate Professor, IIM Bangalore
+  themes: Statistical inference · Time series · Spatio-temporal modelling · Analytics · Learning
+  email: soudeep@iimb.ac.in
+  profile:
+
 - name: Kunal Rai
   category: phd
   image: /assets/images/members/Kunal_Rai.jpg
