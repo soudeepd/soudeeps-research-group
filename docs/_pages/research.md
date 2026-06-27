@@ -10,64 +10,67 @@ Our work is often motivated by real-world problems from climate, public health, 
 
 ## Key research themes
 
+<p class="section-note">
+Click on a theme to view related publications.
+</p>
+
 <div class="theme-grid">
-{% for theme in site.data.themes %}
-  <section class="theme-card" id="{{ theme.id }}">
-    <div class="theme-icon">{{ theme.icon }}</div>
-    <h3>{{ theme.name }}</h3>
-    <p>{{ theme.description }}</p>
-
-    {% if theme.keywords %}
-      <div class="theme-keywords">
-      {% for keyword in theme.keywords %}
-        <span>{{ keyword }}</span>
-      {% endfor %}
-      </div>
-    {% endif %}
-
-    <p class="theme-link">
-      <a href="#pubs-{{ theme.id }}">View related publications</a>
-    </p>
-  </section>
-{% endfor %}
-</div>
-
-## Publications by theme
-
 {% for theme in site.data.themes %}
   {% assign theme_papers = site.data.publications | where_exp: "paper", "paper.themes contains theme.id" %}
 
-  {% if theme_papers.size > 0 %}
-  <section class="theme-publication-section" id="pubs-{{ theme.id }}">
-    <h3>{{ theme.name }}</h3>
+  <details class="theme-card theme-details" id="{{ theme.id }}">
+    <summary class="theme-summary">
+      <div class="theme-icon">{{ theme.icon }}</div>
+      <h3>{{ theme.name }}</h3>
+      <p>{{ theme.description }}</p>
 
-    <div class="publication-compact-list">
-    {% for paper in theme_papers %}
-      <article class="publication-item">
-        <div class="publication-main">
-          <p class="publication-title">{{ paper.title }}</p>
-          <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
-          {% if paper.venue %}
-            <p class="publication-venue">{{ paper.venue }}</p>
-          {% endif %}
+      {% if theme.keywords %}
+        <div class="theme-keywords">
+        {% for keyword in theme.keywords %}
+          <span>{{ keyword }}</span>
+        {% endfor %}
         </div>
+      {% endif %}
 
-        <div class="publication-links">
-          {% for link in paper.links %}
-            {% assign first_char = link.url | slice: 0 %}
-            {% if first_char == "/" %}
-              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-            {% else %}
-              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+      <span class="theme-click-label">
+        View related publications
+      </span>
+    </summary>
+
+    {% if theme_papers.size > 0 %}
+      <div class="theme-paper-panel">
+        {% for paper in theme_papers %}
+          <article class="theme-paper-item">
+            <p class="theme-paper-title">{{ paper.title }}</p>
+            <p class="theme-paper-meta">
+              {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+            </p>
+
+            {% if paper.venue %}
+              <p class="theme-paper-venue">{{ paper.venue }}</p>
             {% endif %}
-          {% endfor %}
-        </div>
-      </article>
-    {% endfor %}
-    </div>
-  </section>
-  {% endif %}
+
+            <div class="publication-links theme-paper-links">
+              {% for link in paper.links %}
+                {% assign first_char = link.url | slice: 0 %}
+                {% if first_char == "/" %}
+                  <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                {% else %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="theme-paper-panel">
+        <p class="theme-paper-empty">No publications listed under this theme yet.</p>
+      </div>
+    {% endif %}
+  </details>
 {% endfor %}
+</div>
 
 ## Pre-prints and working papers
 
@@ -81,6 +84,9 @@ Our work is often motivated by real-world problems from climate, public health, 
       <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
       {% if paper.venue %}
         <p class="publication-venue">{{ paper.venue }}</p>
+      {% endif %}
+      {% if paper.status %}
+        <span class="publication-status">{{ paper.status }}</span>
       {% endif %}
     </div>
 
@@ -110,6 +116,9 @@ Our work is often motivated by real-world problems from climate, public health, 
       <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
       {% if paper.venue %}
         <p class="publication-venue">{{ paper.venue }}</p>
+      {% endif %}
+      {% if paper.status %}
+        <span class="publication-status">{{ paper.status }}</span>
       {% endif %}
     </div>
 
