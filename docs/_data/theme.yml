@@ -1,0 +1,88 @@
+- id: time-series
+  name: Time series and forecasting
+  icon: "📈"
+  description: Methods for analysing dependent data, forecasting future outcomes, detecting temporal changes, and understanding uncertainty in sequential processes.
+  keywords:
+    - time series
+    - forecasting
+    - structural breaks
+    - volatility
+    - sequential data
+
+- id: spatio-temporal
+  name: Spatio-temporal modelling
+  icon: "🌍"
+  description: Statistical models for data varying over space and time, with applications in air pollution, climate, real estate, disease spread, and urban systems.
+  keywords:
+    - spatial data
+    - spatio-temporal processes
+    - air pollution
+    - real estate
+    - public health
+
+- id: quantile-extremes
+  name: Quantile regression and extremes
+  icon: "⚡"
+  description: Quantile-based and tail-focused methods for understanding heterogeneous responses, risks, and extreme behaviour.
+  keywords:
+    - quantile regression
+    - extremes
+    - tail risk
+    - climate
+    - finance
+
+- id: statistical-learning
+  name: Statistical learning
+  icon: "🧠"
+  description: Machine learning, deep learning, ensemble learning, and statistical learning methods for complex empirical datasets.
+  keywords:
+    - machine learning
+    - deep learning
+    - ensemble methods
+    - classification
+    - prediction
+
+- id: sports-analytics
+  name: Sports analytics
+  icon: "⚽"
+  description: Statistical modelling and analytics for football, cricket, tennis, kabaddi, and other sports.
+  keywords:
+    - sports analytics
+    - player valuation
+    - match forecasting
+    - strategy
+    - competitive balance
+
+- id: environmental-research
+  name: Environmental research
+  icon: "🌱"
+  description: Applied research using environmental datasets such as air pollution, rainfall, flooding, land surface temperature, and climate data.
+  keywords:
+    - air pollution
+    - rainfall
+    - flooding
+    - climate
+    - land surface temperature
+
+- id: real-estate-urban
+  name: Real estate and urban analytics
+  icon: "🏙️"
+  description: Statistical methods for large real estate datasets, rental indices, spatial zoning, urban systems, and policy-relevant analytics.
+  keywords:
+    - real estate
+    - rental index
+    - urban analytics
+    - spatial zoning
+    - policy evaluation
+
+- id: other-applications
+  name: Other applications
+  icon: "🔬"
+  description: Applied statistical and machine learning research in areas beyond the lab's main thematic clusters, including public health, social systems, policy studies, education, management, and interdisciplinary empirical applications.
+  keywords:
+    - public health
+    - social systems
+    - policy studies
+    - education
+    - management
+    - interdisciplinary applications

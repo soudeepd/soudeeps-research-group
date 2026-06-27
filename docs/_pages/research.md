@@ -4,80 +4,125 @@ title: Research & Publications
 permalink: /research/
 ---
 
-The group works on statistical and machine learning methods for complex data, with a particular emphasis on time series, spatial and spatio-temporal data, forecasting, nonparametric methods, Bayesian modelling, and interdisciplinary applications.
+The research group works on statistical and machine learning methods for complex data, with a particular emphasis on time series, spatial and spatio-temporal data, forecasting, nonparametric methods, Bayesian modelling, and interdisciplinary applications.
 
 Our work is often motivated by real-world problems from climate, public health, finance, urban systems, social sciences, policy, and sports. The aim is to develop rigorous methods and apply them to data-rich problems where uncertainty, dependence, heterogeneity, and temporal or spatial structure play an important role.
 
-## Research themes
+## Key research themes
 
-### Time series and forecasting
+<div class="theme-grid">
+{% for theme in site.data.themes %}
+  <section class="theme-card" id="{{ theme.id }}">
+    <div class="theme-icon">{{ theme.icon }}</div>
+    <h3>{{ theme.name }}</h3>
+    <p>{{ theme.description }}</p>
 
-We work on methods for analysing dependent data, forecasting future outcomes, detecting changes in temporal patterns, and understanding uncertainty in sequential processes. Applications include finance, public health, elections, internet search behaviour, exchange rates, cryptocurrency markets, and sports.
+    {% if theme.keywords %}
+      <div class="theme-keywords">
+      {% for keyword in theme.keywords %}
+        <span>{{ keyword }}</span>
+      {% endfor %}
+      </div>
+    {% endif %}
 
-Related keywords: time series, forecasting, structural breaks, stochastic processes, dependence, volatility, financial time series, public health surveillance.
+    <p class="theme-link">
+      <a href="#pubs-{{ theme.id }}">View related publications</a>
+    </p>
+  </section>
+{% endfor %}
+</div>
 
-### Spatio-temporal modelling
+## Publications by theme
 
-A major part of the group's research focuses on spatial and spatio-temporal data. These methods are useful when observations vary over both space and time, such as air pollution, climate data, real estate prices, disease spread, urban systems, and environmental processes.
+{% for theme in site.data.themes %}
+  {% assign theme_papers = site.data.publications | where_exp: "paper", "paper.themes contains theme.id" %}
 
-Related keywords: spatial data, spatio-temporal modelling, random fields, air pollution, climate data, real estate analytics, COVID-19 spread, environmental statistics.
+  {% if theme_papers.size > 0 %}
+  <section class="theme-publication-section" id="pubs-{{ theme.id }}">
+    <h3>{{ theme.name }}</h3>
 
-### Quantile regression and extremes
+    <div class="publication-compact-list">
+    {% for paper in theme_papers %}
+      <article class="publication-item">
+        <div class="publication-main">
+          <p class="publication-title">{{ paper.title }}</p>
+          <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
+          {% if paper.venue %}
+            <p class="publication-venue">{{ paper.venue }}</p>
+          {% endif %}
+        </div>
 
-The group studies quantile-based methods and extreme value problems for time series and spatial or spatio-temporal processes. These methods are especially useful when the interest is not only in average behaviour but also in tail behaviour, risk, extremes, and heterogeneous responses.
+        <div class="publication-links">
+          {% for link in paper.links %}
+            {% assign first_char = link.url | slice: 0 %}
+            {% if first_char == "/" %}
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% else %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}
 
-Related keywords: quantile regression, extreme value theory, climate extremes, financial risk, tail behaviour, nonparametric regression.
+## Pre-prints and working papers
 
-### Categorical and discrete time series
+{% assign preprints = site.data.publications | where: "type", "preprint" %}
 
-Several real-world datasets consist of binary, categorical, ordinal, or count-valued observations collected over time or across locations. The group works on statistical models and inference methods for such data, with applications in epidemiology, ordered categorical data, and social or behavioural processes.
+<div class="publication-compact-list">
+{% for paper in preprints %}
+  <article class="publication-item">
+    <div class="publication-main">
+      <p class="publication-title">{{ paper.title }}</p>
+      <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
+      {% if paper.venue %}
+        <p class="publication-venue">{{ paper.venue }}</p>
+      {% endif %}
+    </div>
 
-Related keywords: categorical data, discrete time series, binary data, count data, ordered categorical data, epidemiology.
+    <div class="publication-links">
+      {% for link in paper.links %}
+        {% assign first_char = link.url | slice: 0 %}
+        {% if first_char == "/" %}
+          <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% else %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+{% endfor %}
+</div>
 
-### Statistical learning
+## Accepted publications since 2020
 
-The group develops and applies clustering and classification methods for time series, multivariate data, and spatio-temporal datasets. This includes methodological work as well as applications to real estate networks, financial data, sports data, and environmental datasets.
+{% assign accepted = site.data.publications | where: "type", "publication" %}
 
-Related keywords: clustering, classification, multivariate time series, anomaly detection, t-SNE, network data, machine learning.
+<div class="publication-compact-list">
+{% for paper in accepted %}
+  <article class="publication-item">
+    <div class="publication-main">
+      <p class="publication-title">{{ paper.title }}</p>
+      <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
+      {% if paper.venue %}
+        <p class="publication-venue">{{ paper.venue }}</p>
+      {% endif %}
+    </div>
 
-### Sports analytics
-
-The group has an active interest in statistical modelling and analytics for sports, especially football, cricket, tennis, and kabaddi. Research topics include match forecasting, player valuation, lineup selection, penalty shootouts, shot conversion, competitive balance, and performance analysis.
-
-Related keywords: sports analytics, football analytics, cricket analytics, Bayesian modelling, player valuation, match forecasting, penalty shootouts.
-
-### Environmental, urban, and policy analytics
-
-The group works on applied research involving air pollution, rainfall, flooding, land surface temperature, real estate markets, commercial rental indices, public programmes, and urban systems. These projects often combine statistical modelling, machine learning, policy evaluation, and domain-specific data.
-
-Related keywords: environmental analytics, urban analytics, air pollution, rainfall, flooding, real estate, policy evaluation, smart cities.
-
-## Publications
-
-The group's publications include books, journal articles, conference papers, working papers, preprints, policy briefs, and other published material.
-
-Major publication areas include:
-
-- Spatio-temporal modelling and random fields
-- Quantile regression and nonparametric methods
-- Time series forecasting and structural breaks
-- Air pollution, climate, epidemiology, and public health
-- Sports analytics
-- Financial analytics and volatility modelling
-- Urban and real estate analytics
-- Policy evaluation and applied empirical research
-
-A structured publication database will be added here. Each publication will eventually be cross-referenced with relevant themes, keywords, people, alumni, collaborators, datasets, code, and projects.
-
-## Books
-
-The group also contributes to educational material and textbooks.
-
-- **Business Analytics: Data to Decisions**  
-  Soudeep Deb and Shubhabrata Das, 2025.  
-  This book introduces analytical tools and methods for business analytics, probability, statistics, and introductory machine learning, with illustrations using real-life datasets, especially in the Indian context.
-
-- **Mathematical Techniques for Competitive Examinations**  
-  Soudeep Deb and Debangan Dey, 2023.  
-  This is a problem-based book for high-school students interested in advanced mathematical topics related to ISI and CMI entrance tests and Mathematics Olympiads.
-
+    <div class="publication-links">
+      {% for link in paper.links %}
+        {% assign first_char = link.url | slice: 0 %}
+        {% if first_char == "/" %}
+          <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% else %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </article>
+{% endfor %}
+</div>

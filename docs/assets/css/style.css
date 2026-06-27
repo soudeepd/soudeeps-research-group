@@ -243,7 +243,7 @@ h3 {
   text-decoration: none;
 }
 
-/* Research theme strip */
+/* Home research theme strip */
 
 .compact-theme-strip {
   grid-area: themes;
@@ -415,6 +415,150 @@ h3 {
   border-radius: 20px;
   padding: 24px;
   box-shadow: 0 14px 35px rgba(15, 23, 42, 0.06);
+}
+
+/* Research theme cards */
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 1.5rem 0 2.25rem;
+}
+
+.theme-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+  scroll-margin-top: 100px;
+}
+
+.theme-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.18rem;
+}
+
+.theme-card p {
+  margin: 0.45rem 0;
+  font-size: 0.92rem;
+}
+
+.theme-icon {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  font-size: 1.3rem;
+}
+
+.theme-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.theme-keywords span {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid var(--line);
+  color: #374151;
+  font-size: 0.72rem;
+  font-weight: 650;
+}
+
+.theme-link {
+  margin-top: 12px !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+}
+
+/* Publications */
+
+.theme-publication-section {
+  margin-top: 2.4rem;
+  scroll-margin-top: 100px;
+}
+
+.theme-publication-section h3 {
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.publication-compact-list {
+  display: grid;
+  gap: 10px;
+  margin: 1.2rem 0 2rem;
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+}
+
+.publication-title {
+  margin: 0 0 4px !important;
+  color: var(--text) !important;
+  font-size: 0.94rem;
+  font-weight: 760;
+  line-height: 1.35;
+}
+
+.publication-meta {
+  margin: 0 !important;
+  color: #4b5563 !important;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.publication-venue {
+  margin: 3px 0 0 !important;
+  color: #6b7280 !important;
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.publication-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: lowercase;
+}
+
+.publication-links a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 /* Members and alumni compact card grid */
@@ -764,6 +908,19 @@ button:hover {
 
   .page-content .container {
     padding: 26px;
+  }
+
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-item {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .publication-links {
+    justify-content: flex-start;
   }
 }
 

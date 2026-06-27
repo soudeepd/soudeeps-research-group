@@ -1,0 +1,511 @@
+- title: "Projection Diagnostics for Directional Asymmetry and Tail-Ratio Departure in Multivariate Data"
+  authors: "Banerjee, S., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - statistical-learning
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2606.03670"
+    - label: bibtex
+      url: "/assets/bibtex/banerjee2026projection.bib"
+
+- title: "Optimising football transfer strategy under budget constraints: A weighted multi-criteria approach"
+  authors: "Basu, T., Deb, S., Roy, R."
+  year: 2026
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - sports-analytics
+    - statistical-learning
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2605.13926"
+    - label: bibtex
+      url: "/assets/bibtex/basu2026optimising.bib"
+
+- title: "Nonparametric regression of spatio-temporal data using infinite-dimensional covariates"
+  authors: "Roy, S., Deb, S., Karmakar, S., Roy, R."
+  year: 2026
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - spatio-temporal
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2604.01593"
+    - label: bibtex
+      url: "/assets/bibtex/roy2026nonparametric.bib"
+
+- title: "Multiperiod volatility forecasting with optimization-based model selection: Evidence from NIFTY-50 Banks"
+  authors: "Rai, K., Anand, A., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Working paper"
+  venue: "SSRN"
+  themes:
+    - time-series
+  links:
+    - label: pre-print
+      url: "https://dx.doi.org/10.2139/ssrn.6513699"
+    - label: bibtex
+      url: "/assets/bibtex/rai2026multi.bib"
+
+- title: "A nonparametric approach to understand multivariate quantile dynamics in financial time series"
+  authors: "Rai, K., Roy, A., Dattner, I., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - time-series
+    - quantile-extremes
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2603.16400"
+    - label: bibtex
+      url: "/assets/bibtex/rai2026nonparametric.bib"
+
+- title: "Nonparametric method of structural break detection in stochastic time series regression model"
+  authors: "Roy, A., Podder, M., Deb, S."
+  year: 2024
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - time-series
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2410.15713"
+    - label: bibtex
+      url: "/assets/bibtex/roy2024nonparametric.bib"
+
+- title: "Nonparametric quantile regression for spatio-temporal processes"
+  authors: "Deb, S., Neves, C., Roy, S."
+  year: 2024
+  type: preprint
+  status: "Pre-print"
+  venue: "arXiv"
+  themes:
+    - spatio-temporal
+    - quantile-extremes
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2405.13783"
+    - label: bibtex
+      url: "/assets/bibtex/deb2024nonparametric2.bib"
+
+- title: "CPRI-Office: A new commercial property rental index for Indian cities using spatio-temporal modeling techniques"
+  authors: "Gupta, K., Srivastava, S., Deb, S., Panchapagesan, V."
+  year: 2025
+  type: preprint
+  status: "Working paper"
+  venue: "IIMB Working Paper No. 727/2025"
+  themes:
+    - real-estate-urban
+    - spatio-temporal
+  links:
+    - label: working paper
+      url: "https://www.iimb.ac.in/sites/default/files/2025-11/WP%20No.%20727.pdf"
+
+- title: "A review and recommendations on variable selection methods in regression models for binary data"
+  authors: "Bag, S., Gupta, K., Deb, S."
+  year: 2022
+  type: preprint
+  status: "Under resubmission"
+  venue: "arXiv"
+  themes:
+    - statistical-learning
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2201.06063"
+    - label: bibtex
+      url: "/assets/bibtex/bag2022review.bib"
+
+- title: "A Bayesian approach to identify changepoints in spatio-temporal ordered categorical data: An application to COVID-19 data"
+  authors: "Rawat, S., Durrant, A., Simpson, A., Nielson, G., Berrett, C., Deb, S."
+  year: 2023
+  type: preprint
+  status: "Under resubmission"
+  venue: "arXiv"
+  themes:
+    - spatio-temporal
+    - other-applications
+  links:
+    - label: pre-print
+      url: "https://arxiv.org/abs/2305.01906"
+    - label: bibtex
+      url: "/assets/bibtex/rawat2023bayesian.bib"
+
+- title: "Skill or chance? A Bayesian analysis of dependence and heterogeneity in penalty shootouts in football"
+  authors: "Deb, S."
+  year: 2026
+  type: publication
+  status: "Published"
+  venue: "Journal of Sports Analytics, 12"
+  themes:
+    - sports-analytics
+  links:
+    - label: publication
+      url: "https://journals.sagepub.com/doi/10.1177/22150218261444633"
+    - label: GitHub
+      url: "https://github.com/soudeepd/shootout-analysis"
+    - label: bibtex
+      url: "/assets/bibtex/deb2026skill.bib"
+
+- title: "E-STGCN: Extreme spatiotemporal graph convolutional networks for air quality forecasting"
+  authors: "Panja, M., Chakraborty, T., Biswas, A., Deb, S."
+  year: 2026
+  type: publication
+  status: "Published"
+  venue: "Journal of the Royal Statistical Society Series A: Statistics in Society, qnag010"
+  themes:
+    - environmental-research
+    - spatio-temporal
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://doi.org/10.1093/jrsssa/qnag010"
+    - label: bibtex
+      url: "/assets/bibtex/panja2026estgcn.bib"
+
+- title: "Optimal selection of the starting lineup for a football team"
+  authors: "Deb, S., Das, S."
+  year: 2026
+  type: publication
+  status: "Published"
+  venue: "IIMB Management Review, 100642"
+  themes:
+    - sports-analytics
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://doi.org/10.1016/j.iimb.2026.100642"
+    - label: bibtex
+      url: "/assets/bibtex/deb2026optimal.bib"
+
+- title: "A divide-and-conquer approach for spatio-temporal analysis of large house price data from Greater London"
+  authors: "Gupta, K., Deb, S."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "Annals of Operations Research, 1-42"
+  themes:
+    - real-estate-urban
+    - spatio-temporal
+  links:
+    - label: publication
+      url: "https://link.springer.com/article/10.1007/s10479-025-06889-x"
+    - label: bibtex
+      url: "/assets/bibtex/gupta2025divide.bib"
+
+- title: "A data-driven approach to spatial zoning and anomaly detection in the dynamic real estate network"
+  authors: "Basu Sarbadhikary, S., Roy, A., Deb, S."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "Environment and Planning B: Urban Analytics and City Science, 23998083251411954"
+  themes:
+    - real-estate-urban
+    - spatio-temporal
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://doi.org/10.1177/23998083251411954"
+    - label: bibtex
+      url: "/assets/bibtex/basu2025data.bib"
+
+- title: "tSNE-Spec: A new classification method for multivariate time series data"
+  authors: "Sen, S., Deb, S."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "Journal of Multivariate Analysis, 105537"
+  themes:
+    - time-series
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://doi.org/10.1016/j.jmva.2025.105537"
+    - label: bibtex
+      url: "/assets/bibtex/sen2025tsne.bib"
+
+- title: "Environmentally Responsible Index Tracking: Maintaining Performance while Reducing Carbon Footprint of the Portfolio"
+  authors: "Lakshmi M.V., Deb, S., Sen, R."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "Statistics and Applications, 23(1), 217-223"
+  themes:
+    - statistical-learning
+    - environmental-research
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.ssca.org.in/media/12_SA003_01_2024_R2_S_A_08062024_Rituparna_Sen_FINAL_Finally.pdf"
+    - label: bibtex
+      url: "/assets/bibtex/lakshmi2025environmentally.bib"
+
+- title: "A survey of statistical and machine learning methods of quantile regression in time series and their suitability in predicting dengue outbreaks"
+  authors: "Deshmukh, S. S., Deb, S."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "Japanese Journal of Statistics and Data Science, 8(1), 641-689"
+  themes:
+    - quantile-extremes
+    - time-series
+    - other-applications
+  links:
+    - label: publication
+      url: "https://link.springer.com/article/10.1007/s42081-025-00297-y"
+    - label: bibtex
+      url: "/assets/bibtex/deshmukh2025survey.bib"
+
+- title: "What elements of the opening set influence the outcome of a tennis match? An in-depth analysis of Wimbledon data"
+  authors: "Gupta, K., Krishnamurthy, V., Deb, S."
+  year: 2025
+  type: publication
+  status: "Published"
+  venue: "IIMB Management Review, 37(1), 100519"
+  themes:
+    - sports-analytics
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://www.sciencedirect.com/science/article/pii/S0970389624000089"
+    - label: bibtex
+      url: "/assets/bibtex/gupta2025elements.bib"
+
+- title: "Nonparametric quantile regression for time series with replicated observations and its application to climate data"
+  authors: "Deb, S., Jana, K."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "Statistical Science, 39(3), 428-448"
+  themes:
+    - time-series
+    - quantile-extremes
+    - environmental-research
+  links:
+    - label: publication
+      url: "https://projecteuclid.org/journals/statistical-science/volume-39/issue-3/Nonparametric-Quantile-Regression-for-Time-Series-with-Replicated-Observations-and/10.1214/23-STS918.short"
+    - label: bibtex
+      url: "/assets/bibtex/deb2024nonparametric.bib"
+
+- title: "Real-time forecasting within soccer matches through a Bayesian lens"
+  authors: "Divekar, C., Deb, S., Roy, R."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "Journal of the Royal Statistical Society Series A: Statistics in Society, 187(2), 513-540"
+  themes:
+    - sports-analytics
+    - time-series
+  links:
+    - label: publication
+      url: "https://doi.org/10.1093/jrsssa/qnad136"
+    - label: bibtex
+      url: "/assets/bibtex/divekar2024real.bib"
+
+- title: "Forecasting elections from partial information using a Bayesian model for a multinomial sequence of data"
+  authors: "Deb, S., Roy, R., Das, S."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "Journal of Forecasting, 43(6), 1814-1834"
+  themes:
+    - time-series
+    - other-applications
+  links:
+    - label: publication
+      url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/for.3107"
+    - label: bibtex
+      url: "/assets/bibtex/deb2024forecasting.bib"
+
+- title: "A spatio-temporal model for binary data and its application in analyzing the direction of COVID-19 spread"
+  authors: "Chattopadhyay, A., Deb, S."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "AStA Advances in Statistical Analysis, 108(4), 823-851"
+  themes:
+    - spatio-temporal
+    - other-applications
+  links:
+    - label: publication
+      url: "https://link.springer.com/article/10.1007/s10182-024-00507-0?utm_source=rct_congratemailt&utm_medium=email&utm_campaign=nonoa_20240708&utm_content=10.1007/s10182-024-00507-0"
+    - label: bibtex
+      url: "/assets/bibtex/chattopadhyay2024spatio.bib"
+
+- title: "New methods of structural break detection and an ensemble approach to analyse exchange rate volatility of Indian rupee during coronavirus pandemic"
+  authors: "Mareeswaran, M., Sen, S., Deb, S."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "Journal of the Royal Statistical Society Series A: Statistics in Society, 187(1), 39-61"
+  themes:
+    - time-series
+    - statistical-learning
+    - other-applications
+  links:
+    - label: publication
+      url: "https://academic.oup.com/jrsssa/article-abstract/187/1/39/7197368"
+    - label: bibtex
+      url: "/assets/bibtex/mareeswaran2024new.bib"
+
+- title: "Impact of COVID-19 on public social life and mental health: A statistical study of Google Trends data from the USA"
+  authors: "Roy, A., Deb, S., Chakarwarti, D."
+  year: 2024
+  type: publication
+  status: "Published"
+  venue: "Journal of Applied Statistics, 51(3), 581-605"
+  themes:
+    - time-series
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.tandfonline.com/doi/abs/10.1080/02664763.2022.2164562"
+    - label: bibtex
+      url: "/assets/bibtex/roy2024impact.bib"
+
+- title: "A wavelet-based methodology to compare the impact of pandemic versus Russia-Ukraine conflict on crude oil sector and its interconnectedness with other energy and non-energy markets"
+  authors: "Roy, A., Soni, A., Deb, S."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "Energy Economics, 124, 106830"
+  themes:
+    - time-series
+    - statistical-learning
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.sciencedirect.com/science/article/pii/S0140988323003286"
+    - label: bibtex
+      url: "/assets/bibtex/roy2023wavelet.bib"
+
+- title: "A novel spatio-temporal clustering algorithm with applications on COVID-19 data from the United States"
+  authors: "Deb, S., Karmakar, S."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "Computational Statistics & Data Analysis, 188, 107810"
+  themes:
+    - spatio-temporal
+    - statistical-learning
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.sciencedirect.com/science/article/pii/S0167947323001214"
+    - label: bibtex
+      url: "/assets/bibtex/deb2023novel.bib"
+
+- title: "A spatio-temporal statistical model to analyze COVID-19 spread in the USA"
+  authors: "Rawat, S., Deb, S."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "Journal of Applied Statistics, 50(11-12), 2310-2329"
+  themes:
+    - spatio-temporal
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.tandfonline.com/doi/full/10.1080/02664763.2021.1970122"
+    - label: bibtex
+      url: "/assets/bibtex/rawat2023spatio.bib"
+
+- title: "Analyzing airlines stock price volatility during COVID-19 pandemic through internet search data"
+  authors: "Deb, S."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "International Journal of Finance & Economics, 28(2), 1497-1513"
+  themes:
+    - time-series
+    - statistical-learning
+    - other-applications
+  links:
+    - label: publication
+      url: "https://onlinelibrary.wiley.com/doi/10.1002/ijfe.2490"
+    - label: bibtex
+      url: "/assets/bibtex/deb2023analyzing.bib"
+
+- title: "A quadratic trend-based time series method to analyze the early incidence pattern of COVID-19"
+  authors: "Deb, S., Majumdar, M."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "Biostatistics & Epidemiology, 7(1), e2076529"
+  themes:
+    - time-series
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.tandfonline.com/doi/full/10.1080/24709360.2022.2076529"
+    - label: bibtex
+      url: "/assets/bibtex/deb2023quadratic.bib"
+
+- title: "Prevalence and spectrum of diabetic peripheral neuropathy and its correlation with insulin resistance - An experience from eastern India"
+  authors: "Majumdar, M., Banerjee, M., Sengupta, J., Deb, S., Jana, C. K., Roy, B. K."
+  year: 2023
+  type: publication
+  status: "Published"
+  venue: "International Journal of Advanced Research, 11(06), 1085-1094"
+  themes:
+    - other-applications
+  links:
+    - label: publication
+      url: "https://www.journalijar.com/uploads/64bc018830053_IJAR-43799.pdf"
+    - label: bibtex
+      url: "/assets/bibtex/majumdar2023prevalence.bib"
+
+- title: "An ensemble method for early prediction of dengue outbreak"
+  authors: "Deb, S., Deb, S."
+  year: 2022
+  type: publication
+  status: "Published"
+  venue: "Journal of the Royal Statistical Society Series A, 185(1), 84-101"
+  themes:
+    - time-series
+    - statistical-learning
+    - other-applications
+  links:
+    - label: publication
+      url: "https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/rssa.12714"
+    - label: bibtex
+      url: "/assets/bibtex/deb2022ensemble.bib"
+
+- title: "A goal based index to analyze the competitive balance of a football league"
+  authors: "Deb, S."
+  year: 2022
+  type: publication
+  status: "Published"
+  venue: "Journal of Quantitative Analysis in Sports, 18(3), 171-186"
+  themes:
+    - sports-analytics
+  links:
+    - label: publication
+      url: "https://www.degruyter.com/document/doi/10.1515/jqas-2021-0015/html"
+    - label: bibtex
+      url: "/assets/bibtex/deb2022goal.bib"
+
+- title: "A machine learning approach to analyze the effect of situational and player-dependent features on converting freekicks in soccer"
+  authors: "Nahata, S., Deb, S."
+  year: 2021
+  type: publication
+  status: "Published"
+  venue: "Conference Proceedings 2021 Asia-Singapore Conference on Sport Science, p. 19"
+  themes:
+    - sports-analytics
+    - statistical-learning
+  links:
+    - label: publication
+      url: "https://www.researchgate.net/profile/Stuart-Evans-2/publication/359186201_ACSS_2021_Book/links/622c28413c53d31ba4bcf4e7/ACSS-2021-Book.pdf#page=26"
+    - label: bibtex
+      url: "/assets/bibtex/nahata2021machine.bib"
