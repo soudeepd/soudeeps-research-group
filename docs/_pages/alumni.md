@@ -155,7 +155,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
 ## Other notable research assistants
 
-- Mareeswaran M: Former PhD student in the Finance & Accounting area at Indian Institute of Management Bangalore. Later joined Queens Business School, Gift City, as a faculty.
+- Mareeswaran M: Former PhD student in the Finance & Accounting area at Indian Institute of Management Bangalore. Later joined Queens University Belfast, Gift City, as a faculty.
 - Meghana Krishna: Worked during 2024-25 as a research assistant.
 - Sreeranjini TM: Worked during 2023-25, later joined doctoral program at Indian Institute of Technology Bombay.
 - Anagh Chattopadhyay: Worked during 2021-23, later joined doctoral program at Johns Hopkins University.
