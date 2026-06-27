@@ -24,14 +24,7 @@ Click on a theme to view related publications.
       <h3>{{ theme.name }}</h3>
       <p>{{ theme.description }}</p>
 
-      {% if theme.keywords %}
-        <div class="theme-keywords">
-        {% for keyword in theme.keywords %}
-          <span>{{ keyword }}</span>
-        {% endfor %}
-        </div>
-      {% endif %}
-
+      
       <span class="theme-click-label">
         View related publications
       </span>

@@ -8,6 +8,8 @@ This page lists former doctoral students, postdoctoral fellows, and other resear
 
 The alumni directory is intended to document the academic and professional journeys of people associated with the SIGNAL Lab and to help future students, collaborators, and alumni understand the range of research areas connected with the group.
 
+If you are an alumnus of this group and want your information to be added/modified, please send an email to [soudeeps.research.group@gmail.com](mailto:soudeeps.research.group@gmail.com).
+
 {% assign phd_alumni = site.data.alumni | where: "category", "phd" %}
 {% assign postdoc_alumni = site.data.alumni | where: "category", "postdoc" %}
 {% assign other_alumni = site.data.alumni | where: "category", "other" %}
@@ -106,7 +108,7 @@ The alumni directory is intended to document the academic and professional journ
 
 {% if other_alumni.size > 0 %}
 <section class="member-section">
-  <h2>Other notable research assistants</h2>
+  <h2>Key research fellows</h2>
 
   <div class="member-grid">
   {% for person in other_alumni %}
@@ -150,4 +152,18 @@ The alumni directory is intended to document the academic and professional journ
 </section>
 {% endif %}
 
-If you are an alumnus of this group and want your information to be added/modified, please send an email to [soudeeps.research.group@gmail.com](mailto:soudeeps.research.group@gmail.com).
+
+## Other notable research assistants
+
+- Mareeswaran M: Former PhD student in the Finance & Accounting area at Indian Institute of Management Bangalore. Later joined Queens Business School, Gift City, as a faculty.
+- Meghana Krishna: Worked during 2024-25 as a research assistant.
+- Sreeranjini TM: Worked during 2023-25, later joined doctoral program at Indian Institute of Technology Bombay.
+- Anagh Chattopadhyay: Worked during 2021-23, later joined doctoral program at Johns Hopkins University.
+- Manit Paul: Worked during 2021-22, later joined doctoral program at University of Pennsylvania.
+- Anirban Nath: Worked during 2021-22, later joined doctoral program at Columbia University.
+- Shubhajit Sen: Worked during 2020-23, later joined doctoral program at North Carolina State University.
+- Divya Chakarwarti: Worked during 2021-22, later joined Google as Software Engineer.
+- Siddhant Nahata: Worked during 2020-21, later joined McKinsey & Co as Business Analyst.
+
+
+
