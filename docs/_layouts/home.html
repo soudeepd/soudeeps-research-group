@@ -2,41 +2,43 @@
 layout: default
 ---
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div class="hero-main">
+<section class="hero compact-hero">
+  <div class="container compact-hero-grid">
+
+    <div class="hero-copy">
       <p class="eyebrow">Prof. Soudeep Deb's</p>
       <h1>SIGNAL Lab</h1>
 
-      <p class="hero-text">
+      <p class="hero-text compact-hero-text">
         <strong>S</strong>tatistical <strong>I</strong>nnovation and
         <strong>G</strong>uidance for <strong>N</strong>ovel
         <strong>A</strong>nalytics and <strong>L</strong>earning
       </p>
-
-      <div class="hero-actions">
-        <a class="button primary" href="{{ site.baseurl }}/research/">Explore research</a>
-        <a class="button secondary" href="{{ site.baseurl }}/contact/">Contact the group</a>
-      </div>
     </div>
 
-    <div class="hero-panel hero-panel-with-logo">
+    <div class="hero-side">
       <img
         src="{{ site.baseurl }}/assets/images/logo/signal-logo.png"
         alt="SIGNAL Lab logo"
-        class="hero-panel-logo"
+        class="compact-hero-logo"
       >
 
-      <h2>Research themes</h2>
-      <ul>
-        <li>Time series and forecasting</li>
-        <li>Spatio-temporal modelling</li>
-        <li>Environmental research</li>
-        <li>Sports analytics</li>
-        <li>Real estate finance and economics</li>
-        <li>Policy-oriented applications</li>
-      </ul>
+      <div class="hero-actions compact-hero-actions">
+        <a class="button primary" href="{{ site.baseurl }}/research/">Explore research</a>
+        <a class="button secondary" href="{{ site.baseurl }}/contact/">Contact</a>
+      </div>
     </div>
+
+    <div class="compact-theme-strip">
+      <span class="theme-label">Research themes</span>
+      <span>Time series and forecasting</span>
+      <span>Spatio-temporal modelling</span>
+      <span>Environmental research</span>
+      <span>Sports analytics</span>
+      <span>Real estate finance and economics</span>
+      <span>Policy-oriented applications</span>
+    </div>
+
   </div>
 </section>
 

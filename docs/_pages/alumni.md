@@ -18,7 +18,7 @@ The alumni directory is intended to document the academic and professional journ
 
   <div class="member-grid">
   {% for person in phd_alumni %}
-    <article class="member-card">
+    <article class="member-card"  id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -64,7 +64,7 @@ The alumni directory is intended to document the academic and professional journ
 
   <div class="member-grid">
   {% for person in postdoc_alumni %}
-    <article class="member-card">
+    <article class="member-card"  id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -110,7 +110,7 @@ The alumni directory is intended to document the academic and professional journ
 
   <div class="member-grid">
   {% for person in other_alumni %}
-    <article class="member-card">
+    <article class="member-card"  id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}

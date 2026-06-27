@@ -18,7 +18,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
   <div class="member-grid pi-grid">
   {% for person in pi_members %}
-    <article class="member-card pi-card">
+    <article class="member-card pi-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -54,13 +54,13 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 </section>
 {% endif %}
 
-{% if phd_members.size > 0 %}
+{% if postdoc_members.size > 0 %}
 <section class="member-section">
-  <h2>PhD students</h2>
+  <h2>Postdoctoral fellows</h2>
 
   <div class="member-grid">
-  {% for person in phd_members %}
-    <article class="member-card">
+  {% for person in postdoc_members %}
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -92,13 +92,14 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 </section>
 {% endif %}
 
-{% if postdoc_members.size > 0 %}
+
+{% if phd_members.size > 0 %}
 <section class="member-section">
-  <h2>Postdoctoral fellows</h2>
+  <h2>PhD students</h2>
 
   <div class="member-grid">
-  {% for person in postdoc_members %}
-    <article class="member-card">
+  {% for person in phd_members %}
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -136,7 +137,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
   <div class="member-grid">
   {% for person in masters_members %}
-    <article class="member-card">
+   <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -174,7 +175,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
   <div class="member-grid">
   {% for person in other_members %}
-    <article class="member-card">
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}

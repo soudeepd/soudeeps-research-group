@@ -1,4 +1,5 @@
-- name: Soudeep Deb
+- id: soudeep-deb
+  name: Soudeep Deb
   category: pi
   image: /assets/images/members/Soudeep_Deb.jpg
   role: Associate Professor, IIM Bangalore
@@ -6,7 +7,8 @@
   email: soudeep@iimb.ac.in
   profile:
 
-- name: Kunal Rai
+- id: kunal-rai
+  name: Kunal Rai
   category: phd
   image: /assets/images/members/Kunal_Rai.jpg
   role: PhD student, IIM Bangalore (exp 2026)
@@ -14,7 +16,8 @@
   email: kunal.rai21@iimb.ac.in
   profile: 
 
-- name: Amrutha Seshagiri
+- id: amrutha-seshagiri
+  name: Amrutha Seshagiri
   category: phd
   image: /assets/images/members/Amrutha_Seshagiri.jpg
   role: PhD student, IIM Bangalore (exp 2028)
@@ -22,7 +25,8 @@
   email: amrutha.seshagiri23@iimb.ac.in
   profile: 
 
-- name: Lizan Meryl Pereira
+- id: lizan-mp
+  name: Lizan Meryl Pereira
   category: phd
   image: /assets/images/members/Lizan_Pereira.jpg
   role: PhD student, IIM Bangalore (exp 2029)
@@ -30,7 +34,8 @@
   email: lizan.pereira24@iimb.ac.in
   profile: 
 
-- name: Shagun Srivastava
+- id: shagun-srivastava
+  name: Shagun Srivastava
   category: phd
   image: /assets/images/members/Shagun_Srivastava.png
   role: PhD student, IIM Bangalore (exp 2029)
@@ -38,7 +43,8 @@
   email: shagun.srivastava24@iimb.ac.in
   profile: 
 
-- name: Shobhit Gupta
+- id: shobhit-gupta
+  name: Shobhit Gupta
   category: phd
   image: /assets/images/members/Shobhit_Gupta.png
   role: PhD student, IIM Bangalore (exp 2029)
@@ -47,7 +53,8 @@
   profile: 
 
 
-- name: Madhab Barman
+- id: madhab-barman
+  name: Madhab Barman
   category: postdoc
   image: /assets/images/members/Madhab_Barman.jpg
   role: Working since 2025
@@ -55,7 +62,8 @@
   email: madhab.barman@iimb.ac.in
   profile: 
 
-- name: Mohd Irfan
+- id: mohd-irfan
+  name: Mohd Irfan
   category: postdoc
   image: /assets/images/members/Mohd_Irfan.jpg
   role: Working since 2026
@@ -64,7 +72,8 @@
   profile: 
 
 
-- name: Anitha Pathlavath
+- id: anitha-p
+  name: Anitha Pathlavath
   category: other
   image: /assets/images/members/Anitha_Pathlavath.jpg
   role: Research Associate, working since 2025
@@ -72,7 +81,8 @@
   email: anitha.pathlavath@iimb.ac.in
   profile: 
 
-- name: Ashish Yadav
+- id: ashish-yadav
+  name: Ashish Yadav
   category: other
   image: /assets/images/members/blank.jpg
   role: MS Student, IISER Mohali, working since 2026
