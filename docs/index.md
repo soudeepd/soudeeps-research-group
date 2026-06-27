@@ -21,16 +21,17 @@ The group's current work broadly spans the following areas:
 
 ### What you can find on this website
 
-This website presents the research, publications, consulting activities, current members, alumni, collaborations, grants, and other academic activities of the group.
+This website presents the research, publications, consulting activities, current members, alumni, and other academic activities of the group.
 
-- Visit **Research & Publications** to explore our research themes, papers, books, working papers, and ongoing projects.
-- Visit **Consulting** to learn about our applied work with public, private, and policy organisations.
-- Visit **Other Activities** for talks, datasets, books, case studies, and outreach activities.
-- Visit **Alumni** to learn about former students, research assistants, interns, and collaborators associated with the group.
-- Visit **Contact** for research, consulting, collaboration, and alumni-related enquiries.
+- Visit [**Research**]({{ site.baseurl }}/research/) to explore our research themes, papers, books, working papers, and ongoing projects.
+- Visit [**Consulting**]({{ site.baseurl }}/consulting/) to learn about our applied work with public, private, and policy organisations.
+- Visit [**Members**]({{ site.baseurl }}/members/) to know about the current members in the group.
+- Visit [**Alumni**]({{ site.baseurl }}/alumni/) to learn about former students, fellows, and research assistants associated with the group.
+- Visit [**News**]({{ site.baseurl }}/news/) to see the recent news and activities by the group.
+- Visit [**Contact**]({{ site.baseurl }}/contact/) for research, consulting, collaboration, and alumni-related enquiries.
 
 ### Opportunities
 
-Prof. Deb is considering hiring a new postdoctoral fellow who will be working in the domain of Bayesian approaches in spatio-temporal data. If you are interested in such a role, please send an email to [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in?subject=Postdoctoral%20Fellow%20Application%20-%20Bayesian%20Spatio-temporal%20Data), with your CV and specific information about how you fit well in this domain.
+Prof. Deb is considering hiring a new postdoctoral fellow who will be working in the domain of Bayesian approaches in spatio-temporal data. If you are interested in such a role, please send an email to [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in?subject=Postdoctoral%20Fellow%20Application%20-%20Bayesian%20Spatio-temporal%20Data), with your detailed CV and a statement of purpose containing specific information about how you fit well in this domain.
 
 In general, students and researchers willing to join/collaborate with the group may submit their CV and a short statement of interest through the contact page. For any postdoctoral position, applicants are expected to have a PhD and relevant expertise in probability theory, Bayesian methods, time series, spatial modelling, machine learning, or related areas. For short-term internships or research assistantships, applicants should have a strong motivation to pursue higher studies, and should clearly explain their research interests in the application, along with technical background, and how their interests connect with the group's work.
