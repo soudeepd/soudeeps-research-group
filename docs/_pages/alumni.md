@@ -20,7 +20,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
   <div class="member-grid">
   {% for person in phd_alumni %}
-    <article class="member-card"  id="{{ person.id }}">
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -37,25 +37,23 @@ If you are an alumnus of this group and want your information to be added/modifi
         {% endif %}
 
         {% if person.current %}
-  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
-	{% endif %}
+          <p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+        {% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
-
         <div class="member-actions">
-        <div class="member-main-links">
-          
-          {% if person.webpage %}
+          <div class="member-main-links">
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
-        </div>
+          </div>
         </div>
       </div>
     </article>
@@ -70,7 +68,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
   <div class="member-grid">
   {% for person in postdoc_alumni %}
-    <article class="member-card"  id="{{ person.id }}">
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -87,26 +85,24 @@ If you are an alumnus of this group and want your information to be added/modifi
         {% endif %}
 
         {% if person.current %}
-  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
-	{% endif %}
+          <p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+        {% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
         <div class="member-actions">
-        <div class="member-main-links">
-          
-          {% if person.webpage %}
+          <div class="member-main-links">
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-		
       </div>
     </article>
   {% endfor %}
@@ -120,7 +116,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
   <div class="member-grid">
   {% for person in other_alumni %}
-    <article class="member-card"  id="{{ person.id }}">
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -137,26 +133,24 @@ If you are an alumnus of this group and want your information to be added/modifi
         {% endif %}
 
         {% if person.current %}
-  	<p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
-	{% endif %}
+          <p class="member-current"><span class="mini-label">Current</span> {{ person.current }}</p>
+        {% endif %}
 
         {% if person.themes %}
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
         <div class="member-actions">
-        <div class="member-main-links">
-          
-          {% if person.webpage %}
+          <div class="member-main-links">
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-		
       </div>
     </article>
   {% endfor %}
@@ -168,7 +162,8 @@ If you are an alumnus of this group and want your information to be added/modifi
   <h2>SIGNAL Lab publications by alumni</h2>
 
   {% for person in site.data.alumni %}
-    {% assign person_papers = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+    {% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+    {% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
 
     {% if person_papers.size > 0 %}
       <details class="person-publications" id="pubs-{{ person.id }}">
@@ -222,6 +217,3 @@ If you are an alumnus of this group and want your information to be added/modifi
 - Shubhajit Sen: Worked during 2020-23, later joined doctoral program at North Carolina State University.
 - Divya Chakarwarti: Worked during 2021-22, later joined Google as Software Engineer.
 - Siddhant Nahata: Worked during 2020-21, later joined McKinsey & Co as Business Analyst.
-
-
-
