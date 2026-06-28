@@ -35,17 +35,20 @@ Following are the current members of SIGNAL Lab, who are working in different ca
         {% endif %}
 
         <div class="member-actions">
-          {% if person.email %}
-            <a href="mailto:{{ person.email }}">Email</a>
-          {% endif %}
+          <div class="member-main-links">
+            {% if person.email %}
+              <a href="mailto:{{ person.email }}">Email</a>
+            {% endif %}
 
-          {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
-          {% endif %}
+            {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
+            {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
-          {% endif %}
+            {% if person.profile and person.profile != "#" %}
+              <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+            {% endif %}
+          </div>
+
         </div>
       </div>
     </article>
@@ -77,28 +80,26 @@ Following are the current members of SIGNAL Lab, who are working in different ca
         {% endif %}
 
         <div class="member-actions">
-        <div class="member-main-links">
-          {% if person.email %}
+          <div class="member-main-links">
+            {% if person.email %}
               <a href="mailto:{{ person.email }}">Email</a>
-          {% endif %}
+            {% endif %}
 
-          {% if person.webpage %}
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-        
       </div>
     </article>
   {% endfor %}
   </div>
 </section>
 {% endif %}
-
 
 {% if phd_members.size > 0 %}
 <section class="member-section">
@@ -122,23 +123,21 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
-
         <div class="member-actions">
-        <div class="member-main-links">
-          {% if person.email %}
+          <div class="member-main-links">
+            {% if person.email %}
               <a href="mailto:{{ person.email }}">Email</a>
-          {% endif %}
+            {% endif %}
 
-          {% if person.webpage %}
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-
       </div>
     </article>
   {% endfor %}
@@ -152,7 +151,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
   <div class="member-grid">
   {% for person in masters_members %}
-   <article class="member-card" id="{{ person.id }}">
+    <article class="member-card" id="{{ person.id }}">
       {% if person.image %}
         <img class="member-photo" src="{{ site.baseurl }}{{ person.image }}" alt="{{ person.name }}">
       {% endif %}
@@ -168,23 +167,21 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
-
         <div class="member-actions">
-        <div class="member-main-links">
-          {% if person.email %}
+          <div class="member-main-links">
+            {% if person.email %}
               <a href="mailto:{{ person.email }}">Email</a>
-          {% endif %}
+            {% endif %}
 
-          {% if person.webpage %}
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-
       </div>
     </article>
   {% endfor %}
@@ -214,23 +211,21 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
-
         <div class="member-actions">
-        <div class="member-main-links">
-          {% if person.email %}
+          <div class="member-main-links">
+            {% if person.email %}
               <a href="mailto:{{ person.email }}">Email</a>
-          {% endif %}
+            {% endif %}
 
-          {% if person.webpage %}
+            {% if person.webpage %}
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
-          {% endif %}
-        </div>
+            {% endif %}
+          </div>
 
-        <div class="member-publication-link">
+          <div class="member-publication-link">
             <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+          </div>
         </div>
-        </div>
-
       </div>
     </article>
   {% endfor %}
@@ -242,7 +237,8 @@ Following are the current members of SIGNAL Lab, who are working in different ca
   <h2>SIGNAL Lab publications by current members</h2>
 
   {% for person in site.data.members %}
-    {% assign person_papers = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+    {% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+    {% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
 
     {% if person_papers.size > 0 %}
       <details class="person-publications" id="pubs-{{ person.id }}">
