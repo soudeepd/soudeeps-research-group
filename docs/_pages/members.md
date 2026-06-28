@@ -77,14 +77,21 @@ Following are the current members of SIGNAL Lab, who are working in different ca
         {% endif %}
 
         <div class="member-actions">
+        <div class="member-main-links">
           {% if person.email %}
-            <a href="mailto:{{ person.email }}">Email</a>
+              <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+        
       </div>
     </article>
   {% endfor %}
@@ -115,15 +122,23 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
+
         <div class="member-actions">
+        <div class="member-main-links">
           {% if person.email %}
-            <a href="mailto:{{ person.email }}">Email</a>
+              <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+
       </div>
     </article>
   {% endfor %}
@@ -153,15 +168,23 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
+
         <div class="member-actions">
+        <div class="member-main-links">
           {% if person.email %}
-            <a href="mailto:{{ person.email }}">Email</a>
+              <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+
       </div>
     </article>
   {% endfor %}
@@ -191,15 +214,23 @@ Following are the current members of SIGNAL Lab, who are working in different ca
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
+
         <div class="member-actions">
+        <div class="member-main-links">
           {% if person.email %}
-            <a href="mailto:{{ person.email }}">Email</a>
+              <a href="mailto:{{ person.email }}">Email</a>
           {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+          {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+
       </div>
     </article>
   {% endfor %}
