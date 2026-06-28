@@ -4,7 +4,7 @@ title: Consulting
 permalink: /consulting/
 ---
 
-The SIGNAL Lab undertakes consulting, advisory, and collaborative research projects involving statistics, data science, machine learning, forecasting, policy evaluation, and empirical analysis. We are especially interested in projects where methodological depth and real-world relevance can inform each other. Please note that the consulting projects have to be approved by the Indian Institute of Management Bangalore (IIMB), as per the official norms. For any enquiry in this regard, please write through the contact page or email the group with a short description of the problem, available data, expected timeline, and intended use of the analysis. Subsequently, the PI or a suitable representative from IIMB will reach out to you.
+The SIGNAL Lab undertakes consulting, advisory, and collaborative research projects involving statistics, data science, machine learning, forecasting, policy evaluation, and empirical analysis. We are especially interested in projects where methodological depth and real-world relevance can inform each other. Please note that the consulting projects have to be approved by the Indian Institute of Management Bangalore (IIMB), as per the official norms. For any enquiry in this regard, please [write through the contact page]({{ site.baseurl }}/contact/) or [email the PI](mailto:soudeep@iimb.ac.in) with a short description of the problem, available data, expected timeline, and intended use of the analysis. Subsequently, the PI or a suitable representative from IIMB will reach out to you.
 
 Broadly, the group can contribute to projects involving:
 
