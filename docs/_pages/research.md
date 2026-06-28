@@ -8,7 +8,13 @@ The research group works on statistical and machine learning methods for complex
 
 Our work is often motivated by real-world problems from climate, public health, finance, urban systems, social sciences, policy, and sports. The aim is to develop rigorous methods and apply them to data-rich problems where uncertainty, dependence, heterogeneity, and temporal or spatial structure play an important role.
 
-## Key research themes
+<div class="research-page-nav">
+  <a href="#themes">Themes</a>
+  <a href="#preprints">Pre-prints</a>
+  <a href="#publications">Publications</a>
+</div>
+
+<h2 id="themes">Key research themes</h2>
 
 <p class="section-note">
 Click on a theme to view related publications.
@@ -70,7 +76,7 @@ Click on a theme to view related publications.
 {% endfor %}
 </div>
 
-## Pre-prints and working papers
+<h2 id="preprints">Pre-prints and working papers</h2>
 
 {% assign preprints_unsorted = site.data.publications | where: "type", "preprint" %}
 {% assign preprints = preprints_unsorted | sort: "year" | reverse %}
@@ -108,7 +114,7 @@ Click on a theme to view related publications.
 {% endfor %}
 </div>
 
-## Accepted publications since 2020
+<h2 id="publications">Accepted publications since 2020</h2>
 
 {% assign accepted_unsorted = site.data.publications | where: "type", "publication" %}
 {% assign accepted = accepted_unsorted | sort: "year" | reverse %}
