@@ -4,7 +4,7 @@ title: Contact
 permalink: /contact/
 ---
 
-If you are writing with consulting enquiries, please email us directly at <a href="mailto:soudeeps.research.group@gmail.com">soudeeps.research.group@gmail.com</a> with a short description of the problem, the available data, the expected timeline, and the intended use of the analysis. 
+If you are writing with consulting enquiries, please email the PI directly at <a href="mailto:soudeep@iimb.ac.in">soudeep@iimb.ac.in</a> with a short description of the problem, the available data, the expected timeline, and the intended use of the analysis. 
 
 For research, collaboration, alumni, or student-related enquiries, please use the form below or write by email. If you are particularly interested in a research assistantship, internship, doctoral supervision, or postdoctoral position, please mention your academic background, technical skills, research interests, and a brief explanation of how your interests connect with the group's work. If this information is missing, your query may remain unanswered.
 
