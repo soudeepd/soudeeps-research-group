@@ -49,6 +49,8 @@
   venue: "SSRN"
   themes:
     - time-series
+  people:
+    - kunal-rai 
   links:
     - label: pre-print
       url: "https://dx.doi.org/10.2139/ssrn.6513699"
@@ -64,6 +66,9 @@
   themes:
     - time-series
     - quantile-extremes
+  people:
+    - kunal-rai 
+    - archi-roy
   links:
     - label: pre-print
       url: "https://arxiv.org/abs/2603.16400"
@@ -78,6 +83,8 @@
   venue: "arXiv"
   themes:
     - time-series
+  people:
+    - archi-roy
   links:
     - label: pre-print
       url: "https://arxiv.org/abs/2410.15713"
@@ -108,6 +115,9 @@
   themes:
     - real-estate-urban
     - spatio-temporal
+  people:
+    - kapil-gupta 
+    - shagun-srivastava
   links:
     - label: working paper
       url: "https://www.iimb.ac.in/sites/default/files/2025-11/WP%20No.%20727.pdf"
@@ -120,6 +130,9 @@
   venue: "arXiv"
   themes:
     - statistical-learning
+  people:
+    - kapil-gupta 
+    - souvik-bag
   links:
     - label: pre-print
       url: "https://arxiv.org/abs/2201.06063"
@@ -135,6 +148,8 @@
   themes:
     - spatio-temporal
     - other-applications
+  people:
+    - siddharth-rawat
   links:
     - label: pre-print
       url: "https://arxiv.org/abs/2305.01906"
@@ -197,6 +212,8 @@
   themes:
     - real-estate-urban
     - spatio-temporal
+  people:
+    - kapil-gupta 
   links:
     - label: publication
       url: "https://link.springer.com/article/10.1007/s10479-025-06889-x"
@@ -213,6 +230,9 @@
     - real-estate-urban
     - spatio-temporal
     - statistical-learning
+  people:
+    - satyaki-bs 
+    - archi-roy
   links:
     - label: publication
       url: "https://doi.org/10.1177/23998083251411954"
@@ -260,6 +280,8 @@
     - quantile-extremes
     - time-series
     - other-applications
+  people:
+    - shreyash-deshmukh
   links:
     - label: publication
       url: "https://link.springer.com/article/10.1007/s42081-025-00297-y"
@@ -275,6 +297,8 @@
   themes:
     - sports-analytics
     - statistical-learning
+  people:
+    - kapil-gupta 
   links:
     - label: publication
       url: "https://www.sciencedirect.com/science/article/pii/S0970389624000089"
@@ -367,6 +391,8 @@
   themes:
     - time-series
     - other-applications
+  people:
+    - archi-roy
   links:
     - label: publication
       url: "https://www.tandfonline.com/doi/abs/10.1080/02664763.2022.2164562"
@@ -383,6 +409,9 @@
     - time-series
     - statistical-learning
     - other-applications
+  people:
+    - archi-roy 
+    - anchal-soni
   links:
     - label: publication
       url: "https://www.sciencedirect.com/science/article/pii/S0140988323003286"
@@ -414,6 +443,8 @@
   themes:
     - spatio-temporal
     - other-applications
+  people:
+    - siddharth-rawat
   links:
     - label: publication
       url: "https://www.tandfonline.com/doi/full/10.1080/02664763.2021.1970122"
