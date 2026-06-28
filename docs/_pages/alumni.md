@@ -44,14 +44,18 @@ If you are an alumnus of this group and want your information to be added/modifi
           <p class="member-tags">{{ person.themes }}</p>
         {% endif %}
 
-        <div class="member-actions">
-          {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
-          {% endif %}
 
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+        <div class="member-actions">
+        <div class="member-main-links">
+          
+          {% if person.webpage %}
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
+        </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
         </div>
       </div>
     </article>
@@ -91,14 +95,18 @@ If you are an alumnus of this group and want your information to be added/modifi
         {% endif %}
 
         <div class="member-actions">
+        <div class="member-main-links">
+          
           {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
-          {% endif %}
-
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+		
       </div>
     </article>
   {% endfor %}
@@ -137,14 +145,18 @@ If you are an alumnus of this group and want your information to be added/modifi
         {% endif %}
 
         <div class="member-actions">
+        <div class="member-main-links">
+          
           {% if person.webpage %}
-            <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
-          {% endif %}
-
-          {% if person.profile and person.profile != "#" %}
-            <a href="{{ person.profile }}" target="_blank" rel="noopener">Profile</a>
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
           {% endif %}
         </div>
+
+        <div class="member-publication-link">
+            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+        </div>
+        </div>
+		
       </div>
     </article>
   {% endfor %}
@@ -152,10 +164,56 @@ If you are an alumnus of this group and want your information to be added/modifi
 </section>
 {% endif %}
 
+<section class="person-publications-wrap">
+  <h2>SIGNAL Lab publications by alumni</h2>
+
+  {% for person in site.data.alumni %}
+    {% assign person_papers = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+
+    {% if person_papers.size > 0 %}
+      <details class="person-publications" id="pubs-{{ person.id }}">
+        <summary>{{ person.name }}</summary>
+
+        <div class="publication-compact-list">
+        {% for paper in person_papers %}
+          <article class="publication-item">
+            <div class="publication-main">
+              <p class="publication-title">{{ paper.title }}</p>
+
+              <p class="publication-meta">
+                {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+              </p>
+
+              {% if paper.venue %}
+                <p class="publication-venue">{{ paper.venue }}</p>
+              {% endif %}
+
+              {% if paper.status %}
+                <span class="publication-status">{{ paper.status }}</span>
+              {% endif %}
+            </div>
+
+            <div class="publication-links">
+              {% for link in paper.links %}
+                {% assign first_char = link.url | slice: 0 %}
+                {% if first_char == "/" %}
+                  <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                {% else %}
+                  <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </article>
+        {% endfor %}
+        </div>
+      </details>
+    {% endif %}
+  {% endfor %}
+</section>
 
 ## Other notable research assistants
 
-- Mareeswaran M: Former PhD student in the Finance & Accounting area at Indian Institute of Management Bangalore. Later joined Queens University Belfast, Gift City, as a faculty.
+- Mareeswaran M: Worked during 2021-23 as a research assistant, while he was a PhD student in the Finance & Accounting area at IIM Bangalore. Later joined Queens University Belfast, Gift City, as a faculty.
 - Meghana Krishna: Worked during 2024-25 as a research assistant.
 - Sreeranjini TM: Worked during 2023-25, later joined doctoral program at Indian Institute of Technology Bombay.
 - Anagh Chattopadhyay: Worked during 2021-23, later joined doctoral program at Johns Hopkins University.
