@@ -34,11 +34,11 @@ All of the below projects were led by Prof. Soudeep Deb, in collaboration with v
 
 ### Real Estate Research Initiative, IIM Bangalore
 
-This is a continuous collaboration with IIMB-RERI, and we jointly work on various exciting challenges in the domain of real estate markets. One of the major projects in this domain was on innovative spatial modelling techniques that helped us create India's first scientific commercial rental index for understanding the dynamics of rental properties in various Indian cities. This index has later been extended to other applications as well, most notably an index for Global Capability Centres (GCC), which has provided important insights for different stakeholders. **Contributors:** [Kapil Gupta]({{ site.baseurl }}/alumni/#kapil-gupta), [Shagun Srivastava]({{ site.baseurl }}/member/#shagun-srivastava), [Mohd Irfan]({{ site.baseurl }}/member/#mohd-irfan)
+This is a continuous collaboration with IIMB-RERI, and we jointly work on various exciting challenges in the domain of real estate markets. One of the major projects in this domain was on innovative spatial modelling techniques that helped us create India's first scientific commercial rental index for understanding the dynamics of rental properties in various Indian cities. This index has later been extended to other applications as well, most notably an index for Global Capability Centres (GCC), which has provided important insights for different stakeholders. **Contributors:** [Kapil Gupta]({{ site.baseurl }}/alumni/#kapil-gupta), [Shagun Srivastava]({{ site.baseurl }}/members/#shagun-srivastava), [Mohd Irfan]({{ site.baseurl }}/members/#mohd-irfan)
 
 ### National Foundation for Corporate Governance, Government of India
 
-We are collaborating with the Ministry of Corporate Affairs, India, on an in-depth analysis related to the feedback survey and concurrent evaluation of the pilot project for the Prime Minister Internship Scheme in India. This project is conducted in two rounds, starting from 2025. **Contributors:** [Amrutha Seshagiri]({{ site.baseurl }}/member/#amrutha-seshagiri), [Lizan Meryl Pereira]({{ site.baseurl }}/member/#lizan-mp)
+We are collaborating with the Ministry of Corporate Affairs, India, on an in-depth analysis related to the feedback survey and concurrent evaluation of the pilot project for the Prime Minister Internship Scheme in India. This project is conducted in two rounds, starting from 2025. **Contributors:** [Amrutha Seshagiri]({{ site.baseurl }}/members/#amrutha-seshagiri), [Lizan Meryl Pereira]({{ site.baseurl }}/members/#lizan-mp)
 
 
 ### GDPS Innovations, Bengaluru, India
