@@ -1116,7 +1116,13 @@ button:hover {
     padding: 12px;
     gap: 7px;
   }
-
+  
+  .compact-theme-strip .theme-label {
+    background: #7f1d1d;
+    border-color: #7f1d1d;
+    color: #ffffff;
+  }
+  
   .compact-theme-strip span {
     font-size: 0.74rem;
     padding: 5px 8px;
