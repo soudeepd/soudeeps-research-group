@@ -12,7 +12,7 @@ For consulting enquiries, please include a short description of the problem, the
 
 ### Contact form
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form action="https://formspree.io/f/mpqgzyqg" method="POST">
 
   <p>
     <label for="name">Name</label><br>
@@ -31,7 +31,7 @@ For consulting enquiries, please include a short description of the problem, the
       <option value="Research collaboration">Research collaboration</option>
       <option value="Consulting enquiry">Consulting enquiry</option>
       <option value="Student / internship enquiry">Student / internship enquiry</option>
-      <option value="Alumni update">Alumni update</option>
+      <option value="Alumni update">Alumni / member update</option>
       <option value="Other">Other</option>
     </select>
   </p>
@@ -59,4 +59,5 @@ Decision Sciences Area
 Indian Institute of Management Bangalore  
 Bannerghatta Road, Bengaluru, KA 560076, India.  
 Email:  [soudeep@iimb.ac.in](mailto:soudeep@iimb.ac.in)
+Phone (Office): +91 80 2699 3387
 
