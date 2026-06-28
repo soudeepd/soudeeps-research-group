@@ -16,7 +16,8 @@ Click on a theme to view related publications.
 
 <div class="theme-grid">
 {% for theme in site.data.themes %}
-  {% assign theme_papers = site.data.publications | where_exp: "paper", "paper.themes contains theme.id" %}
+  {% assign theme_papers_unsorted = site.data.publications | where_exp: "paper", "paper.themes contains theme.id" %}
+  {% assign theme_papers = theme_papers_unsorted | sort: "year" | reverse %}
 
   <details class="theme-card theme-details" id="{{ theme.id }}">
     <summary class="theme-summary">
@@ -24,7 +25,6 @@ Click on a theme to view related publications.
       <h3>{{ theme.name }}</h3>
       <p>{{ theme.description }}</p>
 
-      
       <span class="theme-click-label">
         View related publications
       </span>
@@ -35,12 +35,17 @@ Click on a theme to view related publications.
         {% for paper in theme_papers %}
           <article class="theme-paper-item">
             <p class="theme-paper-title">{{ paper.title }}</p>
+
             <p class="theme-paper-meta">
               {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
             </p>
 
             {% if paper.venue %}
               <p class="theme-paper-venue">{{ paper.venue }}</p>
+            {% endif %}
+
+            {% if paper.status %}
+              <span class="publication-status">{{ paper.status }}</span>
             {% endif %}
 
             <div class="publication-links theme-paper-links">
@@ -67,17 +72,23 @@ Click on a theme to view related publications.
 
 ## Pre-prints and working papers
 
-{% assign preprints = site.data.publications | where: "type", "preprint" %}
+{% assign preprints_unsorted = site.data.publications | where: "type", "preprint" %}
+{% assign preprints = preprints_unsorted | sort: "year" | reverse %}
 
 <div class="publication-compact-list">
 {% for paper in preprints %}
   <article class="publication-item">
     <div class="publication-main">
       <p class="publication-title">{{ paper.title }}</p>
-      <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
+
+      <p class="publication-meta">
+        {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+      </p>
+
       {% if paper.venue %}
         <p class="publication-venue">{{ paper.venue }}</p>
       {% endif %}
+
       {% if paper.status %}
         <span class="publication-status">{{ paper.status }}</span>
       {% endif %}
@@ -99,17 +110,23 @@ Click on a theme to view related publications.
 
 ## Accepted publications since 2020
 
-{% assign accepted = site.data.publications | where: "type", "publication" %}
+{% assign accepted_unsorted = site.data.publications | where: "type", "publication" %}
+{% assign accepted = accepted_unsorted | sort: "year" | reverse %}
 
 <div class="publication-compact-list">
 {% for paper in accepted %}
   <article class="publication-item">
     <div class="publication-main">
       <p class="publication-title">{{ paper.title }}</p>
-      <p class="publication-meta">{{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}</p>
+
+      <p class="publication-meta">
+        {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+      </p>
+
       {% if paper.venue %}
         <p class="publication-venue">{{ paper.venue }}</p>
       {% endif %}
+
       {% if paper.status %}
         <span class="publication-status">{{ paper.status }}</span>
       {% endif %}
