@@ -596,6 +596,43 @@ h3 {
   font-size: 0.82rem !important;
 }
 
+.research-page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 1.6rem 0 2rem;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.research-page-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.research-page-nav a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#themes,
+#preprints,
+#publications {
+  scroll-margin-top: 100px;
+}
+
 /* Publications */
 
 .publication-compact-list {
