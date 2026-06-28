@@ -89,10 +89,46 @@ Following are the current members of SIGNAL Lab, who are working in different ca
               <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
             {% endif %}
           </div>
+{% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+{% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
 
-          <div class="member-publication-link">
-            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+{% if person_papers.size > 0 %}
+  <details class="member-publication-details">
+    <summary>SIGNAL Lab publications</summary>
+
+    <div class="member-publication-panel">
+      {% for paper in person_papers %}
+        <article class="member-publication-item">
+          <p class="member-publication-title">{{ paper.title }}</p>
+
+          <p class="member-publication-meta">
+            {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+          </p>
+
+          {% if paper.venue %}
+            <p class="member-publication-venue">{{ paper.venue }}</p>
+          {% endif %}
+
+          {% if paper.status %}
+            <span class="publication-status">{{ paper.status }}</span>
+          {% endif %}
+
+          <div class="publication-links member-publication-links">
+            {% for link in paper.links %}
+              {% assign first_char = link.url | slice: 0 %}
+              {% if first_char == "/" %}
+                <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% else %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% endif %}
+            {% endfor %}
           </div>
+        </article>
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
+          
         </div>
       </div>
     </article>
@@ -134,9 +170,45 @@ Following are the current members of SIGNAL Lab, who are working in different ca
             {% endif %}
           </div>
 
-          <div class="member-publication-link">
-            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+{% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+{% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
+
+{% if person_papers.size > 0 %}
+  <details class="member-publication-details">
+    <summary>SIGNAL Lab publications</summary>
+
+    <div class="member-publication-panel">
+      {% for paper in person_papers %}
+        <article class="member-publication-item">
+          <p class="member-publication-title">{{ paper.title }}</p>
+
+          <p class="member-publication-meta">
+            {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+          </p>
+
+          {% if paper.venue %}
+            <p class="member-publication-venue">{{ paper.venue }}</p>
+          {% endif %}
+
+          {% if paper.status %}
+            <span class="publication-status">{{ paper.status }}</span>
+          {% endif %}
+
+          <div class="publication-links member-publication-links">
+            {% for link in paper.links %}
+              {% assign first_char = link.url | slice: 0 %}
+              {% if first_char == "/" %}
+                <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% else %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% endif %}
+            {% endfor %}
           </div>
+        </article>
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
         </div>
       </div>
     </article>
@@ -178,9 +250,45 @@ Following are the current members of SIGNAL Lab, who are working in different ca
             {% endif %}
           </div>
 
-          <div class="member-publication-link">
-            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+{% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+{% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
+
+{% if person_papers.size > 0 %}
+  <details class="member-publication-details">
+    <summary>SIGNAL Lab publications</summary>
+
+    <div class="member-publication-panel">
+      {% for paper in person_papers %}
+        <article class="member-publication-item">
+          <p class="member-publication-title">{{ paper.title }}</p>
+
+          <p class="member-publication-meta">
+            {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+          </p>
+
+          {% if paper.venue %}
+            <p class="member-publication-venue">{{ paper.venue }}</p>
+          {% endif %}
+
+          {% if paper.status %}
+            <span class="publication-status">{{ paper.status }}</span>
+          {% endif %}
+
+          <div class="publication-links member-publication-links">
+            {% for link in paper.links %}
+              {% assign first_char = link.url | slice: 0 %}
+              {% if first_char == "/" %}
+                <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% else %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% endif %}
+            {% endfor %}
           </div>
+        </article>
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
         </div>
       </div>
     </article>
@@ -222,9 +330,45 @@ Following are the current members of SIGNAL Lab, who are working in different ca
             {% endif %}
           </div>
 
-          <div class="member-publication-link">
-            <a href="#pubs-{{ person.id }}">SIGNAL Lab publications</a>
+{% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
+{% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
+
+{% if person_papers.size > 0 %}
+  <details class="member-publication-details">
+    <summary>SIGNAL Lab publications</summary>
+
+    <div class="member-publication-panel">
+      {% for paper in person_papers %}
+        <article class="member-publication-item">
+          <p class="member-publication-title">{{ paper.title }}</p>
+
+          <p class="member-publication-meta">
+            {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
+          </p>
+
+          {% if paper.venue %}
+            <p class="member-publication-venue">{{ paper.venue }}</p>
+          {% endif %}
+
+          {% if paper.status %}
+            <span class="publication-status">{{ paper.status }}</span>
+          {% endif %}
+
+          <div class="publication-links member-publication-links">
+            {% for link in paper.links %}
+              {% assign first_char = link.url | slice: 0 %}
+              {% if first_char == "/" %}
+                <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% else %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              {% endif %}
+            {% endfor %}
           </div>
+        </article>
+      {% endfor %}
+    </div>
+  </details>
+{% endif %}
         </div>
       </div>
     </article>
@@ -233,50 +377,4 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 </section>
 {% endif %}
 
-<section class="person-publications-wrap">
-  <h2>SIGNAL Lab publications by current members</h2>
 
-  {% for person in site.data.members %}
-    {% assign person_papers_unsorted = site.data.publications | where_exp: "paper", "paper.people contains person.id" %}
-    {% assign person_papers = person_papers_unsorted | sort: "year" | reverse %}
-
-    {% if person_papers.size > 0 %}
-      <details class="person-publications" id="pubs-{{ person.id }}">
-        <summary>{{ person.name }}</summary>
-
-        <div class="publication-compact-list">
-        {% for paper in person_papers %}
-          <article class="publication-item">
-            <div class="publication-main">
-              <p class="publication-title">{{ paper.title }}</p>
-
-              <p class="publication-meta">
-                {{ paper.authors }}{% if paper.year %} · {{ paper.year }}{% endif %}
-              </p>
-
-              {% if paper.venue %}
-                <p class="publication-venue">{{ paper.venue }}</p>
-              {% endif %}
-
-              {% if paper.status %}
-                <span class="publication-status">{{ paper.status }}</span>
-              {% endif %}
-            </div>
-
-            <div class="publication-links">
-              {% for link in paper.links %}
-                {% assign first_char = link.url | slice: 0 %}
-                {% if first_char == "/" %}
-                  <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-                {% else %}
-                  <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-                {% endif %}
-              {% endfor %}
-            </div>
-          </article>
-        {% endfor %}
-        </div>
-      </details>
-    {% endif %}
-  {% endfor %}
-</section>
