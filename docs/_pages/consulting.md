@@ -4,9 +4,9 @@ title: Consulting
 permalink: /consulting/
 ---
 
-The SIGNAL Lab undertakes consulting, advisory, and collaborative research projects involving statistics, data science, machine learning, forecasting, policy evaluation, and empirical analysis. We are especially interested in projects where methodological depth and real-world relevance can inform each other. Please note that the consulting projects have to be approved by the Indian Institute of Management Bangalore (IIMB), as per the official norms. For any enquiry in this regard, please [write through the contact page]({{ site.baseurl }}/contact/) or [email the PI](mailto:soudeep@iimb.ac.in) with a short description of the problem, available data, expected timeline, and intended use of the analysis. Subsequently, the PI or a suitable representative from IIMB will reach out to you.
+The SIGNAL Lab undertakes collaborative, advisory, and consulting research projects involving statistics, data science, machine learning, forecasting, policy evaluation, and empirical analysis. We are especially interested in projects where methodological depth and real-world relevance can inform each other. Please note that the consulting projects have to be approved by the Indian Institute of Management Bangalore (IIMB), as per the official norms. For any enquiry in this regard, please [write through the contact page]({{ site.baseurl }}/contact/) or [email the PI](mailto:soudeep@iimb.ac.in) directly with a short description of the problem, available data, expected timeline, and intended use of the analysis. Subsequently, the PI or a suitable representative from IIMB will reach out to you.
 
-Broadly, the group can contribute to projects involving:
+Broadly, the group can actively collaboate on projects involving:
 
 - Statistical and methodological review
 - Data analysis and modelling
@@ -17,7 +17,7 @@ Broadly, the group can contribute to projects involving:
 - Development of research reports and working papers
 - Joint academic-industry research
 
-Our consulting approach emphasises:
+Our collaborative and consulting approach emphasises:
 
 - Clear problem formulation
 - Transparent assumptions
@@ -28,7 +28,7 @@ Our consulting approach emphasises:
 - Careful communication of uncertainty
 
 
-## Selected consulting and collaborative engagements
+## Selected collaborative engagements
 
 All of the below projects were led by Prof. Soudeep Deb, in collaboration with various government / industry partners.
 
@@ -43,7 +43,7 @@ We are collaborating with the Ministry of Corporate Affairs, India, on an in-dep
 
 ### GDPS Innovations, Bengaluru, India
 
-GDPS Innovations is a sports technology start-up whose focus is on artificial intelligence and machine learning projects related to sports training and performance, primarily in cricket. Our collaboration involves research papers and case studies on sports analytics and performance modelling. **Contributor:** [Kapil Gupta]({{ site.baseurl }}/alumni/#kapil-gupta)
+GDPS Innovations is a sports technology start-up whose focus is on artificial intelligence and machine learning projects related to sports training and performance, primarily in cricket. We have been involved in an academic collaboration with them. The collaboration primarily involves research papers and case studies on sports analytics and performance modelling. **Contributor:** [Kapil Gupta]({{ site.baseurl }}/alumni/#kapil-gupta)
 
 
 ### Smart City Mission, Government of India
@@ -56,5 +56,5 @@ This project involved reviewing and evaluating a three-step methodology used for
 
 ### SportsKPI, Bengaluru
 
-This collaboration focused on analytics for kabaddi, including methods for player valuation and strategy-building during auctions and matches.
+This was an academic collaboration through various projects, primarily undertaken through course projects for MBA students. The projects mainly focused on analytics for kabaddi, including methods for player valuation and strategy-building during auctions and matches.
 
