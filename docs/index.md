@@ -3,7 +3,7 @@ layout: home
 title: Home
 ---
 
-Welcome to the SIGNAL Lab, a research group led by Prof. Soudeep Deb, in the Decision Sciences Area at the Indian Institute of Management Bangalore. The group works on statistical modelling, data science, machine learning, forecasting, time series analysis, spatio-temporal modelling, nonparametric methods, and applied empirical research.
+Welcome to the SIGNAL Group, a research team led by Prof. Soudeep Deb, in the Decision Sciences Area at the Indian Institute of Management Bangalore (IIMB). The group works on statistical modelling, data science, machine learning, forecasting, time series analysis, spatio-temporal modelling, nonparametric methods, and applied empirical research.
 
 Our research is motivated by real-world problems from climate, public health, finance, sports, urban systems, social sciences, and policy. We develop statistical and machine learning methods, apply them to complex datasets, and collaborate with academic, industry, and policy partners.
 
@@ -24,8 +24,8 @@ The group's current work broadly spans the following areas:
 This website presents the research, publications, consulting activities, current members, alumni, and other academic activities of the group.
 
 - Visit [**Research**]({{ site.baseurl }}/research/) to explore our research themes, papers, books, working papers, and ongoing projects.
-- Visit [**Consulting**]({{ site.baseurl }}/consulting/) to learn about our applied work with public, private, and policy organisations.
 - Visit [**Resources**]({{ site.baseurl }}/resources/) to see educational resources made available by the members of the group.
+- Visit [**Consulting**]({{ site.baseurl }}/consulting/) to learn about our applied work with public, private, and policy organisations.
 - Visit [**Members**]({{ site.baseurl }}/members/) to know about the current members in the group.
 - Visit [**Alumni**]({{ site.baseurl }}/alumni/) to learn about former students, fellows, and research assistants associated with the group.
 - Visit [**News**]({{ site.baseurl }}/news/) to see the recent news and activities by the group.
