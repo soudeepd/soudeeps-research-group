@@ -1,0 +1,39 @@
+<article class="news-timeline-item">
+  <div class="news-timeline-date">
+    {% if include.item.date %}
+      <span class="news-month">{{ include.item.date | date: "%b" }}</span>
+      <span class="news-year">{{ include.item.date | date: "%Y" }}</span>
+    {% endif %}
+  </div>
+
+  <div class="news-timeline-content">
+    {% if include.item.image %}
+      <img class="news-timeline-image" src="{{ site.baseurl }}{{ include.item.image }}" alt="{{ include.item.title }}">
+    {% endif %}
+
+    <div>
+      {% if include.item.category %}
+        <span class="news-category">{{ include.item.category }}</span>
+      {% endif %}
+
+      <h3>{{ include.item.title }}</h3>
+
+      {% if include.item.description %}
+        <p>{{ include.item.description }}</p>
+      {% endif %}
+
+      {% if include.item.links %}
+        <div class="news-links">
+          {% for link in include.item.links %}
+            {% assign first_char = link.url | slice: 0 %}
+            {% if first_char == "/" %}
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% else %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,61 @@
+
+- title: "The SIGNAL Group website launched"
+  date: 2026-06-27
+  type: announcement
+  category: "Website"
+  image: "/assets/images/news/2026/signal-logo.png"
+  description: "The SIGNAL Group launched its academic website to document research, contributions, and group activities."
+  links:
+    - label: "Visit website"
+      url: "https://signal-lab-by-deb.in"
+
+- title: "New pre-print on projection diagnostics in multivariate data"
+  date: 2026-06-02
+  type: latest
+  category: "Publication"
+  image: "/assets/images/news/2026/preprint-2026-06.png"
+  description: "A paper on projection diagnostics for directional asymmetry and tail-ratio departure in multivariate data has been completed by Prof. Soudeep and his coauthor."
+  links:
+    - label: "Read the paper"
+      url: "https://arxiv.org/pdf/2606.03670"
+
+- title: "Group outing and reunion"
+  date: 2026-06-28
+  type: activity
+  category: "Group activity"
+  image: "/assets/images/news/2026/group-outing-2026-06.jpg"
+  description: "Present and past members of The SIGNAL Group went out for some fun activities."
+
+- title: "Qualifying exam cleared"
+  date: 2026-07-09
+  type: latest
+  category: "News"
+  image: "/assets/images/news/2026/shagun-lizan.png"
+  description: "Ms. Lizan and Ms. Shagun have successfully passed their PhD comprehensive examinations at IIM Bangalore."
+  
+- title: "Poster presentation by Snehil"
+  date: 2026-04-18
+  type: announcement
+  category: "News"
+  image: "/assets/images/news/2026/snehil-poster-2026-04.jpg
+  description: "Snehil presented her work in a poster session at IISER Mohali."
+
+- title: "GCC index launched by IIMB-CRE Matrix"
+  date: 2026-06-26
+  type: announcement
+  category: "News"
+  image: "/assets/images/news/2026/gcc-launch-2026-06.jpg
+  description: "Based on research by Prof. Soudeep, Dr. Kapil and Ms. Shagun, India's first GCC index was launched by IIMB-CRE Matrix."
+  links:
+    - label: "News coverage"
+      url: "https://www.thehindu.com/news/cities/bangalore/bengaluru-remains-indias-gcc-capital-as-maturing-market-cools-rental-growth/article71166412.ece"
+
+- title: "Prof. Deb interviewed by Zee Media"
+  date: 2026-06-26
+  type: announcement
+  category: "News"
+  image: "/assets/images/news/2026/gcc-video-2026-06.jpg
+  description: "Prof. Soudeep was interviewed by Zee Business to highlight the research insights in GCC index creation."
+  links:
+    - label: "Watch the video"
+      url: "https://www.youtube.com/watch?v=HQ40kOqJV9U"
