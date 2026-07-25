@@ -5,7 +5,7 @@
   role: Associate Professor, IIM Bangalore
   themes: Statistical inference · Time series · Spatio-temporal modelling · Analytics · Learning
   email: soudeep@iimb.ac.in
-  profile:
+  webpage:
 
 - id: kunal-rai
   name: Kunal Rai
@@ -14,7 +14,7 @@
   role: PhD student, IIM Bangalore (exp 2026)
   themes: Time series · Nonparametrics · Financial data · Physics-informed neural network
   email: kunal.rai21@iimb.ac.in
-  profile: 
+  webpage: 
 
 - id: amrutha-seshagiri
   name: Amrutha Seshagiri
@@ -23,7 +23,7 @@
   role: PhD student, IIM Bangalore (exp 2028)
   themes: Econometrics · Tourism analytics · Bayesian methods · Time series
   email: amrutha.seshagiri23@iimb.ac.in
-  profile: 
+  webpage: 
 
 - id: lizan-mp
   name: Lizan Meryl Pereira
@@ -32,7 +32,7 @@
   role: PhD student, IIM Bangalore (exp 2029)
   themes: Spatio-temporal modeling · Environmental research · Bayesian methods · Extreme value
   email: lizan.pereira24@iimb.ac.in
-  profile: 
+  webpage: 
 
 - id: shagun-srivastava
   name: Shagun Srivastava
@@ -41,7 +41,7 @@
   role: PhD student, IIM Bangalore (exp 2029)
   themes: Spatio-temporal modeling · Real estate · Bayesian methods
   email: shagun.srivastava24@iimb.ac.in
-  profile: 
+  webpage: 
 
 - id: shobhit-gupta
   name: Shobhit Gupta
@@ -50,7 +50,16 @@
   role: PhD student, IIM Bangalore (exp 2030)
   themes: Machine learning · Sports analytics · Ensemble learning 
   email: shobhit.gupta25@iimb.ac.in
-  profile: 
+  webpage: 
+
+- id: thaha-uwaise
+  name: Thaha Uwaise
+  category: phd
+  image: /assets/images/members/Thaha_Uwaise.jpg
+  role: PhD student, VIT (co-supervised, exp 2030)
+  themes: Bayesian methods · Machine learning · Sports analytics
+  email: thahauwaise.ak@vit.ac.in
+  webpage: https://www.linkedin.com/in/thaha-uwaise-366a88174/
 
 
 - id: madhab-barman
@@ -60,16 +69,16 @@
   role: Working since 2025
   themes: Machine learning · Extreme value theory · Environmental research · Applied mathematics 
   email: madhab.barman@iimb.ac.in
-  profile: 
+  webpage: 
 
-- id: mohd-irfan
-  name: Mohd Irfan
+- id: shamriddha-de
+  name: Shamriddha De
   category: postdoc
-  image: /assets/images/members/Mohd_Irfan.jpg
+  image: /assets/images/members/Shamriddha_De.jpg
   role: Working since 2026
-  themes: Real estate · Bayesian methods · Mixture model
-  email: mohd.irfan@iimb.ac.in
-  profile: 
+  themes: Real estate · Bayesian methods · Mixture model · Forecasting
+  email: shamriddha.de@iimb.ac.in
+  webpage: https://sites.google.com/view/shamriddha/bio 
 
 
 - id: anitha-p
@@ -79,16 +88,16 @@
   role: Research Associate, working since 2025
   themes: Financial data · Deep learning · Time series
   email: anitha.pathlavath@iimb.ac.in
-  profile: 
+  webpage: 
 
 - id: ashish-yadav
   name: Ashish Yadav
   category: other
-  image: /assets/images/members/blank.jpg
+  image: /assets/images/members/Ashish_Yadav.jpg
   role: MS Student, IISER Mohali, working since 2026
   themes: Financial data · Deep learning · Time series
   email: ms22168@iisermohali.ac.in
-  profile: 
+  webpage: 
 
 - id: muskan-kumari
   name: Muskan Kumari
@@ -97,4 +106,4 @@
   role: BS-MS Student, IISER Thiruvananthapuram, working since 2026
   themes: Financial data · Deep learning · Time series
   email: muskan23@iisertvm.ac.in
-  profile: 
+  webpage: 
