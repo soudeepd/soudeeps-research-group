@@ -37,14 +37,14 @@
   date: 2026-04-18
   type: talks
   category: "News"
-  image: "/assets/images/news/2026/snehil-poster-2026-04.jpg
+  image: "/assets/images/news/2026/snehil-poster-2026-04.jpg"
   description: "Snehil presented her work in a poster session at IISER Mohali."
 
 - title: "GCC index launched by IIMB-CRE Matrix"
   date: 2026-06-26
   type: announcement
   category: "News"
-  image: "/assets/images/news/2026/gcc-launch-2026-06.jpg
+  image: "/assets/images/news/2026/gcc-launch-2026-06.jpg"
   description: "Based on research by Prof. Soudeep, Dr. Kapil and Ms. Shagun, India's first GCC index was launched by IIMB-CRE Matrix."
   links:
     - label: "News coverage"
@@ -54,7 +54,7 @@
   date: 2026-06-26
   type: announcement
   category: "News"
-  image: "/assets/images/news/2026/gcc-video-2026-06.jpg
+  image: "/assets/images/news/2026/gcc-video-2026-06.jpg"
   description: "Prof. Soudeep was interviewed by Zee Business to highlight the research insights in GCC index creation."
   links:
     - label: "Watch the video"
