@@ -4,7 +4,7 @@ title: Members
 permalink: /members/
 ---
 
-Following are the current members of SIGNAL Lab, who are working in different capacities.
+Following are the current members of SIGNAL Group, who are working in different capacities.
 
 {% assign pi_members = site.data.members | where: "category", "pi" %}
 {% assign phd_members = site.data.members | where: "category", "phd" %}
@@ -94,7 +94,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
 {% if person_papers.size > 0 %}
   <details class="member-publication-details">
-    <summary>SIGNAL Lab publications</summary>
+    <summary>SIGNAL Group publications</summary>
 
     <div class="member-publication-panel">
       {% for paper in person_papers %}
@@ -175,7 +175,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
 {% if person_papers.size > 0 %}
   <details class="member-publication-details">
-    <summary>SIGNAL Lab publications</summary>
+    <summary>SIGNAL Group publications</summary>
 
     <div class="member-publication-panel">
       {% for paper in person_papers %}
@@ -255,7 +255,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
 {% if person_papers.size > 0 %}
   <details class="member-publication-details">
-    <summary>SIGNAL Lab publications</summary>
+    <summary>SIGNAL Group publications</summary>
 
     <div class="member-publication-panel">
       {% for paper in person_papers %}
@@ -335,7 +335,7 @@ Following are the current members of SIGNAL Lab, who are working in different ca
 
 {% if person_papers.size > 0 %}
   <details class="member-publication-details">
-    <summary>SIGNAL Lab publications</summary>
+    <summary>SIGNAL Group publications</summary>
 
     <div class="member-publication-panel">
       {% for paper in person_papers %}
