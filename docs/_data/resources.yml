@@ -1,0 +1,41 @@
+- title: "Business Analytics: Data to Decisions"
+  category: books
+  authors: "Shubhabrata Das and Soudeep Deb"
+  image: "/assets/images/books/das_deb_business_analytics.jpg"
+  description: "A textbook on business analytics, probability, statistics, and introductory machine learning, with examples and datasets motivated largely by the Indian context."
+  links:
+    - label: "Buy from Amazon"
+      url: "https://www.amazon.in/Business-Analytics-Decisions-Shubhabrata-Das/dp/9393330999/"
+
+- title: "Mathematical Techniques for Competitive Examinations"
+  category: books
+  authors: "Soudeep Deb and Debangan Dey"
+  image: "/assets/images/books/deb_day_mathematical_techniques.jpg"
+  description: "A problem-based book for high-school students preparing for entrance tests and mathematical competitions."
+  links:
+    - label: "Buy from Amazon"
+      url: "https://www.amazon.in/Mathematical-Techniques-Competitive-Examinations-Debangan/dp/9393330107/"
+
+- title: "Seminar slides on transfer strategy"
+  category: seminar-slides
+  authors: "Soudeep Deb"
+  description: "Slides from DS Area Brown Bag seminar on optimised transfer strategy in football."
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/seminar-slides/IIMB_Brownbag_talk.pdf"
+
+- title: "Seminar slides on nonparametric methods in financial data"
+  category: seminar-slides
+  authors: "Soudeep Deb"
+  description: "Slides from StatFin Conference 2025 on nonparametric methods in financial data."
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/seminar-slides/StatFin_talk.pdf"
+
+- title: "Seminar slides on real-time forecasting in sports"
+  category: seminar-slides
+  authors: "Soudeep Deb"
+  description: "Slides from a seminar at University of Liverpool on real-time forecasting in sports."
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/seminar-slides/Liverpool_talk.pdf"

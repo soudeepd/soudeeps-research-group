@@ -711,6 +711,125 @@ h3 {
   text-decoration: none;
 }
 
+/* Resources page */
+
+.resource-book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 1.3rem 0 2.4rem;
+}
+
+.resource-book-card {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.055);
+}
+
+.resource-book-cover {
+  width: 130px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #f3f4f6;
+}
+
+.resource-book-info h3 {
+  margin: 0 0 7px;
+  font-size: 1rem;
+  line-height: 1.22;
+}
+
+.resource-book-info p {
+  margin: 0.35rem 0;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.resource-meta {
+  color: #4b5563 !important;
+  font-weight: 700;
+}
+
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.resource-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.resource-links a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.resource-list {
+  margin: 1rem 0 2.2rem;
+  padding-left: 1.15rem;
+}
+
+.resource-list li {
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.resource-list li:last-child {
+  border-bottom: none;
+}
+
+#books,
+#seminar-slides,
+#study-materials,
+#others {
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 820px) {
+  .resource-book-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .resource-book-card {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 13px;
+    padding: 13px;
+  }
+
+  .resource-book-cover {
+    width: 90px;
+  }
+
+  .resource-book-info h3 {
+    font-size: 0.92rem;
+  }
+
+  .resource-book-info p {
+    font-size: 0.78rem;
+  }
+}
+
 /* Members and alumni compact card grid */
 
 .member-section {
