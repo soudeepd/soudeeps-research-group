@@ -11,7 +11,7 @@
 
 - title: "New pre-print on projection diagnostics in multivariate data"
   date: 2026-06-02
-  type: latest
+  type: announcement
   category: "Publication"
   image: "/assets/images/news/2026/preprint-2026-06.png"
   description: "A paper on projection diagnostics for directional asymmetry and tail-ratio departure in multivariate data has been completed by Prof. Soudeep and his coauthor."
@@ -28,14 +28,14 @@
 
 - title: "Qualifying exam cleared"
   date: 2026-07-09
-  type: latest
+  type: announcement
   category: "News"
   image: "/assets/images/news/2026/shagun-lizan.png"
   description: "Ms. Lizan and Ms. Shagun have successfully passed their PhD comprehensive examinations at IIM Bangalore."
   
 - title: "Poster presentation by Snehil"
   date: 2026-04-18
-  type: announcement
+  type: talks
   category: "News"
   image: "/assets/images/news/2026/snehil-poster-2026-04.jpg
   description: "Snehil presented her work in a poster session at IISER Mohali."
