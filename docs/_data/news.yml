@@ -31,6 +31,16 @@
   image: "/assets/images/news/2026/snehil-poster-2026-04.jpg"
   description: "Snehil presented her work in a poster session at IISER Mohali."
 
+- title: "Prof. Soudeep interviewed by Zee Business"
+  date: 2026-06-26
+  type: announcement
+  category: "News"
+  image: "/assets/images/news/2026/gcc-video-2026-06.jpg"
+  description: "Following the launch of India's first GCC Index, Prof. Soudeep was interviewed by Zee Business to highlight their research insights."
+  links:
+    - label: "Watch the video"
+      url: "https://www.youtube.com/watch?v=HQ40kOqJV9U"
+
 - title: "Research-driven GCC index launched"
   date: 2026-06-26
   type: announcement
@@ -41,12 +51,3 @@
     - label: "News coverage"
       url: "https://www.thehindu.com/news/cities/bangalore/bengaluru-remains-indias-gcc-capital-as-maturing-market-cools-rental-growth/article71166412.ece"
 
-- title: "Prof. Soudeep interviewed by Zee Business"
-  date: 2026-06-26
-  type: announcement
-  category: "News"
-  image: "/assets/images/news/2026/gcc-video-2026-06.jpg"
-  description: "Following the launch of India's first GCC Index, Prof. Soudeep was interviewed by Zee Business to highlight their research insights."
-  links:
-    - label: "Watch the video"
-      url: "https://www.youtube.com/watch?v=HQ40kOqJV9U"
