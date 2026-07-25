@@ -6,7 +6,7 @@ permalink: /alumni/
 
 This page lists former doctoral students, postdoctoral fellows, and other research associates who have worked in this group and have coauthored at least one research paper or case study.
 
-The alumni directory is intended to document the academic and professional journeys of people associated with the SIGNAL Lab and to help future students, collaborators, and alumni understand the range of research areas connected with the group.
+The alumni directory is intended to document the academic and professional journeys of people associated with the SIGNAL Group and to help future students, collaborators, and alumni understand the range of research areas connected with the group.
 
 If you are an alumnus of this group and want your information to be added/modified, please send an email to [soudeeps.research.group@gmail.com](mailto:soudeeps.research.group@gmail.com).
 
@@ -56,7 +56,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
           {% if person_papers.size > 0 %}
             <details class="member-publication-details">
-              <summary>SIGNAL Lab publications</summary>
+              <summary>SIGNAL Group publications</summary>
 
               <div class="member-publication-panel">
                 {% for paper in person_papers %}
@@ -140,7 +140,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
           {% if person_papers.size > 0 %}
             <details class="member-publication-details">
-              <summary>SIGNAL Lab publications</summary>
+              <summary>SIGNAL Group publications</summary>
 
               <div class="member-publication-panel">
                 {% for paper in person_papers %}
@@ -224,7 +224,7 @@ If you are an alumnus of this group and want your information to be added/modifi
 
           {% if person_papers.size > 0 %}
             <details class="member-publication-details">
-              <summary>SIGNAL Lab publications</summary>
+              <summary>SIGNAL Group publications</summary>
 
               <div class="member-publication-panel">
                 {% for paper in person_papers %}
