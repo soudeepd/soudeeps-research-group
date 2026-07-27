@@ -16,26 +16,47 @@
     - label: "Buy from Amazon"
       url: "https://www.amazon.in/Mathematical-Techniques-Competitive-Examinations-Debangan/dp/9393330107/"
 
-- title: "Seminar slides on transfer strategy"
+- title: "Data-Driven Estimation of Rare Event Probabilities for Spatial Extremes"
   category: seminar-slides
-  authors: "Soudeep Deb"
-  description: "Slides from DS Area Brown Bag seminar on optimised transfer strategy in football."
+  presenter: "Madhab Barman"
+  event: "Invited talk, ISNPS Conference 2026, Greece"
+  year: 2026
   links:
     - label: "Download slides"
-      url: "/assets/resources/seminar-slides/IIMB_Brownbag_talk.pdf"
+      url: "/assets/resources/slides/Madhab_ISNPS_talk.pdf"
 
-- title: "Seminar slides on nonparametric methods in financial data"
+- title: "Nonparametric regression of spatio-temporal data using infinite-dimensional covariates"
   category: seminar-slides
-  authors: "Soudeep Deb"
-  description: "Slides from StatFin Conference 2025 on nonparametric methods in financial data."
+  presenter: "Soudeep Deb"
+  event: "Invited talk, IMS-APRM Conference 2026, Hong Kong"
+  year: 2026
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/seminar-slides/IMS_talk.pdf"
+
+- title: "Optimizing football squad selection: A multi-objective approach to transfer strategy under budget constraints"
+  category: seminar-slides
+  presenter: "Soudeep Deb"
+  event: "Keynote talk, AUEB SAW Conference 2026, Greece"
+  year: 2026
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/slides/AUEB_talk.pdf"
+
+- title: "Some Nonparametric Methods for Analyzing Financial Data"
+  category: seminar-slides
+  presenter: "Soudeep Deb"
+  event: "Invited talk, StatFin Conference 2025, India."
+  year: 2026
   links:
     - label: "Download slides"
       url: "/assets/resources/seminar-slides/StatFin_talk.pdf"
 
-- title: "Seminar slides on real-time forecasting in sports"
+- title: "Real-time forecasting in football and cricket"
   category: seminar-slides
-  authors: "Soudeep Deb"
-  description: "Slides from a seminar at University of Liverpool on real-time forecasting in sports."
+  presenter: "Soudeep Deb"
+  event: "Invited seminar, University of Liverpool Management School, UK"
+  year: 2026
   links:
     - label: "Download slides"
       url: "/assets/resources/seminar-slides/Liverpool_talk.pdf"

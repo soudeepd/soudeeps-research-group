@@ -46,22 +46,47 @@ This page collects books, seminar slides, study materials, and other academic re
 
 <h2 id="seminar-slides">Seminar slides</h2>
 
-<ul class="resource-list">
+<div class="seminar-slide-list">
 {% assign slides = site.data.resources | where: "category", "seminar-slides" %}
 {% for item in slides %}
-  <li>
-    <strong>{{ item.title }}</strong>
-    {% if item.authors %}<br>{{ item.authors }}{% endif %}
-    {% if item.description %}<br>{{ item.description }}{% endif %}
-    {% if item.links %}
-      <br>
-      {% for link in item.links %}
-        <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
-      {% endfor %}
-    {% endif %}
-  </li>
+  <article class="seminar-slide-item">
+    <div class="seminar-slide-title-row">
+      <p class="seminar-slide-title">{{ item.title }}</p>
+
+      {% if item.links %}
+        <div class="seminar-slide-links">
+          {% for link in item.links %}
+            {% assign first_char = link.url | slice: 0 %}
+            {% if first_char == "/" %}
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">Download slides</a>
+            {% else %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">Download slides</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    <p class="seminar-slide-meta">
+      {% if item.presenter %}
+        {{ item.presenter }}
+      {% elsif item.authors %}
+        {{ item.authors }}
+      {% endif %}
+
+      {% if item.event %}
+        · {{ item.event }}
+      {% elsif item.conference %}
+        · {{ item.conference }}
+      {% endif %}
+
+      {% if item.year %}
+        · {{ item.year }}
+      {% endif %}
+    </p>
+  </article>
 {% endfor %}
-</ul>
+</div>
 
 <h2 id="study-materials">Study materials</h2>
 
