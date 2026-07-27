@@ -11,10 +11,19 @@
   name: Kunal Rai
   category: phd
   image: /assets/images/members/Kunal_Rai.jpg
-  role: PhD student, IIM Bangalore (exp 2026)
+  role: PhD student, IIM Bangalore (thesis submitted)
   themes: Time series · Nonparametrics · Financial data · Physics-informed neural network
   email: kunal.rai21@iimb.ac.in
   webpage: https://sites.google.com/view/kunalrai98/about
+
+- id: chinmay-divekar
+  name: Chinmay Divekar
+  category: phd
+  image: /assets/images/members/Chinmay_Divekar.jpg
+  role: PhD student, IIM Bangalore (thesis submitted)
+  themes: Bayesian methods · Sports analytics · Quantitative finance · Markov models
+  email: chinmay.divekar21@iimb.ac.in
+  webpage: https://sites.google.com/view/chinmay-divekar/home
 
 - id: amrutha-seshagiri
   name: Amrutha Seshagiri
@@ -52,15 +61,6 @@
   email: shobhit.gupta25@iimb.ac.in
   webpage: https://www.linkedin.com/in/shobhit-guptaa-b86478118/
 
-- id: thaha-uwaise
-  name: Thaha Uwaise
-  category: other
-  image: /assets/images/members/Thaha_Uwaise.jpg
-  role: PhD student, VIT, working since 2026
-  themes: Bayesian methods · Machine learning · Sports analytics
-  email: thahauwaise.ak@vit.ac.in
-  webpage: https://www.linkedin.com/in/thaha-uwaise-366a88174/
-
 
 - id: madhab-barman
   name: Madhab Barman
@@ -81,6 +81,15 @@
   webpage: https://sites.google.com/view/shamriddha/bio 
 
 
+- id: thaha-uwaise
+  name: Thaha Uwaise
+  category: other
+  image: /assets/images/members/Thaha_Uwaise.jpg
+  role: PhD student, VIT, working since 2026
+  themes: Bayesian methods · Machine learning · Sports analytics
+  email: thahauwaise.ak@vit.ac.in
+  webpage: https://www.linkedin.com/in/thaha-uwaise-366a88174/
+
 - id: anitha-p
   name: Anitha Pathlavath
   category: other
@@ -89,6 +98,15 @@
   themes: Financial data · Deep learning · Time series
   email: anitha.pathlavath@iimb.ac.in
   webpage: https://www.linkedin.com/in/anitha-rathod-952b57250/
+
+- id: muskan-kumari
+  name: Muskan Kumari
+  category: other
+  image: /assets/images/members/Muskan_Kumari.png
+  role: BS-MS Student, IISER Thiruvananthapuram, working since 2026
+  themes: Financial data · Deep learning · Time series
+  email: muskan23@iisertvm.ac.in
+  webpage: https://www.linkedin.com/in/muskan-kumari-5bb884287/
 
 - id: ashish-yadav
   name: Ashish Yadav
@@ -99,11 +117,3 @@
   email: ms22168@iisermohali.ac.in
   webpage: 
 
-- id: muskan-kumari
-  name: Muskan Kumari
-  category: other
-  image: /assets/images/members/Muskan_Kumari.png
-  role: BS-MS Student, IISER Thiruvananthapuram, working since 2026
-  themes: Financial data · Deep learning · Time series
-  email: muskan23@iisertvm.ac.in
-  webpage: https://www.linkedin.com/in/muskan-kumari-5bb884287/

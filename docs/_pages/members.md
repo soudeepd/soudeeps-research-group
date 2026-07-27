@@ -41,7 +41,7 @@ Following are the current members of SIGNAL Group, who are working in different 
             {% endif %}
 
             {% if person.webpage %}
-              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Webpage</a>
+              <a href="{{ person.webpage }}" target="_blank" rel="noopener">Website</a>
             {% endif %}
 
             {% if person.profile and person.profile != "#" %}

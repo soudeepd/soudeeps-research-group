@@ -332,6 +332,8 @@
   themes:
     - sports-analytics
     - time-series
+  people:
+    - chinmay-divekar
   links:
     - label: publication
       url: "https://doi.org/10.1093/jrsssa/qnad136"
