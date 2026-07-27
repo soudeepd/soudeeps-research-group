@@ -13,42 +13,42 @@
 - title: "Group outing and reunion"
   date: 2026-06-28
   type: group-update
-  category: "Group activity"
+  category: "Activity"
   image: "/assets/images/news/2026/group-outing-2026-06.jpg"
   description: "Present and past members of The SIGNAL Group went out for some fun activities."
 
 - title: "Qualifying exam cleared"
   date: 2026-07-09
   type: achievement
-  category: "News"
-  image: "/assets/images/news/2026/shagun-lizan.png"
+  category: "Milestone"
+  image: "/assets/images/news/2026/shagun-lizan-2026-07.png"
   description: "Ms. Lizan and Ms. Shagun have successfully passed their PhD comprehensive examinations at IIM Bangalore."
   
 - title: "Invited talk by Prof. Soudeep"
   date: 2026-06-15
   type: research-update
-  category: "News"
+  category: "Talk"
   image: "/assets/images/news/2026/IMS_APRM_Soudeep-2026-06.jpg"
   description: "Prof. Soudeep presented a paper on nonparametric methods in infinite dimensional data in an invited session at IMS-APRM 2026 Conference."
 
 - title: "Paper presentation by Dr. Madhab"
   date: 2026-06-23
   type: research-update
-  category: "News"
+  category: "Talk"
   image: "/assets/images/news/2026/madhab-talk-2026-06.png"
   description: "Dr. Madhab presented our joint work in an invited session at ISNPS 2026 Conference."
 
 - title: "Poster presentation by Ms. Snehil"
   date: 2026-04-18
   type: research-update
-  category: "News"
+  category: "Talk"
   image: "/assets/images/news/2026/snehil-poster-2026-04.jpg"
   description: "Ms. Snehil presented her work in a poster session at IISER Mohali."
 
 - title: "Prof. Soudeep interviewed by Zee Business"
   date: 2026-06-26
   type: achievement
-  category: "News"
+  category: "Media"
   image: "/assets/images/news/2026/gcc-video-2026-06.jpg"
   description: "Following the launch of India's first GCC Index, Prof. Soudeep was interviewed by Zee Business to highlight their research insights."
   links:
@@ -58,10 +58,24 @@
 - title: "Research-driven GCC index launched"
   date: 2026-06-26
   type: research-update
-  category: "News"
+  category: "Impact"
   image: "/assets/images/news/2026/gcc-launch-2026-06.jpg"
   description: "Based on research by Prof. Soudeep, Dr. Kapil and Ms. Shagun, India's first GCC index was launched by IIMB-CRE Matrix."
   links:
     - label: "News coverage"
       url: "https://www.thehindu.com/news/cities/bangalore/bengaluru-remains-indias-gcc-capital-as-maturing-market-cools-rental-growth/article71166412.ece"
+
+- title: "Kunal moves on to new faculty role"
+  date: 2026-07-16
+  type: achievement
+  category: "Milestone"
+  image: "/assets/images/news/2026/kunal-jsbf-2026-07.png"
+  description: "Mr. Kunal has joined the Jindal School of Banking & Finance (JSBF), O.P. Jindal Global University, Haryana, as a Lecturer."
+  
+- title: Amrutha and Kunal present their papers in RMS 2026 
+  date: 2026-07-03
+  type: research-update
+  category: "Talk"
+  image: "/assets/images/news/2026/rms-talk-2026-07.jpg"
+  description: "Mr. Kunal and Ms. Amrutha presented their individual papers at the RMS 2026 Conference, India."
 
