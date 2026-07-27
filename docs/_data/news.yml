@@ -2,7 +2,7 @@
 
 - title: "New pre-print on projection diagnostics in multivariate data"
   date: 2026-06-02
-  type: announcement
+  type: research-update
   category: "Publication"
   image: "/assets/images/news/2026/preprint-2026-06.png"
   description: "A paper on projection diagnostics for directional asymmetry and tail-ratio departure in multivariate data has been completed by Prof. Soudeep and his coauthor."
@@ -12,28 +12,42 @@
 
 - title: "Group outing and reunion"
   date: 2026-06-28
-  type: activity
+  type: group-update
   category: "Group activity"
   image: "/assets/images/news/2026/group-outing-2026-06.jpg"
   description: "Present and past members of The SIGNAL Group went out for some fun activities."
 
 - title: "Qualifying exam cleared"
   date: 2026-07-09
-  type: announcement
+  type: achievement
   category: "News"
   image: "/assets/images/news/2026/shagun-lizan.png"
   description: "Ms. Lizan and Ms. Shagun have successfully passed their PhD comprehensive examinations at IIM Bangalore."
   
-- title: "Poster presentation by Snehil"
+- title: "Invited talk by Prof. Soudeep"
+  date: 2026-06-15
+  type: research-update
+  category: "News"
+  image: "/assets/images/news/2026/IMS_APRM_Soudeep-2026-06.jpg"
+  description: "Prof. Soudeep presented a paper on nonparametric methods in infinite dimensional data in an invited session at IMS-APRM 2026 Conference."
+
+- title: "Paper presentation by Dr. Madhab"
+  date: 2026-06-23
+  type: research-update
+  category: "News"
+  image: "/assets/images/news/2026/madhab-talk-2026-06.png"
+  description: "Dr. Madhab presented our joint work in an invited session at ISNPS 2026 Conference."
+
+- title: "Poster presentation by Ms. Snehil"
   date: 2026-04-18
-  type: talks
+  type: research-update
   category: "News"
   image: "/assets/images/news/2026/snehil-poster-2026-04.jpg"
-  description: "Snehil presented her work in a poster session at IISER Mohali."
+  description: "Ms. Snehil presented her work in a poster session at IISER Mohali."
 
 - title: "Prof. Soudeep interviewed by Zee Business"
   date: 2026-06-26
-  type: announcement
+  type: achievement
   category: "News"
   image: "/assets/images/news/2026/gcc-video-2026-06.jpg"
   description: "Following the launch of India's first GCC Index, Prof. Soudeep was interviewed by Zee Business to highlight their research insights."
@@ -43,7 +57,7 @@
 
 - title: "Research-driven GCC index launched"
   date: 2026-06-26
-  type: announcement
+  type: research-update
   category: "News"
   image: "/assets/images/news/2026/gcc-launch-2026-06.jpg"
   description: "Based on research by Prof. Soudeep, Dr. Kapil and Ms. Shagun, India's first GCC index was launched by IIMB-CRE Matrix."

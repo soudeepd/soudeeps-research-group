@@ -8,9 +8,9 @@ This page records selected news, academic activities, group updates, talks, publ
 
 <div class="research-page-nav">
   <a href="#latest">Latest</a>
-  <a href="#announcements">Announcements</a>
-  <a href="#talks">Talks</a>
-  <a href="#activities">Group activities</a>
+  <a href="#research-updates">Research updates</a>
+  <a href="#achievements">Achievements</a>
+  <a href="#group-updates">Group updates</a>
   <a href="#archive">Archive</a>
 </div>
 
@@ -56,29 +56,29 @@ This page records selected news, academic activities, group updates, talks, publ
 {% endfor %}
 </div>
 
-<h2 id="announcements">Announcements</h2>
+<h2 id="research-updates">Research updates</h2>
 
 <div class="news-timeline">
-{% assign announcements = site.data.news | where: "type", "announcement" | sort: "date" | reverse %}
-{% for item in announcements %}
+{% assign research_updates = site.data.news | where: "type", "research-update" | sort: "date" | reverse %}
+{% for item in research_updates %}
   {% include news-timeline-item.html item=item %}
 {% endfor %}
 </div>
 
-<h2 id="talks">Talks and seminars</h2>
+<h2 id="achievements">Achievements</h2>
 
 <div class="news-timeline">
-{% assign talks = site.data.news | where: "type", "talk" | sort: "date" | reverse %}
-{% for item in talks %}
+{% assign achievements = site.data.news | where: "type", "achievement" | sort: "date" | reverse %}
+{% for item in achievements %}
   {% include news-timeline-item.html item=item %}
 {% endfor %}
 </div>
 
-<h2 id="activities">Group activities</h2>
+<h2 id="group-updates">Group updates</h2>
 
 <div class="news-timeline">
-{% assign activities = site.data.news | where: "type", "activity" | sort: "date" | reverse %}
-{% for item in activities %}
+{% assign group_updates = site.data.news | where: "type", "group-update" | sort: "date" | reverse %}
+{% for item in group_updates %}
   {% include news-timeline-item.html item=item %}
 {% endfor %}
 </div>
