@@ -95,12 +95,25 @@ This page collects books, seminar slides, study materials, and other academic re
 {% for item in study_materials %}
   <li>
     <strong>{{ item.title }}</strong>
-    {% if item.authors %}<br>{{ item.authors }}{% endif %}
-    {% if item.description %}<br>{{ item.description }}{% endif %}
+
+    {% if item.authors and item.authors != "" %}
+      <br>{{ item.authors }}
+    {% endif %}
+
+    {% if item.description %}
+      <br>{{ item.description }}
+    {% endif %}
+
     {% if item.links %}
       <br>
       {% for link in item.links %}
-        <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
+        {% assign first_char = link.url | slice: 0 %}
+        {% if first_char == "/" %}
+          <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% else %}
+          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% endif %}
+        {% unless forloop.last %} · {% endunless %}
       {% endfor %}
     {% endif %}
   </li>

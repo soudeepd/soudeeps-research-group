@@ -60,3 +60,10 @@
   links:
     - label: "Download slides"
       url: "/assets/resources/seminar-slides/Liverpool_talk.pdf"
+
+- title: "HR analytics dataset"
+  category: study-materials
+  description: "An Excel dataset for teaching and practice exercises in applied statistical modelling."
+  links:
+    - label: "Download dataset"
+      url: "/assets/resources/study-materials/datasets/HR_analytics_dataset.xlsx"
