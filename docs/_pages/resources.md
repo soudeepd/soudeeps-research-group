@@ -90,35 +90,33 @@ This page collects books, seminar slides, study materials, and other academic re
 
 <h2 id="study-materials">Study materials</h2>
 
-<ul class="resource-list">
+<div class="study-material-list">
 {% assign study_materials = site.data.resources | where: "category", "study-materials" %}
 {% for item in study_materials %}
-  <li>
-    <strong>{{ item.title }}</strong>
+  <article class="study-material-item">
+    <div class="study-material-title-row">
+      <p class="study-material-title">{{ item.title }}</p>
 
-    {% if item.authors and item.authors != "" %}
-      <br>{{ item.authors }}
-    {% endif %}
+      {% if item.links %}
+        <div class="study-material-links">
+          {% for link in item.links %}
+            {% assign first_char = link.url | slice: 0 %}
+            {% if first_char == "/" %}
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% else %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
 
     {% if item.description %}
-      <br>{{ item.description }}
+      <p class="study-material-description">{{ item.description }}</p>
     {% endif %}
-
-    {% if item.links %}
-      <br>
-      {% for link in item.links %}
-        {% assign first_char = link.url | slice: 0 %}
-        {% if first_char == "/" %}
-          <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-        {% else %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
-        {% endif %}
-        {% unless forloop.last %} · {% endunless %}
-      {% endfor %}
-    {% endif %}
-  </li>
+  </article>
 {% endfor %}
-</ul>
+</div>
 
 <h2 id="others">Others</h2>
 
