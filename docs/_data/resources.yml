@@ -61,9 +61,21 @@
     - label: "Download slides"
       url: "/assets/resources/seminar-slides/Liverpool_talk.pdf"
 
+- title: "Basics of R"
+  category: study-materials
+  description: "Here is an introduction to R coding through a comprehensive guide, with simple practices to follow. Download the R script and run it using the UrbanMart dataset for hands-on practice. Contact Prof. Soudeep if there is any question about this."
+  links:
+    - label: "Guide"
+      url: "/assets/resources/study-materials/documents/R_and_RStudio_Getting_Started_Guide.pdf"
+    - label: "R script"
+      url: "/assets/resources/study-materials/datasets/R_Basics_and_UrbanMart_EDA.R"
+    - label: "Dataset"
+      url: "/assets/resources/study-materials/datasets/UrbanMart_dataset.xlsx"
+
 - title: "HR analytics dataset"
   category: study-materials
-  description: "An Excel dataset for teaching and practice exercises in applied statistical modelling."
+  description: "Here is an Excel dataset for teaching and practice exercises in applied statistical modelling. This can be used for different types of regression and classification exercises. Contact Prof. Soudeep if there is any question about this."
   links:
     - label: "Download dataset"
       url: "/assets/resources/study-materials/datasets/HR_analytics_dataset.xlsx"
+
