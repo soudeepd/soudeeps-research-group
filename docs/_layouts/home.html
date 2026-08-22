@@ -40,13 +40,84 @@ layout: default
 
 <section class="home-photo-section">
   <div class="container">
-    <img
-      src="{{ site.baseurl }}/assets/images/home/signal-lab-collage.png"
-      alt="SIGNAL Group collage"
-      class="home-feature-photo"
-    >
+    <div class="home-photo-slider" data-slider>
+      <div class="home-photo-track">
+        {% for photo in site.data.home_photos %}
+          <figure class="home-photo-slide{% if forloop.first %} active{% endif %}">
+            <img
+              src="{{ site.baseurl }}{{ photo.image }}"
+              alt="{{ photo.alt }}"
+              class="home-feature-photo"
+            >
+
+            {% if photo.caption %}
+              <figcaption>{{ photo.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        {% endfor %}
+      </div>
+
+      <button class="slider-arrow slider-arrow-left" type="button" aria-label="Previous photo" data-slider-prev>
+        &#10094;
+      </button>
+
+      <button class="slider-arrow slider-arrow-right" type="button" aria-label="Next photo" data-slider-next>
+        &#10095;
+      </button>
+
+      <div class="slider-dots" aria-label="Photo navigation">
+        {% for photo in site.data.home_photos %}
+          <button
+            type="button"
+            class="slider-dot{% if forloop.first %} active{% endif %}"
+            aria-label="Show photo {{ forloop.index }}"
+            data-slider-dot="{{ forloop.index0 }}">
+          </button>
+        {% endfor %}
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector("[data-slider]");
+    if (!slider) return;
+
+    const slides = slider.querySelectorAll(".home-photo-slide");
+    const dots = slider.querySelectorAll(".slider-dot");
+    const prevButton = slider.querySelector("[data-slider-prev]");
+    const nextButton = slider.querySelector("[data-slider-next]");
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      currentIndex = (index + slides.length) % slides.length;
+
+      slides.forEach(function (slide, i) {
+        slide.classList.toggle("active", i === currentIndex);
+      });
+
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === currentIndex);
+      });
+    }
+
+    prevButton.addEventListener("click", function () {
+      showSlide(currentIndex - 1);
+    });
+
+    nextButton.addEventListener("click", function () {
+      showSlide(currentIndex + 1);
+    });
+
+    dots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        showSlide(Number(dot.dataset.sliderDot));
+      });
+    });
+  });
+</script>
 
 <section class="section">
   <div class="container">
