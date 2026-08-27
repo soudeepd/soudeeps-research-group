@@ -16,6 +16,15 @@
     - label: "Buy from Amazon"
       url: "https://www.amazon.in/Mathematical-Techniques-Competitive-Examinations-Debangan/dp/9393330107/"
 
+- title: "Does economic strength or political and civil freedom improve international tourism? An econometric analysis"
+  category: seminar-slides
+  presenter: "Amrutha Seshagiri"
+  event: "Contributed talk, COMPSTAT Conference 2026, Greece"
+  year: August 2026
+  links:
+    - label: "Download slides"
+      url: "/assets/resources/slides/Amrutha_COMPSTAT2026_talk.pdf"
+
 - title: "Data-Driven Estimation of Rare Event Probabilities for Spatial Extremes"
   category: seminar-slides
   presenter: "Madhab Barman"
@@ -79,3 +88,10 @@
     - label: "Download dataset"
       url: "/assets/resources/study-materials/datasets/HR_analytics_dataset.xlsx"
 
+- title: "A discussion on statistical power"
+  category: study-materials
+  description: "Understanding the concept of type I/II error and power is important for an introductory course in statistics. Here is a short note about power with specific examples in one-sample tests of mean and variance. Contact Prof. Soudeep if there is any question about this."
+  links:
+    - label: "Download notes"
+      url: "/assets/resources/study-materials/documents/Notes_on_statistical_power.pdf"
+   
