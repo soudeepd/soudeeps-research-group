@@ -105,3 +105,10 @@
   image: "/assets/images/news/2026/ashish-iimb-2026-08.png"
   description: "Mr. Ashish -- a student of IISER Mohali -- has moved to IIM Bangalore for a period of four months to start working on his MS thesis."
 
+- title: "Amrutha presents her research in COMPSTAT 2026" 
+  date: 2026-08-26
+  type: research-update
+  category: "Talk"
+  image: "/assets/images/news/2026/compstat-talk-2026-08.png"
+  description: "Ms. Amrutha presented her paper on econometric modelling of tourism data at the COMPSTAT 2026 Conference, Greece."
+
