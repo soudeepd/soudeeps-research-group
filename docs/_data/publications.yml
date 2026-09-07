@@ -1,3 +1,20 @@
+- title: "Mapping Nitrate Risk in Drinking Water: A Scalable Bayesian Framework for Spatial Hotspots and Exceedance Assessment"
+  authors: "Pereira, L.M., Nishant, Shrinivas, A., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Working paper"
+  venue: "IIMB Working Paper No. 747/2026"
+  themes:
+    - environmental-research
+    - spatio-temporal
+  people:
+    - lizan-mp
+  links:
+    - label: pre-print
+      url: "https://www.iimb.ac.in/sites/default/files/2026-09/WP%20No.%20747.pdf"
+    - label: bibtex
+      url: "/assets/bibtex/pereira2026mapping.bib"
+
 - title: "Projection Diagnostics for Directional Asymmetry and Tail-Ratio Departure in Multivariate Data"
   authors: "Banerjee, S., Deb, S."
   year: 2026

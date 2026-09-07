@@ -1,3 +1,48 @@
+- title: "First draft of water quality analysis"
+  date: 2026-09-07
+  type: research-update
+  category: "Publication"
+  image: "/assets/images/news/2026/wp-2026-09.png"
+  description: "A working paper on new Bayesian methods for analysing water quality data for hotspot detection and policy-level implications has been released by Ms. Lizan, Prof. Soudeep and coauthors."
+  links:
+    - label: "Read the paper"
+      url: "https://www.iimb.ac.in/sites/default/files/2026-09/WP%20No.%20747.pdf"
+
+- title: "Happy Teachers' Day"
+  date: 2026-09-05
+  type: group-update
+  category: "Activity"
+  image: "/assets/images/news/2026/teachers-day-2026-09.jpg"
+  description: "Group members celebrated the Teachers' Day during the weekly meeting."
+
+- title: "Multiple acceptances at IMRC 2026" 
+  date: 2026-09-02
+  type: achievement
+  category: "Acceptance"
+  image: "/assets/images/news/2026/imrc-2026-09.png"
+  description: "Papers from Dr. Madhab, Ms. Lizan, and Mr. Shobhit have been accepted for presentations in IMRC 2026, to be held later this year at IIM Ahmedabad, India."
+
+- title: "Muskan's summer visit to IIMB comes to an end"
+  date: 2026-07-30
+  type: group-update
+  category: "People"
+  image: "/assets/images/news/2026/muskan-iimb-2026-07.jpg"
+  description: "Ms. Muskan visited IIM Bangalore for two months to work on her project and has now moved back to her alma mater for finishing MS."
+
+- title: "Ashish moves to IIM Bangalore for MS thesis work"
+  date: 2026-08-01
+  type: group-update
+  category: "People"
+  image: "/assets/images/news/2026/ashish-iimb-2026-08.png"
+  description: "Mr. Ashish -- a student of IISER Mohali -- has moved to IIM Bangalore for a period of four months to start working on his MS thesis."
+
+- title: "Amrutha presents her research in COMPSTAT 2026" 
+  date: 2026-08-26
+  type: research-update
+  category: "Talk"
+  image: "/assets/images/news/2026/compstat-talk-2026-08.png"
+  description: "Ms. Amrutha presented her paper on econometric modelling of tourism data at the COMPSTAT 2026 Conference, Greece."
+
 - title: "Amrutha defends thesis proposal"
   date: 2026-08-20
   type: achievement
@@ -90,32 +135,4 @@
   category: "Talk"
   image: "/assets/images/news/2026/rms-talk-2026-07.png"
   description: "Mr. Kunal and Ms. Amrutha presented their individual papers at the RMS 2026 Conference, India."
-
-- title: "Muskan's summer visit to IIMB comes to an end"
-  date: 2026-07-30
-  type: group-update
-  category: "People"
-  image: "/assets/images/news/2026/muskan-iimb-2026-07.jpg"
-  description: "Ms. Muskan visited IIM Bangalore for two months to work on her project and has now moved back to her alma mater for finishing MS."
-
-- title: "Ashish moves to IIM Bangalore for MS thesis work"
-  date: 2026-08-01
-  type: group-update
-  category: "People"
-  image: "/assets/images/news/2026/ashish-iimb-2026-08.png"
-  description: "Mr. Ashish -- a student of IISER Mohali -- has moved to IIM Bangalore for a period of four months to start working on his MS thesis."
-
-- title: "Amrutha presents her research in COMPSTAT 2026" 
-  date: 2026-08-26
-  type: research-update
-  category: "Talk"
-  image: "/assets/images/news/2026/compstat-talk-2026-08.png"
-  description: "Ms. Amrutha presented her paper on econometric modelling of tourism data at the COMPSTAT 2026 Conference, Greece."
-
-- title: "Multiple acceptances at IMRC 2026" 
-  date: 2026-09-02
-  type: achievement
-  category: "Acceptance"
-  image: "/assets/images/news/2026/imrc-2026-09.png"
-  description: "Papers from Dr. Madhab, Ms. Lizan, and Mr. Shobhit have been accepted for presentations in IMRC 2026, to be held later this year at IIM Ahmedabad, India."
 
