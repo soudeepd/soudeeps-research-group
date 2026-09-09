@@ -1,3 +1,10 @@
+- title: "Chinmay completes his PhD journey"
+  date: 2026-09-07
+  type: achievement
+  category: "Milestone"
+  image: "/assets/images/news/2026/chinmay-defense-2026-09.jpg"
+  description: "Chinmay has successfully defended his thesis and has become Dr. Chinmay Divekar. His thesis was co-supervised by Prof. Rishideep Roy from University of Leicester, and the research focus was on novel methods for within-game analytics in sports."
+
 - title: "First draft of water quality analysis"
   date: 2026-09-07
   type: research-update
@@ -135,4 +142,14 @@
   category: "Talk"
   image: "/assets/images/news/2026/rms-talk-2026-07.png"
   description: "Mr. Kunal and Ms. Amrutha presented their individual papers at the RMS 2026 Conference, India."
+
+- title: "Prof. Soudeep's coauthored article in BT"
+  date: 2026-04-18
+  type: achievement
+  category: "Media"
+  image: "/assets/images/news/2026/bt-article-2026-04.jpg"
+  description: "Prof. Soudeep and Prof. Venkatesh have written an article on Business Today to discuss potential problems with India's CPI calculation, even after the revision."
+  links:
+    - label: "Read the news"
+      url: "https://www.businesstoday.in/latest/economy/story/indias-cpi-reform-still-misses-the-house-rent-reset-problem-526328-2026-04-18"
 
