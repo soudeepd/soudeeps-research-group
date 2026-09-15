@@ -38,6 +38,17 @@
   themes: Time series · Nonparametrics · Financial data · Applied probability
   webpage: "https://sites.google.com/view/archi-roy"
 
+- id: chinmay-divekar
+  name: Chinmay Divekar
+  category: phd
+  image: /assets/images/members/Chinmay_Divekar.jpg
+  role: PhD, IIM Bangalore (co-supervised)
+  period: Graduated September 2026
+  current: Assistant Vice President, Barclays Investment Bank, India
+  themes: Bayesian methods · Sports analytics · Quantitative finance · Markov models
+  webpage: "https://sites.google.com/view/chinmay-divekar/home"
+
+
 - id: souvik-bag
   name: Souvik Bag
   category: other
