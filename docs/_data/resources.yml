@@ -99,7 +99,14 @@
   category: study-materials
   description: "Here is a short note, accompanied with relevant slides, to understand various techniques of modelling large spatial data. Contact Dr. Shamriddha and Ms. Shagun if there is any question about this."
   links:
-    - label: "Notes"
+    - label: "Download notes"
       url: "/assets/resources/study-materials/documents/Modelling_Large_Spatial_Data_Notes.pdf"
-    - label: "Slides"
+    - label: "Download slides"
       url: "/assets/resources/study-materials/datasets/Modelling_Large_Spatial_Data_Slides.pdf"
+
+- title: "How to Get Into IIM Bangalore for a PhD?"
+  category: others
+  description: "Ms. Lizan discusses the PhD journey at IIM Bangalore in this podcast, including admissions, research experience, and career opportunities."
+  links:
+    - label: "Watch on YouTube"
+      url: "https://www.youtube.com/watch?v=JqQBN5YdUvs"
