@@ -120,24 +120,30 @@ This page collects books, seminar slides, study materials, and other academic re
 
 <h2 id="others">Others</h2>
 
-<ul class="resource-list">
+<div class="other-resource-list">
 {% assign others = site.data.resources | where: "category", "others" %}
 {% for item in others %}
-  <li>
-    <strong>{{ item.title }}</strong>
-    {% if item.authors %}<br>{{ item.authors }}{% endif %}
-    {% if item.description %}<br>{{ item.description }}{% endif %}
-    {% if item.links %}
-      <br>
-      {% for link in item.links %}
-        {% assign first_char = link.url | slice: 0 %}
-        {% if first_char == "/" %}
-          <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
-        {% else %}
-          <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}
-        {% endif %}
-      {% endfor %}
+  <article class="other-resource-item">
+    <div class="other-resource-title-row">
+      <p class="other-resource-title">{{ item.title }}</p>
+
+      {% if item.links %}
+        <div class="other-resource-links">
+          {% for link in item.links %}
+            {% assign first_char = link.url | slice: 0 %}
+            {% if first_char == "/" %}
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% else %}
+              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if item.description %}
+      <p class="other-resource-description">{{ item.description }}</p>
     {% endif %}
-  </li>
+  </article>
 {% endfor %}
-</ul>
+</div>
