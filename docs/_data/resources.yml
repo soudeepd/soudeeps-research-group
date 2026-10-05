@@ -95,3 +95,11 @@
     - label: "Download notes"
       url: "/assets/resources/study-materials/documents/Notes_on_statistical_power.pdf"
    
+- title: "A guide to model large spatial data"
+  category: study-materials
+  description: "Here is a short note, accompanied with relevant slides, to understand various techniques of modelling large spatial data. Contact Dr. Shamriddha and Ms. Shagun if there is any question about this."
+  links:
+    - label: "Notes"
+      url: "/assets/resources/study-materials/documents/Modelling_Large_Spatial_Data_Notes.pdf"
+    - label: "Slides"
+      url: "/assets/resources/study-materials/datasets/Modelling_Large_Spatial_Data_Slides.pdf"
