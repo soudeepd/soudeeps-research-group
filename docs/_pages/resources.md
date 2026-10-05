@@ -120,30 +120,41 @@ This page collects books, seminar slides, study materials, and other academic re
 
 <h2 id="others">Others</h2>
 
-<div class="other-resource-list">
+<div class="study-material-list">
 {% assign others = site.data.resources | where: "category", "others" %}
 {% for item in others %}
-  <article class="other-resource-item">
-    <div class="other-resource-title-row">
-      <p class="other-resource-title">{{ item.title }}</p>
+  <article class="study-material-item">
+    <div class="study-material-title-row">
+
+      <p class="study-material-title">{{ item.title }}</p>
 
       {% if item.links %}
-        <div class="other-resource-links">
+        <div class="study-material-links">
           {% for link in item.links %}
             {% assign first_char = link.url | slice: 0 %}
+
             {% if first_char == "/" %}
-              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              <a href="{{ site.baseurl }}{{ link.url }}" target="_blank" rel="noopener">
+                {{ link.label }}
+              </a>
             {% else %}
-              <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }}</a>
+              <a href="{{ link.url }}" target="_blank" rel="noopener">
+                {{ link.label }}
+              </a>
             {% endif %}
+
           {% endfor %}
         </div>
       {% endif %}
+
     </div>
 
     {% if item.description %}
-      <p class="other-resource-description">{{ item.description }}</p>
+      <p class="study-material-description">
+        {{ item.description }}
+      </p>
     {% endif %}
+
   </article>
 {% endfor %}
 </div>
