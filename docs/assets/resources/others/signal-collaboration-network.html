@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SIGNAL Group collaboration map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Spectral:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDEFF8; --panel:#FFFFFF; --canvas:#F3F4FB; --ink:#161A2E; --muted:#5B6278; --line:#D9DCEC;
+  --pi:#4338CA; --member:#0D9488; --alum:#C2670A; --ext:#8B92A8; --focus:#4338CA;
+  --nebula:rgba(67,56,202,.07); --star:#B9BEDC; --star-op:.35; --glow-k:4px;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#090C16; --panel:#12162A; --canvas:#070A13; --ink:#EDEFFA; --muted:#8B93B5; --line:#242A46;
+    --pi:#9593FF; --member:#2DD9C4; --alum:#FBBB3F; --ext:#5A6286; --focus:#9593FF;
+    --nebula:rgba(149,147,255,.16); --star:#C9CEFF; --star-op:.8; --glow-k:7px;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#090C16; --panel:#12162A; --canvas:#070A13; --ink:#EDEFFA; --muted:#8B93B5; --line:#242A46;
+  --pi:#9593FF; --member:#2DD9C4; --alum:#FBBB3F; --ext:#5A6286; --focus:#9593FF;
+  --nebula:rgba(149,147,255,.16); --star:#C9CEFF; --star-op:.8; --glow-k:7px;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+  font:14px/1.5 "Public Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.app{display:grid;grid-template-columns:320px 1fr;height:100%}
+aside{background:var(--panel);border-right:1px solid var(--line);overflow-y:auto;padding:22px 22px 28px}
+h1{font-family:Spectral,Georgia,"Times New Roman",serif;font-weight:600;font-size:27px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 6px;max-width:34ch}
+.sub a{color:inherit}
+.how{color:var(--muted);font-size:12.5px;margin:0 0 4px}
+h2{font-family:Spectral,Georgia,serif;font-weight:600;font-size:17px;margin:20px 0 8px}
+.row{display:flex;align-items:center;gap:8px;margin:6px 0}
+label{cursor:pointer}
+input[type=checkbox]{accent-color:var(--pi);width:16px;height:16px;flex:none}
+input[type=search]{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--canvas);color:var(--ink)}
+.combo{position:relative}
+.combo input[type=text]{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--canvas);color:var(--ink)}
+.combo input[type=text]:focus{border-color:var(--pi)}
+.qlist{position:absolute;z-index:6;left:0;right:0;top:calc(100% + 4px);margin:0;padding:4px;list-style:none;
+  background:var(--panel);border:1px solid var(--line);border-radius:9px;max-height:240px;overflow-y:auto;
+  box-shadow:0 14px 34px -16px rgba(15,25,40,.45)}
+.qlist li{padding:7px 9px;border-radius:6px;cursor:pointer;font-size:13.5px;display:flex;align-items:center;gap:7px;line-height:1.3}
+.qlist li i{width:8px;height:8px;border-radius:50%;flex:none}
+.qlist li:hover,.qlist li.active{background:var(--canvas)}
+.qlist li.empty{color:var(--muted);cursor:default}
+.qlist li.empty:hover{background:none}
+#qmsg{min-height:0;margin:6px 0 0;font-size:12.5px;color:var(--muted)}
+.years{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center}
+input[type=range]{width:100%;accent-color:var(--pi)}
+.btn{border:1px solid var(--line);background:var(--canvas);color:var(--ink);font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--ink);color:var(--panel);border-color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12.5px;
+  padding:4px 10px 4px 8px;border-radius:14px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.chip i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.chip[aria-pressed=false]{opacity:.42}
+.chiprow{display:flex;gap:10px;margin-top:8px;font-size:12.5px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;margin-top:4px}
+.stat b{display:block;font-family:Spectral,Georgia,serif;font-size:22px;font-weight:600;line-height:1.1}
+.stat span{color:var(--muted);font-size:12.5px}
+ol.top{margin:6px 0 0;padding-left:20px}
+ol.top li{margin:2px 0}
+.link{background:none;border:0;padding:0;color:inherit;font:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;cursor:pointer;text-align:left}
+.link:hover{text-decoration-color:currentColor}
+.meta{color:var(--muted);font-size:12.5px}
+.note{color:var(--muted);font-size:12.5px;margin-top:22px;line-height:1.5}
+main{position:relative;overflow:hidden;min-height:0;background:
+  radial-gradient(ellipse 70% 60% at 62% 38%, var(--nebula), transparent 70%),
+  radial-gradient(ellipse 50% 50% at 15% 85%, var(--nebula), transparent 65%),
+  var(--canvas);
+  transition:background-color .3s ease}
+.star{fill:var(--star);opacity:var(--star-op)}
+svg{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
+svg:active{cursor:grabbing}
+.seg{position:absolute;top:14px;left:14px;display:flex;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:3px;z-index:3}
+.seg button{border:0;background:transparent;color:var(--muted);font:inherit;font-weight:500;padding:6px 13px;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--panel)}
+.tools{position:absolute;top:14px;right:14px;display:flex;gap:6px;z-index:3}
+.tools .btn{background:var(--panel)}
+.focusbar{position:absolute;top:64px;left:14px;z-index:3;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--pi);border-radius:8px;padding:6px 8px 6px 12px;display:none;align-items:center;gap:10px;font-size:13px}
+.focusbar.on{display:flex}
+.legend{position:absolute;left:14px;bottom:14px;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-size:12.5px;z-index:2;display:flex;gap:14px;flex-wrap:wrap;max-width:calc(100% - 28px)}
+.evo{position:absolute;left:14px;right:14px;bottom:14px;z-index:3;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:9px 14px;display:none;align-items:center;gap:10px;box-shadow:0 10px 30px -14px rgba(15,25,40,.4)}
+.evo.on{display:flex}
+.evo .lbl{font-size:12.5px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.evo select{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--canvas);color:var(--ink);flex:none}
+.evo .track{position:relative;flex:1;height:22px;display:flex;align-items:center;cursor:pointer;touch-action:none}
+.evo .track .bar{position:absolute;left:0;right:0;top:50%;height:3px;background:var(--line);border-radius:2px;transform:translateY(-50%)}
+.evo .track .fill{position:absolute;left:0;top:50%;height:3px;background:var(--pi);border-radius:2px;transform:translateY(-50%);width:0%}
+.evo .track .thumb{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--pi);border:2px solid var(--panel);transform:translate(-50%,-50%);left:0%;box-shadow:0 1px 3px rgba(0,0,0,.35)}
+@media (max-width:860px){ .evo{flex-wrap:wrap} .evo .track{order:5;flex:1 1 100%} }
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:11px;height:11px;border-radius:50%;display:inline-block}
+.card{position:absolute;right:14px;bottom:14px;width:350px;max-height:calc(100% - 80px);overflow:auto;z-index:4;
+  background:color-mix(in srgb, var(--panel) 92%, transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid var(--line);border-radius:12px;padding:14px 16px 16px;display:none;
+  box-shadow:0 1px 0 var(--line),0 20px 44px -16px rgba(10,14,30,.5);
+  opacity:0;transform:translateY(8px) scale(.98);transition:opacity .2s ease,transform .22s cubic-bezier(.2,.8,.2,1)}
+.card.on{display:block}
+.card.on.show{opacity:1;transform:translateY(0) scale(1)}
+@media (prefers-reduced-motion:reduce){.card{transition:opacity .15s ease;transform:none!important}}
+.card h3{font-family:Spectral,Georgia,serif;font-size:19px;font-weight:600;line-height:1.2;margin:0 28px 4px 0}
+.card .x{position:absolute;top:8px;right:8px;border:0;background:transparent;color:var(--muted);font-size:20px;line-height:1;width:30px;height:30px;border-radius:6px;cursor:pointer}
+.card .x:hover{background:var(--canvas);color:var(--ink)}
+.card ul{list-style:none;padding:0;margin:10px 0}
+.card li{margin:2px -6px;padding:4px 6px;border-radius:6px}
+.card li:hover{background:var(--canvas)}
+.card a{color:var(--pi)}
+.card .acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.tip{position:absolute;left:0;top:0;pointer-events:none;background:var(--ink);color:var(--panel);padding:7px 10px;border-radius:7px;font-size:12.5px;max-width:290px;line-height:1.4;opacity:0;z-index:6}
+.tip b{font-weight:600}
+.tip .m{opacity:.75}
+button:focus-visible,input:focus-visible,.node:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.node{cursor:pointer}
+.node .hit{fill:none;pointer-events:all}
+.node.pi{--glow:var(--pi)} .node.member{--glow:var(--member)} .node.alumni{--glow:var(--alum)} .node.ext{--glow:var(--ext)}
+.node circle.c{stroke:var(--canvas);stroke-width:2;transition:filter .18s ease}
+.node:hover circle.c,.node.lit circle.c,.node.sel circle.c{filter:drop-shadow(0 0 var(--glow-k) var(--glow)) drop-shadow(0 0 1.5px var(--glow))}
+.node.pi circle.c{animation:pipulse 3.4s ease-in-out infinite}
+@keyframes pipulse{0%,100%{filter:drop-shadow(0 0 3px var(--pi))}50%{filter:drop-shadow(0 0 calc(var(--glow-k) + 5px) var(--pi))}}
+.node circle.ring{fill:none;stroke:var(--ink);stroke-width:1.4;stroke-dasharray:3 2;display:none}
+.node.pinned circle.ring{display:block}
+.node text{font-size:11px;fill:var(--ink);paint-order:stroke;stroke:var(--canvas);stroke-width:3px;pointer-events:none}
+.node.ext text{opacity:0}
+.zk .node.ext text,.alllabels .node.ext text,.node.ext.lit text{opacity:.85}
+.node.sel circle.c{stroke:var(--ink);stroke-width:2.5}
+.pnode rect{stroke:var(--canvas);stroke-width:1.5;cursor:pointer;transition:filter .18s ease}
+.pnode:hover rect,.pnode.lit rect{filter:drop-shadow(0 0 5px currentColor)}
+.hull{cursor:pointer;transition:filter .2s ease}
+.hull.spawn{animation:spawnglow 900ms ease-out}
+@keyframes spawnglow{0%{filter:drop-shadow(0 0 14px currentColor);stroke-width:3}100%{filter:none;stroke-width:1.4}}
+.dim{opacity:.1}
+.edge{stroke:var(--muted);stroke-linecap:round;pointer-events:none;transition:stroke .18s ease}
+svg.dragging .node,svg.dragging .pnode,svg.dragging .hull,svg.dragging .edgehit{pointer-events:none}
+.edgehit{stroke:transparent;stroke-width:12;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.node.pi circle.c{animation:none}.hull.spawn{animation:none}}
+@media (max-width:860px){
+  .app{display:block;height:auto}
+  aside{border-right:0;border-bottom:1px solid var(--line)}
+  main{height:640px}
+  .tools{top:62px;left:14px;right:auto}
+  .focusbar{top:108px}
+  .card{left:8px;right:8px;bottom:8px;width:auto;max-height:52%}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<aside>
+  <h1>Who writes with whom in the SIGNAL Group</h1>
+  <p class="sub">Co-authorship among members, alumni and outside collaborators of Prof. Soudeep Deb's group at IIM Bangalore, built from the papers listed on <a href="https://signal-lab-by-deb.in/research/" target="_blank" rel="noopener">the group website</a>.</p>
+
+  <h2>Find a person</h2>
+  <p class="how" style="margin:0 0 8px">Click the box any time to browse or scroll the full list, typed text or not — picking a name shows only their papers.</p>
+  <div class="combo" id="qcombo">
+    <input type="text" id="q" placeholder="Type or click to browse names" autocomplete="off" aria-label="Find a person" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="qlist">
+    <ul class="qlist" id="qlist" role="listbox" hidden></ul>
+  </div>
+  <p id="qmsg"></p>
+
+  <h2>People and papers</h2>
+  <div class="row"><input type="checkbox" id="ext" checked><label for="ext">Include outside co-authors</label></div>
+  <div class="row"><input type="checkbox" id="pi" checked><label for="pi">Include Prof. Deb</label></div>
+  <div class="row"><input type="checkbox" id="pre" checked><label for="pre">Include pre-prints and working papers</label></div>
+  <div class="row"><input type="checkbox" id="labels"><label for="labels">Name every outside co-author</label></div>
+
+  <h2>Years</h2>
+  <div class="years">
+    <span>From</span><input type="range" id="y0" min="2021" max="2026" value="2021"><output id="y0o">2021</output>
+    <span>To</span><input type="range" id="y1" min="2021" max="2026" value="2026"><output id="y1o">2026</output>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <button class="btn primary" id="evoStart" type="button">Play the evolution to 2026</button>
+    <p class="meta" id="evoStartNote" hidden style="margin:0">Playing below the graph — use those controls, or Exit to browse by filter again.</p>
+  </div>
+
+  <h2>Themes</h2>
+  <p class="how" style="margin:0 0 8px">Click a theme to show only it. Shift-click to combine several.</p>
+  <div class="chips" id="chips"></div>
+  <div class="chiprow"><button class="link" id="allT" type="button">Select all</button><button class="link" id="noneT" type="button">Clear all</button></div>
+
+  <h2>In view</h2>
+  <div class="stats" id="stats"></div>
+  <h2>Most distinct co-authors</h2>
+  <ol class="top" id="top"></ol>
+
+</aside>
+<main>
+  <div class="seg" role="group" aria-label="View">
+    <button data-v="hyper" aria-pressed="true">Hypergraph</button>
+    <button data-v="net" aria-pressed="false">Pairwise network</button>
+    <button data-v="inc" aria-pressed="false">Author–paper</button>
+  </div>
+  <div class="tools">
+    <button class="btn" id="unpin" type="button" hidden>Release pinned nodes</button>
+    <button class="btn" id="fit" type="button">Fit to screen</button>
+  </div>
+  <div class="focusbar" id="focusbar"><span id="focustext"></span></div>
+  <svg id="svg" role="img" aria-label="Collaboration graph"></svg>
+  <div class="legend" id="legend">
+    <span><i style="background:var(--pi)"></i>PI</span>
+    <span><i style="background:var(--member)"></i>Current member</span>
+    <span><i style="background:var(--alum)"></i>Alumni</span>
+    <span><i style="background:var(--ext)"></i>Outside co-author</span>
+  </div>
+  <div class="evo" id="evo">
+    <button class="btn" id="evoToggle" type="button">Pause</button>
+    <button class="btn" id="evoRestart" type="button" aria-label="Restart from 2021">Restart</button>
+    <span class="lbl" id="evoLabel">2021 · 0 of 0 papers</span>
+    <div class="track" id="evoTrack" role="slider" tabindex="0" aria-label="Papers revealed so far" aria-valuemin="0">
+      <div class="bar"></div><div class="fill" id="evoFill"></div><div class="thumb" id="evoThumb"></div>
+    </div>
+    <select class="btn" id="evoSpeed" aria-label="Playback speed">
+      <option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option><option value="4">4×</option>
+    </select>
+    <button class="btn" id="evoExit" type="button">Exit</button>
+  </div>
+  <div class="card" id="card" role="region" aria-label="Details" aria-live="polite"></div>
+  <div class="tip" id="tip" role="tooltip"></div>
+</main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+const PEOPLE = {
+  deb:["Soudeep Deb","S. Deb","pi","Principal investigator, Associate Professor, IIM Bangalore"],
+  rai:["Kunal Rai","K. Rai","member","PhD student, IIM Bangalore (thesis submitted)"],
+  pereira:["Lizan Meryl Pereira","L. M. Pereira","member","PhD student, IIM Bangalore"],
+  srivastava:["Shagun Srivastava","S. Srivastava","member","PhD student, IIM Bangalore"],
+  roy_a:["Archi Roy","A. Roy","alumni","PhD, IISER Pune (co-supervised), graduated 2025"],
+  soni:["Anchal Soni","A. Soni","alumni","PhD, IIM Bangalore, graduated 2023"],
+  rawat:["Siddharth Rawat","S. Rawat","alumni","PhD, IIM Bangalore, graduated 2023"],
+  gupta_k:["Kapil Gupta","K. Gupta","alumni","PhD, IIM Bangalore, graduated 2025"],
+  divekar:["Chinmay Divekar","C. Divekar","alumni","PhD, IIM Bangalore (co-supervised), graduated 2026"],
+  bag:["Souvik Bag","S. Bag","alumni","Predoctoral fellow, 2021–22"],
+  deshmukh:["Shreyash S. Deshmukh","S. S. Deshmukh","alumni","Predoctoral fellow, 2023–24"],
+  basu_s:["Satyaki Basu Sarbadhikary","S. Basu Sarbadhikary","alumni","Research associate, 2024–25"],
+  mareeswaran:["Mareeswaran M.","M. Mareeswaran","alumni","Research assistant, 2021–23"],
+  chatto:["Anagh Chattopadhyay","A. Chattopadhyay","alumni","Research assistant, 2021–23"],
+  sen_s:["Shubhajit Sen","S. Sen","alumni","Research assistant, 2020–23"],
+  chakar:["Divya Chakarwarti","D. Chakarwarti","alumni","Research assistant, 2021–22"],
+  nahata:["Siddhant Nahata","S. Nahata","alumni","Research assistant, 2020–21"]
+};
+["I. Dattner","A. Anand","R. Roy","S. Das","K. Jana","M. Podder","M. Majumdar","S. Deb (co-author)","M. Panja","T. Chakraborty","A. Biswas","S. Roy","S. Karmakar","V. Panchapagesan","C. Neves","A. Durrant","A. Simpson","G. Nielson","C. Berrett","T. Basu","S. Banerjee","V. Krishnamurthy","Lakshmi M. V.","R. Sen","M. Banerjee","J. Sengupta","C. K. Jana","B. K. Roy","Nishant","A. Shrinivas"]
+  .forEach(n=>{PEOPLE["x:"+n]=[n,n,"ext","Outside co-author"];});
+const X = n => "x:"+n;
+
+const THEMES = {
+  ts:["Time series & forecasting","#4D6FD0"], st:["Spatio-temporal","#159A8B"], qr:["Quantile & extremes","#8955C6"],
+  ml:["Statistical learning","#C34B7B"], sp:["Sports analytics","#D27A1A"], env:["Environmental","#6F9A22"],
+  re:["Real estate & urban","#8C6748"], oth:["Other applications","#7A8594"]
+};
+
+const PAPERS = [
+ ["A nonparametric approach to understand multivariate quantile dynamics in financial time series",2026,"arXiv","pre",["rai","roy_a",X("I. Dattner"),"deb"],["ts","qr"],"https://arxiv.org/abs/2603.16400"],
+ ["Multiperiod volatility forecasting with optimization-based model selection: Evidence from NIFTY-50 Banks",2026,"SSRN","pre",["rai",X("A. Anand"),"deb"],["ts"],"https://dx.doi.org/10.2139/ssrn.6513699"],
+ ["Mapping nitrate risk in drinking water: A scalable Bayesian framework for spatial hotspots and exceedance assessment",2026,"IIMB Working Paper 747/2026","pre",["pereira",X("Nishant"),X("A. Shrinivas"),"deb"],["st","env"],"https://www.iimb.ac.in/sites/default/files/2026-09/WP%20No.%20747.pdf"],
+ ["E-STGCN: Extreme spatiotemporal graph convolutional networks for air quality forecasting",2026,"JRSS Series A","pub",[X("M. Panja"),X("T. Chakraborty"),X("A. Biswas"),"deb"],["st","ml","env"],"https://doi.org/10.1093/jrsssa/qnag010"],
+ ["Nonparametric regression of spatio-temporal data using infinite-dimensional covariates",2026,"arXiv","pre",[X("S. Roy"),"deb",X("S. Karmakar"),X("R. Roy")],["st"],"https://arxiv.org/abs/2604.01593"],
+ ["Optimal selection of the starting lineup for a football team",2026,"IIMB Management Review","pub",["deb",X("S. Das")],["ml","sp"],"https://doi.org/10.1016/j.iimb.2026.100642"],
+ ["Optimising football transfer strategy under budget constraints: A weighted multi-criteria approach",2026,"arXiv","pre",[X("T. Basu"),"deb",X("R. Roy")],["ml","sp"],"https://arxiv.org/abs/2605.13926"],
+ ["Projection diagnostics for directional asymmetry and tail-ratio departure in multivariate data",2026,"arXiv","pre",[X("S. Banerjee"),"deb"],["ml"],"https://arxiv.org/abs/2606.03670"],
+ ["Skill or chance? A Bayesian analysis of dependence and heterogeneity in penalty shootouts in football",2026,"Journal of Sports Analytics","pub",["deb"],["sp"],"https://journals.sagepub.com/doi/10.1177/22150218261444633"],
+ ["A survey of statistical and machine learning methods of quantile regression in time series and their suitability in predicting dengue outbreaks",2025,"Japanese J. Statistics and Data Science","pub",["deshmukh","deb"],["ts","qr","oth"],"https://link.springer.com/article/10.1007/s42081-025-00297-y"],
+ ["tSNE-Spec: A new classification method for multivariate time series data",2025,"J. Multivariate Analysis","pub",["sen_s","deb"],["ts","ml"],"https://doi.org/10.1016/j.jmva.2025.105537"],
+ ["A data-driven approach to spatial zoning and anomaly detection in the dynamic real estate network",2025,"Environment and Planning B","pub",["basu_s","roy_a","deb"],["st","ml","re"],"https://doi.org/10.1177/23998083251411954"],
+ ["A divide-and-conquer approach for spatio-temporal analysis of large house price data from Greater London",2025,"Annals of Operations Research","pub",["gupta_k","deb"],["st","re"],"https://link.springer.com/article/10.1007/s10479-025-06889-x"],
+ ["CPRI-Office: A new commercial property rental index for Indian cities using spatio-temporal modeling techniques",2025,"IIMB Working Paper 727/2025","pre",["gupta_k","srivastava","deb",X("V. Panchapagesan")],["st","re"],"https://www.iimb.ac.in/sites/default/files/2025-11/WP%20No.%20727.pdf"],
+ ["What elements of the opening set influence the outcome of a tennis match? An in-depth analysis of Wimbledon data",2025,"IIMB Management Review","pub",["gupta_k",X("V. Krishnamurthy"),"deb"],["ml","sp"],"https://www.sciencedirect.com/science/article/pii/S0970389624000089"],
+ ["Environmentally responsible index tracking: Maintaining performance while reducing carbon footprint of the portfolio",2025,"Statistics and Applications","pub",[X("Lakshmi M. V."),"deb",X("R. Sen")],["ml","env","oth"],"https://www.ssca.org.in/media/12_SA003_01_2024_R2_S_A_08062024_Rituparna_Sen_FINAL_Finally.pdf"],
+ ["Impact of COVID-19 on public social life and mental health: A statistical study of Google Trends data from the USA",2024,"J. Applied Statistics","pub",["roy_a","deb","chakar"],["ts","oth"],"https://www.tandfonline.com/doi/abs/10.1080/02664763.2022.2164562"],
+ ["New methods of structural break detection and an ensemble approach to analyse exchange rate volatility of Indian rupee during coronavirus pandemic",2024,"JRSS Series A","pub",["mareeswaran","sen_s","deb"],["ts","ml","oth"],"https://academic.oup.com/jrsssa/article-abstract/187/1/39/7197368"],
+ ["Forecasting elections from partial information using a Bayesian model for a multinomial sequence of data",2024,"J. Forecasting","pub",["deb",X("R. Roy"),X("S. Das")],["ts","oth"],"https://onlinelibrary.wiley.com/doi/abs/10.1002/for.3107"],
+ ["Real-time forecasting within soccer matches through a Bayesian lens",2024,"JRSS Series A","pub",["divekar","deb",X("R. Roy")],["ts","sp"],"https://doi.org/10.1093/jrsssa/qnad136"],
+ ["Nonparametric quantile regression for time series with replicated observations and its application to climate data",2024,"Statistical Science","pub",["deb",X("K. Jana")],["ts","qr","env"],"https://projecteuclid.org/journals/statistical-science/volume-39/issue-3/Nonparametric-Quantile-Regression-for-Time-Series-with-Replicated-Observations-and/10.1214/23-STS918.short"],
+ ["Nonparametric method of structural break detection in stochastic time series regression model",2024,"arXiv","pre",["roy_a",X("M. Podder"),"deb"],["ts"],"https://arxiv.org/abs/2410.15713"],
+ ["A spatio-temporal model for binary data and its application in analyzing the direction of COVID-19 spread",2024,"AStA Advances in Statistical Analysis","pub",["chatto","deb"],["st","oth"],"https://link.springer.com/article/10.1007/s10182-024-00507-0"],
+ ["Nonparametric quantile regression for spatio-temporal processes",2024,"arXiv","pre",["deb",X("C. Neves"),X("S. Roy")],["st","qr"],"https://arxiv.org/abs/2405.13783"],
+ ["A quadratic trend-based time series method to analyze the early incidence pattern of COVID-19",2023,"Biostatistics & Epidemiology","pub",["deb",X("M. Majumdar")],["ts","oth"],"https://www.tandfonline.com/doi/full/10.1080/24709360.2022.2076529"],
+ ["Analyzing airlines stock price volatility during COVID-19 pandemic through internet search data",2023,"Int. J. Finance & Economics","pub",["deb"],["ts","ml","oth"],"https://onlinelibrary.wiley.com/doi/10.1002/ijfe.2490"],
+ ["A wavelet-based methodology to compare the impact of pandemic versus Russia-Ukraine conflict on crude oil sector and its interconnectedness with other energy and non-energy markets",2023,"Energy Economics","pub",["roy_a","soni","deb"],["ts","ml","oth"],"https://www.sciencedirect.com/science/article/pii/S0140988323003286"],
+ ["A spatio-temporal statistical model to analyze COVID-19 spread in the USA",2023,"J. Applied Statistics","pub",["rawat","deb"],["st","oth"],"https://www.tandfonline.com/doi/full/10.1080/02664763.2021.1970122"],
+ ["A novel spatio-temporal clustering algorithm with applications on COVID-19 data from the United States",2023,"Comput. Statistics & Data Analysis","pub",["deb",X("S. Karmakar")],["st","ml","oth"],"https://www.sciencedirect.com/science/article/pii/S0167947323001214"],
+ ["A Bayesian approach to identify changepoints in spatio-temporal ordered categorical data: An application to COVID-19 data",2023,"arXiv","pre",["rawat",X("A. Durrant"),X("A. Simpson"),X("G. Nielson"),X("C. Berrett"),"deb"],["st","oth"],"https://arxiv.org/abs/2305.01906"],
+ ["Prevalence and spectrum of diabetic peripheral neuropathy and its correlation with insulin resistance: An experience from eastern India",2023,"Int. J. Advanced Research","pub",[X("M. Majumdar"),X("M. Banerjee"),X("J. Sengupta"),"deb",X("C. K. Jana"),X("B. K. Roy")],["oth"],"https://www.journalijar.com/uploads/64bc018830053_IJAR-43799.pdf"],
+ ["An ensemble method for early prediction of dengue outbreak",2022,"JRSS Series A","pub",["deb",X("S. Deb (co-author)")],["ts","ml","oth"],"https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/rssa.12714"],
+ ["A goal based index to analyze the competitive balance of a football league",2022,"J. Quantitative Analysis in Sports","pub",["deb"],["sp"],"https://www.degruyter.com/document/doi/10.1515/jqas-2021-0015/html"],
+ ["A review and recommendations on variable selection methods in regression models for binary data",2022,"arXiv","pre",["bag","gupta_k","deb"],["ml"],"https://arxiv.org/abs/2201.06063"],
+ ["A machine learning approach to analyze the effect of situational and player-dependent features on converting freekicks in soccer",2021,"Asia-Singapore Conf. on Sport Science","pub",["nahata","deb"],["ml","sp"],"https://www.researchgate.net/profile/Stuart-Evans-2/publication/359186201_ACSS_2021_Book/links/622c28413c53d31ba4bcf4e7/ACSS-2021-Book.pdf#page=26"]
+].map((p,i)=>({id:"p"+i,title:p[0],year:p[1],venue:p[2],status:p[3],authors:p[4],themes:p[5],url:p[6]}));
+
+
+const ROLE = {pi:"Principal investigator",member:"Current member",alumni:"Alumni",ext:"Outside co-author"};
+const colorOf = g => `var(--${g==="alumni"?"alum":g})`;
+const ALLT = Object.keys(THEMES);
+const state = {view:"hyper", ext:true, pi:true, pre:true, y0:2021, y1:2026, themes:new Set(ALLT), sel:null, focus:null};
+const pos = new Map(), pinned = new Set();
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let sim=null, cur={}, tickFn=()=>{}, userZoomed=false, dragging=false, animToken=0;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const plural = (n,w) => `${n} ${w}${n===1?"":"s"}`;
+const hullColor = p => THEMES[p.themes.find(t=>state.themes.has(t))||p.themes[0]][1];
+
+/* ---------- tooltip ---------- */
+const mainEl=document.querySelector("main"), tip=$("tip");
+function showTip(e,html){
+  if(e.pointerType==="touch"||dragging) return;
+  tip.innerHTML=html;
+  const r=mainEl.getBoundingClientRect(), tw=tip.offsetWidth, th=tip.offsetHeight;
+  let x=e.clientX-r.left+14, y=e.clientY-r.top+16;
+  if(x+tw>r.width-8) x=e.clientX-r.left-tw-14;
+  if(y+th>r.height-8) y=e.clientY-r.top-th-12;
+  tip.style.transform=`translate(${Math.max(4,x)}px,${Math.max(4,y)}px)`; tip.style.opacity=1;
+}
+function hideTip(){ tip.style.opacity=0; }
+const personTip = n => `<b>${esc(n.name)}</b><br><span class="m">${ROLE[n.g]}</span><br>${plural(n.papers.length,"paper")}, ${plural(n.co.size,"co-author")} in view`;
+const paperTip = p => `<b>${esc(p.title)}</b><br><span class="m">${esc(p.venue)}, ${p.year}</span><br>${p.authors.map(a=>esc(PEOPLE[a][1])).join(", ")}`;
+const pairTip = d => `<b>${esc(PEOPLE[d.a][0])} and ${esc(PEOPLE[d.b][0])}</b><br>${plural(d.w,"joint paper")}<br><span class="m">${d.papers.slice(0,3).map(p=>esc(p.title.length>70?p.title.slice(0,68)+"…":p.title)).join("<br>")}</span>`;
+
+/* ---------- controls ---------- */
+const chips = d3.select("#chips");
+Object.entries(THEMES).forEach(([k,[l,c]])=>{
+  chips.append("button").attr("class","chip").attr("data-t",k).attr("aria-pressed","true").attr("type","button")
+    .html(`<i style="background:${c}"></i>${l}`)
+    .on("click",function(ev){
+      if(ev.shiftKey){
+        state.themes.has(k)?state.themes.delete(k):state.themes.add(k);
+      } else if(state.themes.size===1 && state.themes.has(k)){
+        ALLT.forEach(t=>state.themes.add(t)); // clicking the only active theme again restores all
+      } else {
+        state.themes=new Set([k]); // plain click isolates this theme
+      }
+      syncControls(); update();
+    });
+});
+$("allT").onclick=()=>{ ALLT.forEach(t=>state.themes.add(t)); syncControls(); update(); };
+$("noneT").onclick=()=>{ state.themes.clear(); syncControls(); update(); };
+["ext","pi","pre"].forEach(id=>$(id).addEventListener("change",e=>{state[id]=e.target.checked;update();}));
+$("labels").addEventListener("change",e=>root.classed("alllabels",e.target.checked));
+function years(e){
+  let a=+$("y0").value,b=+$("y1").value;
+  if(a>b){ if(e&&e.target===$("y0")) b=a; else a=b; }
+  state.y0=a; state.y1=b; syncControls(); update();
+}
+$("y0").addEventListener("input",years); $("y1").addEventListener("input",years);
+function syncControls(){
+  $("y0").value=state.y0; $("y1").value=state.y1; $("y0o").textContent=state.y0; $("y1o").textContent=state.y1;
+  ["ext","pi","pre"].forEach(id=>$(id).checked=state[id]);
+  chips.selectAll(".chip").attr("aria-pressed",function(){return state.themes.has(this.dataset.t);});
+}
+document.querySelectorAll(".seg button").forEach(b=>b.addEventListener("click",()=>{
+  state.view=b.dataset.v;
+  document.querySelectorAll(".seg button").forEach(o=>o.setAttribute("aria-pressed",o===b));
+  update();
+}));
+$("fit").onclick=()=>fitAll();
+$("unpin").onclick=()=>{ pinned.clear(); update(); };
+
+/* ---------- evolution playback: grow the hypergraph paper by paper, in publication order ---------- */
+let evo=null; // {list, idx, playing, timer, speed}
+const evoBar=$("evo"), evoTrack=$("evoTrack");
+function buildEvoList(){
+  return PAPERS.filter(p=>(state.pre||p.status==="pub") && p.themes.some(t=>state.themes.has(t)))
+    .map(p=>({...p, vis:p.authors.filter(a=>(state.ext||PEOPLE[a][2]!=="ext") && (state.pi||a!=="deb"))}))
+    .filter(p=>p.vis.length>0)
+    .sort((a,b)=>a.year-b.year || a.title.localeCompare(b.title));
+}
+function setEvoLock(on){
+  ["ext","pi","pre","y0","y1"].forEach(id=>$(id).disabled=on);
+  chips.selectAll(".chip").style("pointer-events",on?"none":null).style("opacity",on?.35:null);
+  $("allT").style.pointerEvents=on?"none":null; $("noneT").style.pointerEvents=on?"none":null;
+  $("legend").style.display=on?"none":null;
+  $("evoStart").hidden=on; $("evoStartNote").hidden=!on;
+}
+function startEvo(){
+  evo={list:buildEvoList(), idx:0, playing:false, timer:null, speed:1};
+  if(!evo.list.length){ evo=null; return; }
+  setEvoLock(true); evoBar.classList.add("on");
+  renderEvoUI(); update();
+  playEvo();
+}
+function exitEvo(){
+  if(!evo) return;
+  if(evo.timer) clearInterval(evo.timer);
+  evo=null; setEvoLock(false); evoBar.classList.remove("on");
+  update();
+}
+function playEvo(){
+  if(!evo) return;
+  if(evo.idx>=evo.list.length){ evo.idx=0; renderEvoUI(); update(); }
+  evo.playing=true; clearInterval(evo.timer);
+  evo.timer=setInterval(()=>{
+    evo.idx++; renderEvoUI(); update();
+    if(evo.idx>=evo.list.length){ evo.playing=false; clearInterval(evo.timer); renderEvoUI(); }
+  }, (reduce?2200:1300)/evo.speed);
+  renderEvoUI();
+}
+function pauseEvo(){ if(!evo) return; evo.playing=false; clearInterval(evo.timer); renderEvoUI(); }
+function scrubEvo(idx){ if(!evo) return; pauseEvo(); evo.idx=Math.max(0,Math.min(evo.list.length,idx)); renderEvoUI(); update(); }
+function renderEvoUI(){
+  if(!evo) return;
+  const n=evo.list.length;
+  const yr = evo.idx>0 ? evo.list[evo.idx-1].year : evo.list[0].year;
+  $("evoLabel").textContent=`${yr} · ${evo.idx} of ${n} papers`;
+  const pct=n?(evo.idx/n*100):0;
+  $("evoFill").style.width=pct+"%"; $("evoThumb").style.left=pct+"%";
+  evoTrack.setAttribute("aria-valuenow",evo.idx); evoTrack.setAttribute("aria-valuemin",0); evoTrack.setAttribute("aria-valuemax",n);
+  $("evoToggle").textContent = evo.idx>=n ? "Replay" : (evo.playing?"Pause":"Play");
+}
+$("evoStart").onclick=startEvo;
+$("evoExit").onclick=exitEvo;
+$("evoRestart").onclick=()=>{ if(!evo) return; pauseEvo(); evo.idx=0; renderEvoUI(); update(); };
+$("evoToggle").onclick=()=>{ if(!evo) return; if(evo.idx>=evo.list.length){ evo.idx=0; playEvo(); } else { evo.playing?pauseEvo():playEvo(); } };
+$("evoSpeed").addEventListener("change",e=>{ if(!evo) return; evo.speed=+e.target.value; if(evo.playing) playEvo(); });
+function evoIdxFromClientX(x){ const r=evoTrack.getBoundingClientRect(); const t=Math.max(0,Math.min(1,(x-r.left)/r.width)); return Math.round(t*evo.list.length); }
+evoTrack.addEventListener("pointerdown",e=>{
+  if(!evo) return; e.preventDefault(); scrubEvo(evoIdxFromClientX(e.clientX));
+  const move=ev=>scrubEvo(evoIdxFromClientX(ev.clientX));
+  const up=()=>{ window.removeEventListener("pointermove",move); window.removeEventListener("pointerup",up); };
+  window.addEventListener("pointermove",move); window.addEventListener("pointerup",up);
+});
+evoTrack.addEventListener("keydown",e=>{
+  if(!evo) return;
+  if(e.key==="ArrowRight"){ e.preventDefault(); scrubEvo(evo.idx+1); }
+  else if(e.key==="ArrowLeft"){ e.preventDefault(); scrubEvo(evo.idx-1); }
+  else if(e.key===" "){ e.preventDefault(); evo.playing?pauseEvo():playEvo(); }
+});
+
+/* search — a custom scrollable combobox: selecting a name always isolates that person's papers */
+const names=Object.keys(PEOPLE).sort((a,b)=>(PEOPLE[a][2]==="ext")-(PEOPLE[b][2]==="ext")||PEOPLE[a][0].localeCompare(PEOPLE[b][0]));
+const qInput=$("q"), qList=$("qlist"), qCombo=$("qcombo");
+let qItems=[], qActive=-1;
+
+function findPerson(q){
+  q=q.trim().toLowerCase(); if(!q) return null;
+  const exact=names.find(id=>PEOPLE[id][0].toLowerCase()===q); if(exact) return exact;
+  const hits=names.filter(id=>PEOPLE[id][0].toLowerCase().includes(q)||PEOPLE[id][1].toLowerCase().includes(q));
+  return hits.length?hits[0]:null;
+}
+function personHasPapers(id){
+  if(PEOPLE[id][2]==="ext" && !state.ext) return false;
+  if(id==="deb" && !state.pi) return false;
+  return PAPERS.some(p=>p.year>=state.y0 && p.year<=state.y1 && (state.pre||p.status==="pub") &&
+    p.themes.some(t=>state.themes.has(t)) &&
+    p.authors.filter(a=>(state.ext||PEOPLE[a][2]!=="ext") && (state.pi||a!=="deb")).includes(id));
+}
+function openList(filterText){
+  const q=(filterText||"").trim().toLowerCase();
+  qItems = names.filter(id=>!q || PEOPLE[id][0].toLowerCase().includes(q) || PEOPLE[id][1].toLowerCase().includes(q));
+  qList.innerHTML="";
+  if(!qItems.length){
+    const li=document.createElement("li"); li.className="empty"; li.textContent="No one by that name on the group's papers.";
+    qList.appendChild(li);
+  } else {
+    qItems.forEach(id=>{
+      const li=document.createElement("li"); li.setAttribute("role","option"); li.dataset.id=id;
+      const g=PEOPLE[id][2], dot=g==="alumni"?"var(--alum)":`var(--${g})`;
+      li.innerHTML=`<i style="background:${dot}"></i>${esc(PEOPLE[id][0])}`;
+      li.addEventListener("mousedown",ev=>{ ev.preventDefault(); pickPerson(id); });
+      qList.appendChild(li);
+    });
+  }
+  qActive=-1; qList.hidden=false; qInput.setAttribute("aria-expanded","true");
+}
+function closeList(){ qList.hidden=true; qInput.setAttribute("aria-expanded","false"); qActive=-1; }
+function highlightActive(){
+  [...qList.children].forEach((li,i)=>li.classList.toggle("active",i===qActive));
+  const el=qList.children[qActive]; if(el) el.scrollIntoView({block:"nearest"});
+}
+function pickPerson(id){
+  qInput.value=PEOPLE[id][0]; closeList();
+  const msg=$("qmsg"); msg.innerHTML="";
+  if(!personHasPapers(id)){
+    msg.innerHTML=`${esc(PEOPLE[id][0])} is hidden by the current filters. `;
+    const b=document.createElement("button"); b.className="link"; b.textContent="Reset filters and show them";
+    b.onclick=()=>{ resetFilters(); msg.innerHTML=""; focusPerson(id,true); };
+    msg.appendChild(b);
+    return;
+  }
+  focusPerson(id,true);
+}
+// opening always shows the full scrollable list first, even over existing text — no need to clear it to browse
+qInput.addEventListener("focus",()=>openList(""));
+qInput.addEventListener("click",()=>openList(""));
+qInput.addEventListener("input",()=>openList(qInput.value));
+qInput.addEventListener("keydown",e=>{
+  if(e.key==="ArrowDown"){ e.preventDefault(); if(qList.hidden) openList(qInput.value); qActive=Math.min(qItems.length-1,qActive+1); highlightActive(); }
+  else if(e.key==="ArrowUp"){ e.preventDefault(); if(qList.hidden) openList(qInput.value); qActive=Math.max(0,qActive-1); highlightActive(); }
+  else if(e.key==="Enter"){
+    e.preventDefault();
+    if(qActive>=0 && qItems[qActive]) pickPerson(qItems[qActive]);
+    else { const id=findPerson(qInput.value); if(id) pickPerson(id); else if(qInput.value.trim()){ $("qmsg").textContent="No one by that name on the group's papers."; } }
+  }
+  else if(e.key==="Escape"){ if(!qList.hidden){ e.stopPropagation(); closeList(); } }
+});
+document.addEventListener("click",e=>{ if(!qCombo.contains(e.target)) closeList(); });
+function resetFilters(){ if(evo) exitEvo(); Object.assign(state,{ext:true,pi:true,pre:true,y0:2021,y1:2026,focus:null}); ALLT.forEach(t=>state.themes.add(t)); syncControls(); update(); }
+
+document.addEventListener("keydown",e=>{
+  const typing=/INPUT|TEXTAREA/.test(document.activeElement.tagName);
+  if(e.key==="Escape"){ if(state.sel){ select(null); } else if(state.focus){ state.focus=null; update(); } }
+  else if(e.key==="/" && !typing){ e.preventDefault(); $("q").focus(); }
+});
+
+/* ---------- svg ---------- */
+const svg = d3.select("#svg");
+const root = svg.append("g");
+const gStars=root.append("g").attr("class","stars");
+const gHull=root.append("g"), gEdge=root.append("g"), gPaper=root.append("g"), gNode=root.append("g");
+(function seedStars(){
+  const n=140, spread=2600;
+  for(let i=0;i<n;i++){
+    gStars.append("circle").attr("class","star")
+      .attr("cx",(Math.random()-.5)*spread).attr("cy",(Math.random()-.5)*spread)
+      .attr("r",Math.random()*1.3+.3);
+  }
+})();
+const zoom = d3.zoom().scaleExtent([.25,5]).on("zoom",e=>{
+  root.attr("transform",e.transform); root.classed("zk",e.transform.k>=1.5);
+  if(e.sourceEvent) userZoomed=true;
+});
+svg.call(zoom).on("dblclick.zoom",null);
+svg.on("click",e=>{ if(e.target===svg.node()) select(null); });
+let W=800,H=600;
+function size(){ const r=svg.node().getBoundingClientRect(); W=r.width||800; H=r.height||600; }
+size();
+new ResizeObserver(()=>{ size(); if(sim){ sim.force("x").x(W/2); sim.force("y").y(H/2); sim.alpha(.2).restart(); } }).observe(svg.node());
+const line = d3.line().curve(d3.curveCatmullRomClosed.alpha(.6));
+
+function zoomToPoints(pts,maxK=2.2){
+  if(!pts.length) return;
+  const card=$("card").classList.contains("on") && W>860 ? 370 : 0;
+  const w=W-card, pad=60;
+  const x0=d3.min(pts,p=>p.x)-pad, x1=d3.max(pts,p=>p.x)+pad, y0=d3.min(pts,p=>p.y)-pad, y1=d3.max(pts,p=>p.y)+pad;
+  const k=Math.max(.25,Math.min(maxK, .92*Math.min(w/(x1-x0), (H-60)/(y1-y0))));
+  const t=d3.zoomIdentity.translate(w/2,H/2+10).scale(k).translate(-(x0+x1)/2,-(y0+y1)/2);
+  (reduce?svg:svg.transition().duration(650).ease(d3.easeCubicInOut)).call(zoom.transform,t);
+}
+function fitAll(){ if(sim) zoomToPoints(sim.nodes(),1.6); }
+
+/* ---------- data ---------- */
+function compute(){
+  let papers;
+  if(evo){
+    papers = evo.list.slice(0, evo.idx);
+  } else {
+    papers = PAPERS.filter(p=>p.year>=state.y0 && p.year<=state.y1 && (state.pre||p.status==="pub") && p.themes.some(t=>state.themes.has(t)))
+      .map(p=>({...p, vis:p.authors.filter(a=>(state.ext||PEOPLE[a][2]!=="ext") && (state.pi||a!=="deb"))}))
+      .filter(p=>p.vis.length>0);
+  }
+  if(state.focus){
+    // only the base ext/PI toggles can exclude this person entirely; a theme or year with no overlap
+    // should show an empty graph for them, not silently fall back to everyone else's papers
+    const stillEligible = (PEOPLE[state.focus][2]!=="ext" || state.ext) && (state.focus!=="deb" || state.pi);
+    if(stillEligible) papers = papers.filter(p=>p.vis.includes(state.focus));
+    else state.focus=null;
+  }
+  const nodeMap=new Map();
+  papers.forEach(p=>p.vis.forEach(a=>{
+    if(!nodeMap.has(a)) nodeMap.set(a,{id:a,name:PEOPLE[a][0],short:PEOPLE[a][1],g:PEOPLE[a][2],role:PEOPLE[a][3],papers:[],co:new Set()});
+    nodeMap.get(a).papers.push(p);
+    p.vis.forEach(b=>{ if(b!==a) nodeMap.get(a).co.add(b); });
+  }));
+  const pairs=new Map();
+  papers.forEach(p=>{ for(let i=0;i<p.vis.length;i++) for(let j=i+1;j<p.vis.length;j++){
+    const [a,b]=[p.vis[i],p.vis[j]].sort(), k=a+"|"+b;
+    if(!pairs.has(k)) pairs.set(k,{k,a,b,w:0,papers:[]}); const e=pairs.get(k); e.w++; e.papers.push(p);
+  }});
+  const nodes=[...nodeMap.values()];
+  const jitter=s=>(Math.random()-.5)*s;
+  nodes.forEach(n=>{
+    const q=pos.get(n.id);
+    if(q){ n.x=q.x; n.y=q.y; }
+    else { const nb=[...n.co].map(c=>pos.get(c)).filter(Boolean);
+      if(nb.length){ n.x=d3.mean(nb,p=>p.x)+jitter(50); n.y=d3.mean(nb,p=>p.y)+jitter(50); }
+      else { n.x=W/2+jitter(240); n.y=H/2+jitter(240); } }
+    if(pinned.has(n.id)){ n.fx=n.x; n.fy=n.y; }
+    n.r=Math.min(17,5+Math.sqrt(n.papers.length)*2.8);
+  });
+  return {papers, nodes, nodeMap, pairs, hyper:papers.filter(p=>p.vis.length>=2)};
+}
+
+function selValid(s){
+  if(!s) return false;
+  if(s.type==="person") return cur.nodeMap.has(s.id);
+  if(s.type==="paper") return cur.papers.some(p=>p.id===s.id);
+  return cur.pairs.has(s.a+"|"+s.b);
+}
+
+/* ---------- render ---------- */
+function update(){
+  if(sim) sim.stop();
+  hideTip();
+  const isFirstLoad = pos.size===0;
+  cur=compute();
+  userZoomed=false;
+  if(!selValid(state.sel)) state.sel=null;
+  const {nodes,pairs,hyper,papers}=cur, view=state.view;
+
+  const pnodes = view==="inc" ? papers.map(p=>{
+    const q=pos.get(p.id); let x,y;
+    if(q){x=q.x;y=q.y;} else { const ns=p.vis.map(a=>cur.nodeMap.get(a)); x=d3.mean(ns,n=>n.x)+(Math.random()-.5)*30; y=d3.mean(ns,n=>n.y)+(Math.random()-.5)*30; }
+    const o={id:p.id,paper:p,x,y,r:5}; if(pinned.has(p.id)){o.fx=x;o.fy=y;} return o;
+  }) : [];
+  const links = view==="inc" ? papers.flatMap(p=>p.vis.map(a=>({k:a+">"+p.id,source:a,target:p.id})))
+                             : [...pairs.values()].map(e=>({...e,source:e.a,target:e.b}));
+  const simNodes=[...nodes,...pnodes];
+
+  /* edges */
+  const eSel=gEdge.selectAll("g.e").data(view==="hyper"?[]:links, d=>d.k);
+  eSel.exit().remove();
+  const eEnter=eSel.enter().append("g").attr("class","e");
+  eEnter.append("line").attr("class","edge");
+  eEnter.append("line").attr("class","edgehit");
+  const eAll=eEnter.merge(eSel);
+  eAll.select(".edge").attr("stroke-width",d=>view==="inc"?1:1+(d.w-1)*1.6).attr("stroke-opacity",view==="inc"?.45:.55);
+  eAll.select(".edgehit").style("display",view==="net"?null:"none");
+  eAll.on("pointerenter pointermove",(e,d)=>{ if(view!=="net") return; applyHighlight({type:"pair",a:d.a,b:d.b}); showTip(e,pairTip(d)); })
+      .on("pointerleave",()=>{ applyHighlight(); hideTip(); })
+      .on("click",(e,d)=>{ if(view!=="net") return; e.stopPropagation(); select({type:"pair",a:d.a,b:d.b}); });
+
+  /* hulls */
+  const hSel=gHull.selectAll("path").data(view==="hyper"?hyper:[], d=>d.id);
+  hSel.exit().transition().duration(reduce?0:200).style("opacity",0).remove();
+  const hEnter=hSel.enter().append("path").attr("class",isFirstLoad?"hull":"hull spawn").style("opacity",reduce?1:0);
+  hEnter.each(function(){ this.addEventListener("animationend",()=>this.classList.remove("spawn"),{once:true}); });
+  const hAll=hEnter.merge(hSel)
+    .attr("fill",hullColor).attr("stroke",hullColor).attr("stroke-opacity",.75).style("color",hullColor)
+    .on("pointerenter pointermove",(e,d)=>{ applyHighlight({type:"paper",id:d.id}); showTip(e,paperTip(d)); })
+    .on("pointerleave",()=>{ applyHighlight(); hideTip(); })
+    .on("click",(e,d)=>{ e.stopPropagation(); select({type:"paper",id:d.id}); });
+  if(!reduce) hEnter.transition().delay(150).duration(350).style("opacity",1);
+  hAll.sort((a,b)=>b.vis.length-a.vis.length);
+
+  /* paper diamonds */
+  const pSel=gPaper.selectAll("g.pnode").data(pnodes,d=>d.id);
+  pSel.exit().transition().duration(reduce?0:200).style("opacity",0).remove();
+  const pEnter=pSel.enter().append("g").attr("class","pnode").style("opacity",reduce?1:0);
+  pEnter.append("rect").attr("width",9).attr("height",9).attr("x",-4.5).attr("y",-4.5).attr("rx",1.5).attr("transform","rotate(45)");
+  if(!reduce) pEnter.transition().delay(150).duration(350).style("opacity",1);
+  const pAll=pEnter.merge(pSel);
+  pAll.select("rect").attr("fill",d=>hullColor(d.paper));
+  pAll.style("color",d=>hullColor(d.paper));
+  pAll.on("pointerenter pointermove",(e,d)=>{ applyHighlight({type:"paper",id:d.id}); showTip(e,paperTip(d.paper)); })
+      .on("pointerleave",()=>{ applyHighlight(); hideTip(); })
+      .on("click",(e,d)=>{ e.stopPropagation(); select({type:"paper",id:d.id}); })
+      .on("dblclick",(e,d)=>{ e.stopPropagation(); unpin(d); })
+      .call(drag());
+
+  /* people */
+  const nSel=gNode.selectAll("g.node").data(nodes,d=>d.id);
+  nSel.exit().transition().duration(reduce?0:250).style("opacity",0).remove();
+  const nEnter=nSel.enter().append("g").attr("tabindex",0).attr("role","button");
+  nEnter.append("rect").attr("class","hit");
+  nEnter.append("circle").attr("class","ring");
+  nEnter.append("circle").attr("class","c").attr("r",0);
+  nEnter.append("text").attr("dy","0.32em");
+  const nAll=nEnter.merge(nSel).interrupt().attr("class",d=>"node "+d.g).style("opacity",null);
+  nAll.attr("aria-label",d=>`${d.name}, ${ROLE[d.g]}, ${plural(d.papers.length,"paper")}`);
+  nAll.select("rect.hit").attr("x",d=>-(d.r+8)).attr("y",d=>-(d.r+9)).attr("width",d=>d.r+(d.g==="ext"?18:94)).attr("height",d=>2*d.r+18);
+  nAll.select("circle.c").attr("fill",d=>colorOf(d.g)).transition().duration(reduce?0:400).attr("r",d=>d.r);
+  nAll.select("circle.ring").attr("r",d=>d.r+4);
+  nAll.select("text").attr("x",d=>d.r+4).text(d=>d.short).style("font-weight",d=>d.g==="ext"?400:600);
+  nAll.on("pointerenter pointermove",(e,d)=>{ applyHighlight({type:"person",id:d.id}); showTip(e,personTip(d)); })
+      .on("pointerleave",()=>{ applyHighlight(); hideTip(); })
+      .on("click",(e,d)=>{ e.stopPropagation(); select({type:"person",id:d.id}); })
+      .on("dblclick",(e,d)=>{ e.stopPropagation(); unpin(d); })
+      .on("keydown",(e,d)=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); select({type:"person",id:d.id},true); } })
+      .call(drag());
+  nAll.raise();
+
+  /* layout: resolved once, headlessly — no running physics, so nothing drifts on its own */
+  const oldPos = new Map(pos);
+  sim=d3.forceSimulation(simNodes)
+    .force("link", d3.forceLink(links).id(d=>d.id)
+        .distance(view==="inc"?45:(view==="hyper"?105:95))
+        .strength(d=>view==="inc"?.7:Math.min(.9,.2+.15*(d.w||1))))
+    .force("charge", d3.forceManyBody().strength(d=>d.paper?-90:(view==="hyper"?-520:-360)))
+    .force("collide", d3.forceCollide().radius(d=>d.r+(view==="hyper"?12:7)))
+    .force("x", d3.forceX(W/2).strength(d=>d.co&&d.co.size===0?.14:.04))
+    .force("y", d3.forceY(H/2).strength(d=>d.co&&d.co.size===0?.16:.05))
+    .stop();
+  const iters = Math.min(400, 150 + simNodes.length*5);
+  for(let i=0;i<iters;i++) sim.tick();
+  simNodes.forEach(n=>pos.set(n.id,{x:n.x,y:n.y}));
+
+  function placeFinal(){
+    eAll.selectAll("line").attr("x1",d=>d.source.x).attr("y1",d=>d.source.y).attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+    nAll.attr("transform",d=>`translate(${d.x},${d.y})`);
+    pAll.attr("transform",d=>`translate(${d.x},${d.y})`);
+    hAll.attr("d",hullPath);
+  }
+  function hullPath(d,i){
+    const ring=[], pad=9+(d.vis.length>2?4:0)+(i%3)*2.5;
+    d.vis.forEach(a=>{ const n=cur.nodeMap.get(a), r=n.r+pad;
+      for(let k=0;k<14;k++){ const t=k/14*2*Math.PI; ring.push([n.x+r*Math.cos(t), n.y+r*Math.sin(t)]); } });
+    return line(d3.polygonHull(ring));
+  }
+
+  animToken++;
+  const myToken=animToken, nodeMapNow=cur.nodeMap;
+  if(reduce){ placeFinal(); if(!userZoomed) fitAll(); }
+  else{
+    // animate once from last-known positions to the newly settled ones, then stop moving entirely.
+    // first-ever render gets a slower, springier "big bang" burst outward from the centre; every
+    // later change (filters, selection, evolution) gets a calm, quick settle.
+    const dur = isFirstLoad ? 950 : 500;
+    const ease = isFirstLoad ? d3.easeBackOut.overshoot(1.15) : d3.easeCubicOut;
+    const t0=Date.now();
+    simNodes.forEach(n=>{
+      const o=oldPos.get(n.id);
+      n._x0 = o ? o.x : (isFirstLoad ? W/2 : n.x);
+      n._y0 = o ? o.y : (isFirstLoad ? H/2 : n.y);
+    });
+    const timer=d3.timer(()=>{
+      if(myToken!==animToken){ timer.stop(); return; } // a newer update superseded this animation — stop cleanly, touch nothing stale
+      const t=Math.min(1,(Date.now()-t0)/dur), k=ease(t);
+      simNodes.forEach(n=>{ n._dx=n._x0+(n.x-n._x0)*k; n._dy=n._y0+(n.y-n._y0)*k; });
+      eAll.selectAll("line").attr("x1",d=>d.source._dx).attr("y1",d=>d.source._dy).attr("x2",d=>d.target._dx).attr("y2",d=>d.target._dy);
+      nAll.attr("transform",d=>`translate(${d._dx},${d._dy})`);
+      pAll.attr("transform",d=>`translate(${d._dx},${d._dy})`);
+      hAll.attr("d",(d,i)=>{
+        const ring=[], pad=9+(d.vis.length>2?4:0)+(i%3)*2.5;
+        d.vis.forEach(a=>{ const n=nodeMapNow.get(a); if(!n) return; const r=n.r+pad;
+          for(let m=0;m<14;m++){ const a2=m/14*2*Math.PI; ring.push([n._dx+r*Math.cos(a2), n._dy+r*Math.sin(a2)]); } });
+        return line(d3.polygonHull(ring));
+      });
+      if(t>=1){ timer.stop(); placeFinal(); if(!userZoomed) fitAll(); }
+    });
+  }
+
+  updatePinUI(); renderStats(); renderFocus(); renderCard(); applyHighlight();
+}
+
+function drag(){
+  return d3.drag().clickDistance(4)
+    .on("start",function(e,d){ userZoomed=true; dragging=true; svg.classed("dragging",true); hideTip(); d._moved=false; })
+    .on("drag",function(e,d){
+      d._moved=true; d.fx=e.x; d.fy=e.y; d.x=e.x; d.y=e.y; pos.set(d.id,{x:e.x,y:e.y});
+      d3.select(this).attr("transform",`translate(${e.x},${e.y})`);
+      gEdge.selectAll("g.e").selectAll("line")
+        .filter(l=>l.source===d||l.target===d||l.source.id===d.id||l.target.id===d.id)
+        .attr("x1",l=>l.source.x).attr("y1",l=>l.source.y).attr("x2",l=>l.target.x).attr("y2",l=>l.target.y);
+      gHull.selectAll("path").filter(p=>p.vis&&p.vis.includes(d.id)).attr("d",hullPathLive);
+    })
+    .on("end",function(e,d){
+      dragging=false; svg.classed("dragging",false);
+      if(d._moved){ pinned.add(d.id); update(); } else applyHighlight();
+      updatePinUI();
+    });
+}
+function hullPathLive(p,i){
+  const ring=[], pad=9+(p.vis.length>2?4:0)+(i%3)*2.5;
+  p.vis.forEach(a=>{ const n=cur.nodeMap.get(a); if(!n) return; const r=n.r+pad;
+    for(let k=0;k<14;k++){ const t=k/14*2*Math.PI; ring.push([n.x+r*Math.cos(t), n.y+r*Math.sin(t)]); } });
+  return line(d3.polygonHull(ring));
+}
+function unpin(d){ pinned.delete(d.id); update(); }
+function updatePinUI(){
+  gNode.selectAll("g.node").classed("pinned",d=>pinned.has(d.id));
+  $("unpin").hidden = ![...pinned].some(id=>cur.nodeMap.has(id)||cur.papers.some(p=>p.id===id));
+}
+
+/* ---------- highlight & selection ---------- */
+function involved(h){
+  const people=new Set(), paperIds=new Set();
+  if(!h) return null;
+  if(h.type==="person"){ people.add(h.id); const n=cur.nodeMap.get(h.id); if(n){ n.co.forEach(c=>people.add(c)); n.papers.forEach(p=>paperIds.add(p.id)); } }
+  else if(h.type==="paper"){ const p=cur.papers.find(p=>p.id===h.id); if(p){ p.vis.forEach(a=>people.add(a)); paperIds.add(p.id); } }
+  else { people.add(h.a); people.add(h.b); const e=cur.pairs.get(h.a+"|"+h.b); if(e) e.papers.forEach(p=>paperIds.add(p.id)); }
+  return {people,paperIds};
+}
+function applyHighlight(h){
+  h=h||state.sel;
+  const nodes=gNode.selectAll("g.node"), hulls=gHull.selectAll("path"), edges=gEdge.selectAll("g.e"), pn=gPaper.selectAll("g.pnode");
+  const sid = state.sel && state.sel.type==="person" ? state.sel.id : null;
+  nodes.classed("sel",d=>d.id===sid);
+  const I=involved(h);
+  if(!I){ nodes.classed("dim",false).classed("lit",false); hulls.classed("dim",false).attr("fill-opacity",.13).attr("stroke-width",1.4); edges.classed("dim",false); pn.classed("dim",false); return; }
+  const {people,paperIds}=I;
+  nodes.classed("dim",d=>!people.has(d.id)).classed("lit",d=>people.has(d.id));
+  hulls.classed("dim",d=>!paperIds.has(d.id)).attr("fill-opacity",d=>paperIds.has(d.id)?.24:.13).attr("stroke-width",d=>paperIds.has(d.id)?2.2:1.4);
+  pn.classed("dim",d=>!paperIds.has(d.id));
+  edges.classed("dim",d=>{
+    if(state.view==="inc") return !paperIds.has(d.target.id) || !people.has(d.source.id);
+    if(h.type==="person") return !(d.a===h.id||d.b===h.id);
+    if(h.type==="pair") return d.k!==h.a+"|"+h.b;
+    return !(people.has(d.a)&&people.has(d.b)&&d.papers.some(p=>paperIds.has(p.id)));
+  });
+}
+function zoomToSel(s){
+  const I=involved(s);
+  userZoomed=true; // this explicit zoom takes priority over update()'s own auto-fit, which may still be settling
+  zoomToPoints([...I.people].map(id=>cur.nodeMap.get(id)).filter(Boolean), 2);
+}
+// Lightweight selection: highlights within the graph currently on screen, without changing what's shown.
+// Used for clicking nodes/edges/hulls directly while browsing.
+function select(s,doZoom){
+  state.sel=s;
+  if(s===null && state.focus){ state.focus=null; update(); return; } // clicking empty space also clears an active "only this person" view
+  renderCard(); applyHighlight();
+  if(s && doZoom) zoomToSel(s);
+}
+// Isolating selection: always narrows the graph to just this person's papers.
+// Used for the "Find a person" search and every clickable name shown in a list (co-authors, top list).
+function focusPerson(id,doZoom){
+  state.sel={type:"person",id}; state.focus=id;
+  update();
+  if(doZoom) zoomToSel(state.sel);
+}
+
+/* ---------- panels ---------- */
+function renderStats(){
+  const {nodes,pairs,hyper,papers}=cur, n=nodes.length, m=pairs.size;
+  const dens=n>1?(2*m/(n*(n-1))):0, meanSize=hyper.length?d3.mean(hyper,p=>p.vis.length):0;
+  const group=nodes.filter(d=>d.g!=="ext").length;
+  const S=[[n,0,`people (${group} from the group)`],[papers.length,0,"papers"],[hyper.length,0,"hyperedges (papers with 2+ visible authors)"],
+           [meanSize,2,"mean hyperedge size"],[m,0,"pairwise co-author links"],[dens,3,"pairwise density"]];
+  const sel=d3.select("#stats").selectAll(".stat").data(S);
+  sel.exit().remove();
+  const enter=sel.enter().append("div").attr("class","stat");
+  enter.append("b").attr("data-v","0"); enter.append("span");
+  const allStat=enter.merge(sel);
+  allStat.select("span").text(d=>d[2]);
+  allStat.select("b").each(function(d){
+    const decimals=d[1], next=d[0], prev=+this.dataset.v||0;
+    this.dataset.v=next;
+    if(reduce || prev===next){ this.textContent=next.toFixed(decimals); return; }
+    d3.select(this).transition().duration(500).ease(d3.easeCubicOut).tween("text",function(){
+      const i=d3.interpolateNumber(prev,next);
+      return t=>{ this.textContent=i(t).toFixed(decimals); };
+    });
+  });
+  const top=[...nodes].sort((a,b)=>b.co.size-a.co.size||b.papers.length-a.papers.length).slice(0,6);
+  const ol=d3.select("#top").html("");
+  if(!top.length) ol.append("li").attr("class","meta").text("Nothing matches these filters. Turn a theme back on or widen the years.");
+  top.forEach(d=>{ const li=ol.append("li");
+    li.append("button").attr("class","link").text(d.name)
+      .on("click",()=>focusPerson(d.id,true))
+      .on("pointerenter",()=>applyHighlight({type:"person",id:d.id})).on("pointerleave",()=>applyHighlight());
+    li.append("span").attr("class","meta").text(`, ${d.co.size} co-authors and ${plural(d.papers.length,"paper")}`); });
+}
+function renderFocus(){
+  $("focusbar").classList.toggle("on",!!state.focus);
+  if(!state.focus) return;
+  const name=PEOPLE[state.focus][0];
+  $("focustext").textContent = cur.papers.length
+    ? `Showing only ${name}'s papers — click empty space or press Esc to see everyone`
+    : `${name} has no papers matching the current theme/year filters — click empty space or press Esc to see everyone`;
+}
+function personLink(sel,id){
+  const g=PEOPLE[id][2], shown=cur.nodeMap.has(id);
+  if(!shown) return sel.append("span").style("color","var(--muted)").text(PEOPLE[id][0]);
+  return sel.append("button").attr("class","link").style("color",g==="ext"?"var(--muted)":colorOf(g)).style("font-weight",g==="ext"?400:600).text(PEOPLE[id][0])
+    .on("click",()=>focusPerson(id,true))
+    .on("pointerenter",()=>applyHighlight({type:"person",id})).on("pointerleave",()=>applyHighlight());
+}
+function paperList(box,list){
+  const ul=box.append("ul");
+  [...list].sort((a,b)=>b.year-a.year).forEach(p=>{
+    const li=ul.append("li").on("pointerenter",()=>applyHighlight({type:"paper",id:p.id})).on("pointerleave",()=>applyHighlight());
+    li.append("button").attr("class","link").text(p.title).on("click",()=>select({type:"paper",id:p.id},true));
+    li.append("div").attr("class","meta").text(`${p.venue}, ${p.year}${p.status==="pre"?", pre-print or working paper":""}`);
+  });
+}
+function renderCard(){
+  const s=state.sel, cardEl=$("card"), box=d3.select(cardEl).html("");
+  cardEl.classList.toggle("on",!!s);
+  if(!s){ cardEl.classList.remove("show"); return; }
+  cardEl.classList.remove("show");
+  requestAnimationFrame(()=>requestAnimationFrame(()=>cardEl.classList.add("show")));
+  box.append("button").attr("class","x").attr("aria-label","Close details").text("×").on("click",()=>select(null));
+  const acts=()=>box.append("div").attr("class","acts");
+  if(s.type==="person"){
+    const n=cur.nodeMap.get(s.id);
+    box.append("h3").text(n.name);
+    box.append("p").style("margin","0 0 6px").html(`<span style="color:${colorOf(n.g)};font-weight:600">${ROLE[n.g]}</span><br><span class="meta">${esc(n.role)}</span>`);
+    const co=[...n.co].sort((a,b)=>(PEOPLE[a][2]==="ext")-(PEOPLE[b][2]==="ext")||PEOPLE[a][0].localeCompare(PEOPLE[b][0]));
+    box.append("p").attr("class","meta").style("margin","8px 0 2px").text(`${plural(n.papers.length,"paper")} and ${plural(co.length,"co-author")} in view`);
+    if(co.length){ const p=box.append("p").style("margin","2px 0 0"); co.forEach((c,i)=>{ personLink(p,c); if(i<co.length-1) p.append("span").text(", "); }); }
+    paperList(box,n.papers);
+    acts().append("button").attr("class","btn").text("Zoom to").on("click",()=>select(s,true));
+  } else if(s.type==="paper"){
+    const p=cur.papers.find(q=>q.id===s.id);
+    box.append("h3").text(p.title);
+    box.append("p").attr("class","meta").style("margin","0").text(`${p.venue}, ${p.year}${p.status==="pre"?", pre-print or working paper":""}`);
+    const au=box.append("p").style("margin","8px 0");
+    p.authors.forEach((id,i)=>{ personLink(au,id); if(i<p.authors.length-1) au.append("span").text(", "); });
+    box.append("p").attr("class","meta").html(p.themes.map(t=>`<span style="color:${THEMES[t][1]}">■</span> ${THEMES[t][0]}`).join("&nbsp;&nbsp; "));
+    const a=acts();
+    a.append("a").attr("class","btn primary").attr("href",p.url).attr("target","_blank").attr("rel","noopener").style("text-decoration","none").style("color","var(--panel)").text("Open the paper");
+    a.append("button").attr("class","btn").text("Zoom to").on("click",()=>select(s,true));
+  } else {
+    const e=cur.pairs.get(s.a+"|"+s.b);
+    const h=box.append("h3"); personLink(h,s.a); h.append("span").text(" and "); personLink(h,s.b);
+    box.append("p").attr("class","meta").style("margin","0").text(`${plural(e.w,"joint paper")} in view`);
+    paperList(box,e.papers);
+    acts().append("button").attr("class","btn").text("Zoom to").on("click",()=>select(s,true));
+  }
+}
+
+update();
+</script>
+</body>
+</html>

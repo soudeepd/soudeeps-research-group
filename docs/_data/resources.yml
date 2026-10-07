@@ -110,3 +110,12 @@
   links:
     - label: "Watch on YouTube"
       url: "https://www.youtube.com/watch?v=JqQBN5YdUvs"
+
+- title: "SIGNAL Group Collaboration Network"
+  category: others
+  description: "Interactive visualization of the SIGNAL Group's co-authorship network, with different views, and a playback mode showing how collaborations evolve in themes and time."
+  links:
+    - label: "Explore network"
+      url: "/assets/resources/others/signal-collaboration-network.html"
+    - label: "Read the notes"
+      url: "/assets/resources/others/signal-collaboration-network-notes.pdf"
