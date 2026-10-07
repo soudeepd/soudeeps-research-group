@@ -113,7 +113,7 @@
 
 - title: "SIGNAL Group Collaboration Network"
   category: others
-  description: "Interactive visualization of the SIGNAL Group's co-authorship network, with different views, and a playback mode showing how collaborations evolve in themes and time."
+  description: "Interactive visualization of the SIGNAL Group's co-authorship network, with different views, and a playback mode showing how collaborations evolve in themes and time. It has been kindly prepared by Mr. Satyaki."
   links:
     - label: "Explore network"
       url: "/assets/resources/others/signal-collaboration-network.html"
