@@ -1,3 +1,21 @@
+- title: "Regime-Dependent Value-at-Risk and Risk Spillovers in Multivariate Cryptocurrency Markets"
+  authors: "Soni, A., Deb, S., Das, D."
+  year: 2026
+  type: publication
+  status: "Published"
+  venue: "Applied Stochastic Models in Business and Industry, 42(6), e70140"
+  themes:
+    - time-series
+    - statistical-learning
+    - other-applications
+  people:
+    - anchal-soni
+  links:
+    - label: publication
+      url: "https://doi.org/10.1002/asmb.70140"
+    - label: bibtex
+      url: "/assets/bibtex/soni2026regime.bib"
+
 - title: "Economic Prosperity and Political and Civil Freedom: Can One Offset the Other in Attracting International Tourists?"
   authors: "Seshagiri, A., Das, T., Deb, S."
   year: 2026
