@@ -1,3 +1,17 @@
+- title: "Kunal successfully defends his PhD thesis"
+  date: 2026-11-11
+  type: achievement
+  category: "Milestone"
+  image: "/assets/images/news/2026/kunal-defense-2026-11.jpeg"
+  description: "Kunal has successfully defended his thesis, titled "Nonparametric Quantile Regression in Time Series: Theory and Applications". Henceforth, he is going to be known as Dr. Kunal Rai."
+
+- title: "First draft of our paper on a hybrid technique for pollution forecasting" 
+  date: 2026-11-11
+  type: research-update
+  category: "Publication"
+  image: "/assets/images/news/2026/gprpaper-2026-11.png"
+  description: "Led by Dr. Reetha, this research work focuses on a new technique of air pollution forecasting, by taking advantage of a graph neural network and Gaussian process regression."
+
 - title: "The SIGNAL Group is now on LinkedIn!"
   date: 2026-11-04
   type: group-update

@@ -7,15 +7,6 @@
   email: soudeep@iimb.ac.in
   webpage: https://soudeepd.github.io/
 
-- id: kunal-rai
-  name: Kunal Rai
-  category: phd
-  image: /assets/images/members/Kunal_Rai.jpg
-  role: PhD student, IIM Bangalore (thesis submitted)
-  themes: Time series · Nonparametrics · Financial data · Physics-informed neural network
-  email: kunal.rai21@iimb.ac.in
-  webpage: https://sites.google.com/view/kunalrai98/about
-
 - id: amrutha-seshagiri
   name: Amrutha Seshagiri
   category: phd

@@ -1,3 +1,19 @@
+- title: "A transport-informed graph neural network–Gaussian process framework for air pollution forecasting"
+  authors: "Thomas, R., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Working paper"
+  venue: ""
+  themes:
+    - environmental-research
+    - spatio-temporal
+    - statistical-learning
+  people:
+    - reetha-thomas
+  links:
+    - label: pre-print
+      url: "/assets/resources/others/2026_Thomas Deb_Preprint.pdf"
+
 - title: "Regime-Dependent Value-at-Risk and Risk Spillovers in Multivariate Cryptocurrency Markets"
   authors: "Soni, A., Deb, S., Das, D."
   year: 2026

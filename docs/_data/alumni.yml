@@ -41,13 +41,22 @@
 - id: chinmay-divekar
   name: Chinmay Divekar
   category: phd
-  image: /assets/images/members/Chinmay_Divekar.jpg
+  image: /assets/images/alumni/Chinmay_Divekar.jpg
   role: PhD, IIM Bangalore (co-supervised)
   period: Graduated September 2026
   current: Assistant Vice President, Barclays Investment Bank, India
   themes: Bayesian methods · Sports analytics · Quantitative finance · Markov models
   webpage: "https://sites.google.com/view/chinmay-divekar/home"
 
+- id: kunal-rai
+  name: Kunal Rai
+  category: phd
+  image: /assets/images/alumni/Kunal_Rai.jpg
+  role: PhD, IIM Bangalore
+  period: Graduated November 2026
+  current: Lecturer, Jindal School of Banking & Finance, India
+  themes: Time series · Nonparametrics · Financial data · Physics-informed neural network
+  webpage: "https://sites.google.com/view/kunalrai98/about"
 
 - id: souvik-bag
   name: Souvik Bag
