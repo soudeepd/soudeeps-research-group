@@ -1,3 +1,18 @@
+- title: "Can AI Judge You? An Empirical Audit of Deployment Readiness in LLM-assisted Hiring Systems"
+  authors: "Roy, S., Majumdar, S., Deb, S."
+  year: 2026
+  type: preprint
+  status: "Working paper"
+  venue: ""
+  themes:
+    - other-applications
+    - statistical-learning
+  links:
+    - label: bibtex
+      url: "/assets/bibtex/roy2026can.bib"
+    - label: pre-print
+      url: "https://dx.doi.org/10.2139/ssrn.7728639"
+
 - title: "A transport-informed graph neural network–Gaussian process framework for air pollution forecasting"
   authors: "Thomas, R., Deb, S."
   year: 2026
